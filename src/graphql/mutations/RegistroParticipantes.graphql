@@ -1,0 +1,10 @@
+mutation RegistroParticipantes($input:RegistroParticipanteInput!){
+  RegistroParticipantes(input:$input){
+    nombres
+    apellidos
+    correo
+    nroCelular
+    pais
+    empresa
+  }
+}
