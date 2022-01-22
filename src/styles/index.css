@@ -1,3 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner {
+  background-image: url("/img-banner.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  /* background-repeat: no-repeat; */
+  
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(3.57deg, #1A3C34 -9.22%, rgba(26, 60, 52, 0) 123.08%);
+}
+.banner__cards {
+  right: 47%;
+}
+.banner__gradiente {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    270deg,
+    #173d35 1.17%,
+    #6cbe4c 19.19%,
+    #ffc60b 40.29%,
+    #007598 60.37%,
+    #b01f8c 79.41%,
+    #f3eb5f 100%
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    270deg,
+    #173d35 1.17%,
+    #6cbe4c 19.19%,
+    #ffc60b 40.29%,
+    #007598 60.37%,
+    #b01f8c 79.41%,
+    #f3eb5f 100%
+  );
+}
+
+.banner__san-pedro {
+  letter-spacing: 0.13rem;
+}
+
+/* modal */
+
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal.isOpen {
+  display: flex;
+}
+
+.modalContainer {
+  position: relative;
+  background-color: #fff;
+  min-width: 300px;
+  max-width: 900px;
+  min-height: 200px;
+  max-height: 700px;
+  overflow-y: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  scrollbar-color: #B4038F rgba(0, 0, 0, 0.75);
+  scrollbar-width: thin;
+}
+.modalClose {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #B4038F;
+  color: white;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

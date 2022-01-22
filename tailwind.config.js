@@ -11,7 +11,8 @@ const themeColors = {
     600: '#00b3a6',
     700: '#008077',
     800: '#004e47',
-    900: '#001c19'
+    900: '#001c19',
+    950:'#173D35',
   },
   secondary: {
     50: '#ffe8f8',
@@ -20,10 +21,14 @@ const themeColors = {
     300: '#d775b0',
     400: '#ca4e99',
     500: '#b1357f',
-    600: '#8a2863',
+    600: '#B4038F',
     700: '#631b48',
     800: '#3e0f2b',
     900: '#1b0211'
+  },
+  gray:{
+    500:'#c4c4c4',
+    600:'#4E5057'
   }
 }
 
@@ -75,6 +80,39 @@ module.exports = {
         50: '12.5rem',
         90: '22.5rem'
       },
+
+      fontSize: {
+        xs: ['0.75rem', { lineHeight: '1rem' }],
+        sm: ['0.875rem', { lineHeight: '1.25rem' }],
+        base: ['1rem', { lineHeight: '1.5rem' }],
+        lg: ['1.125rem', { lineHeight: '1.75rem' }],
+        xl: ['1.25rem', { lineHeight: '1.75rem' }],
+        '2xl': ['1.5rem', { lineHeight: '2rem' }],
+        '2.5xl': ['1.68rem', { lineHeight: '2.5rem' }],
+        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+        '4.5xl': ['2.56rem', { lineHeight: '3rem' }],
+        '5xl': ['3rem', { lineHeight: '1' }],
+        '6xl': ['3.75rem', { lineHeight: '1' }],
+        '7xl': ['4.5rem', { lineHeight: '1' }],
+        '8xl': ['6rem', { lineHeight: '1' }],
+        '9xl': ['8rem', { lineHeight: '1' }],
+      },
+      fontWeight: {
+        thin: '100',
+        extralight: '200',
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+        black: '900',
+      },
+
+
+
+      
       /**
        * Extended spacing values for width and height utilities.
        * This way, we won't be adding these to other utilities
@@ -121,7 +159,45 @@ module.exports = {
         none: 'none'
       }),
       width: (theme) => ({
-        ...theme('extendedSpacing')
+        ...theme('extendedSpacing'),
+        '1/2': '50%',
+        '1/3': '33.333333%',
+        '2/3': '66.666667%',
+        '1/4': '25%',
+        '2/4': '50%',
+        '3/4': '75%',
+        '1/5': '20%',
+        '2/5': '40%',
+        '3/5': '60%',
+        '4/5': '80%',
+        '1/6': '16.666667%',
+        '2/6': '33.333333%',
+        '3/6': '50%',
+        '4/6': '66.666667%',
+        '5/6': '83.333333%',
+        '1/12': '8.333333%',
+        '2/12': '16.666667%',
+        '3/12': '25%',
+        '4/12': '33.333333%',
+        '5/12': '41.666667%',
+        '5/13': '47%',
+        '6/12': '50%',
+        '7/12': '58.333333%',
+        '8/12': '66.666667%',
+        '9/12': '75%',
+        '10/12': '83.333333%',
+        '11/12': '91.666667%',
+        '25':'6.25rem',
+        '26':'6.5rem',
+        '70':'17rem',
+        '100': '20rem',
+        '140': '37rem',
+        '200': '55rem',
+        full: '100%',
+        screen: '100vw',
+        min: 'min-content',
+        max: 'max-content',
+        fit: 'fit-content',
       }),
       minWidth: (theme) => ({
         ...theme('spacing'),
