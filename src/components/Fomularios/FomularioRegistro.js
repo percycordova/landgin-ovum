@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import InputText from "../inputs/InputText";
 import useGestionarRegistroParticipantes from "../../Gestionadores/useGestionarRegistroParticipantes";
 
-const FomularioRegistro = ({ openModal }) => {
+const FomularioRegistro = ({ openModal, openModalCorreo }) => {
   const { RegistrarParticipantes, loading } =
     useGestionarRegistroParticipantes();
   const validate = ({ nombres, apellidos, empresa, pais, celular, correo }) => {
@@ -47,28 +47,47 @@ const FomularioRegistro = ({ openModal }) => {
     return errors;
   };
   const [isAccepted, setIsAccepted] = useState(false);
-  console.log(isAccepted);
-  const { handleChange, values, handleSubmit, errors, touched, handleBlur } =
-    useFormik({
-      initialValues: {
-        nombres: "",
-        apellidos: "",
-        empresa: "",
-        pais: "",
-        celular: "",
-        correo: "",
-      },
-      onSubmit: (values) => {
-        RegistrarParticipantes({
-          apellidos: values.apellidos,
-          nombres: values.nombres,
-          correo: values.correo,
-          nroCelular: values.celular,
-          pais: values.pais,
-        });
-      },
-      validate,
-    });
+  // console.log("valor de isAccepted", isAccepted);
+  const {
+    handleChange,
+    values,
+    handleSubmit,
+    errors,
+    touched,
+    handleBlur,
+    resetForm,
+  } = useFormik({
+    initialValues: {
+      nombres: "",
+      apellidos: "",
+      empresa: "",
+      pais: "",
+      celular: "",
+      correo: "",
+    },
+    onSubmit: (values) => {
+      console.log(values);
+      RegistrarParticipantes({
+        apellidos: values.apellidos,
+        nombres: values.nombres,
+        correo: values.correo,
+        nroCelular: values.celular,
+        pais: values.pais,
+        empresa: values.empresa,
+      }).then((rpta) => {
+        if (rpta === "ok") {
+          if (loading === false) {
+            setIsAccepted(false);
+          }
+          openModal();
+          resetForm();
+        } else {
+          openModalCorreo();
+        }
+      });
+    },
+    validate,
+  });
 
   const handleConfirmation = () => {
     setIsAccepted(!isAccepted);
@@ -180,11 +199,13 @@ const FomularioRegistro = ({ openModal }) => {
       <button disabled></button>
       <div className="w-52  mt-10  mx-auto">
         <button
-          className={`bg-secondary-600 text-white pt-2 pb-3 flex justify-center
+          className={`${
+            isAccepted ? "bg-secondary-600" : "bg-gray-500 cursor-not-allowed"
+          } text-white pt-2 pb-3 flex justify-center
      items-center w-full text-lg md:text-xl  rounded-3xl hover:opacity-80 transition-all duration-300 
      focus:outline-none focus:shadow-outline `}
           disabled={!isAccepted}
-          onClick={openModal}
+          type="submit"
         >
           Enviar
         </button>
