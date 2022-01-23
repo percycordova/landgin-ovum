@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import InputText from "../inputs/InputText";
 import useGestionarRegistroParticipantes from "../../Gestionadores/useGestionarRegistroParticipantes";
 
-const FomularioRegistro = ({ openModal, openModalCorreo }) => {
+const FomularioRegistro = ({ openModal}) => {
   const { RegistrarParticipantes, loading } =
     useGestionarRegistroParticipantes();
   const validate = ({ nombres, apellidos, empresa, pais, celular, correo }) => {
@@ -75,15 +75,17 @@ const FomularioRegistro = ({ openModal, openModalCorreo }) => {
         pais: values.pais,
         empresa: values.empresa,
       }).then((rpta) => {
-        if (rpta === "ok") {
-          if (loading === false) {
-            setIsAccepted(false);
-          }
-          openModal();
-          resetForm();
-        } else {
-          openModalCorreo();
-        }
+        openModal();
+         resetForm();
+        // if (rpta === "ok") {
+        //   if (loading === false) {
+        //     setIsAccepted(false);
+        //   }
+        //   openModal();
+        //   resetForm();
+        // } else {
+        //   openModalCorreo();
+        // }
       });
     },
     validate,
