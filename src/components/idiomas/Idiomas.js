@@ -7,7 +7,7 @@ const Idiomas = () => {
   };
   return (
     <div className="flex justify-center md:justify-end md:mr-36 ">
-      <ul className="inline-flex  text-white relative z-70 font-sm gap-x-1 bg-black bg-opacity-5 py-2">
+      <ul className="inline-flex  text-white relative z-70 font-sm gap-x-1 bg-black bg-opacity-5 p-2">
         <li
           className="cursor-pointer hover:-translate-y-1 transform transition-all duration-300"
           onClick={() => cambiarIdioma("es")}
