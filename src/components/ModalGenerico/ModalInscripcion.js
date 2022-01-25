@@ -1,8 +1,8 @@
-import React from "react";
-import ModalCustomer from "./Modal";
-import { useTranslation } from "react-i18next";
+import React from 'react'
+import ModalCustomer from './Modal'
+import { useTranslation } from 'react-i18next'
 const ModalInscripcion = ({ isOpen, closeModal }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <>
       <ModalCustomer isOpen={isOpen} closeModal={closeModal}>
@@ -45,7 +45,6 @@ const ModalInscripcion = ({ isOpen, closeModal }) => {
         </div>
       </ModalCustomer>
     </>
-  );
-};
-
-export default ModalInscripcion;
+  )
+}
+export default ModalInscripcion

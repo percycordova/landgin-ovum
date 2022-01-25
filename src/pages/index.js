@@ -1,15 +1,15 @@
-import Head from "next/head";
-import Banner from "../components/banner/Banner";
-import ButtonWhassapt from "../components/buttons/ButtonWhassapt";
-import FomularioRegistro from "../components/Fomularios/FomularioRegistro";
-import Footer from "../components/footer/Footer";
-import ModalInscripcion from "../components/ModalGenerico/ModalInscripcion";
-import { useTranslation } from "react-i18next";
-import { useModal } from "../hooks/useModal";
+import Head from 'next/head'
+import Banner from '../components/banner/Banner'
+import ButtonWhassapt from '../components/buttons/ButtonWhassapt'
+import FomularioRegistro from '../components/Fomularios/FomularioRegistro'
+import Footer from '../components/footer/Footer'
+import ModalInscripcion from '../components/ModalGenerico/ModalInscripcion'
+import { useTranslation } from 'react-i18next'
+import { useModal } from '../hooks/useModal'
 
 const Home = () => {
-  const { t } = useTranslation();
-  const [isOpen, openModal, closeModal] = useModal(false);
+  const { t } = useTranslation()
+  const [isOpen, openModal, closeModal] = useModal(false)
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
   return (
     <div>
@@ -47,6 +47,6 @@ const Home = () => {
       <ModalInscripcion isOpen={isOpen} closeModal={closeModal} />
       {/* <ModalErrorCorreoRegistrado isOpen={isOpenModalCorreo} closeModal={closeModalCorreo}/> */}
     </div>
-  );
-};
-export default Home;
+  )
+}
+export default Home

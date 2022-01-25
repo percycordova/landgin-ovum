@@ -1,53 +1,52 @@
-import React, { useState } from "react";
-import Button from "../buttons/Button";
-import InputCheckCuadrado from "../inputCheck/InputCheckCuadrado";
-import { useFormik } from "formik";
-import InputText from "../inputs/InputText";
-import useGestionarRegistroParticipantes from "../../Gestionadores/useGestionarRegistroParticipantes";
-import { useTranslation } from "react-i18next";
-const FomularioRegistro = ({ openModal}) => {
-  const { t } = useTranslation();
-  const { RegistrarParticipantes, loading } =
-    useGestionarRegistroParticipantes();
+import React, { useState } from 'react'
+import InputCheckCuadrado from '../inputCheck/InputCheckCuadrado'
+import { useFormik } from 'formik'
+import InputText from '../inputs/InputText'
+import useGestionarRegistroParticipantes from '../../Gestionadores/useGestionarRegistroParticipantes'
+import { useTranslation } from 'react-i18next'
+const FomularioRegistro = ({ openModal }) => {
+  const { t } = useTranslation()
+  const { RegistrarParticipantes } =
+    useGestionarRegistroParticipantes()
   const validate = ({ nombres, apellidos, empresa, pais, celular, correo }) => {
-    const errors = {};
+    const errors = {}
     if (!nombres.trim()) {
-      errors.nombres = "Requerido";
+      errors.nombres = 'Requerido'
     } else if (nombres.trim().length <= 2) {
-      errors.nombres = "Minimo 3 caracteres";
+      errors.nombres = 'Minimo 3 caracteres'
     }
     if (!apellidos.trim()) {
-      errors.apellidos = "Requerido";
+      errors.apellidos = 'Requerido'
     } else if (apellidos.trim().length <= 5) {
-      errors.apellidos = "Minimo 6 caracteres";
+      errors.apellidos = 'Minimo 6 caracteres'
     }
 
     if (!empresa.trim()) {
-      errors.empresa = "Requerido";
+      errors.empresa = 'Requerido'
     } else if (empresa.trim().length <= 2) {
-      errors.empresa = "Minimo 3 caracteres";
+      errors.empresa = 'Minimo 3 caracteres'
     }
 
     if (!pais.trim()) {
-      errors.pais = "Requerido";
+      errors.pais = 'Requerido'
     } else if (pais.trim().length <= 2) {
-      errors.pais = "Minimo 3 caracteres";
+      errors.pais = 'Minimo 3 caracteres'
     }
 
     if (!celular.trim()) {
-      errors.celular = "Requerido";
+      errors.celular = 'Requerido'
     } else if (celular.trim().length <= 4) {
-      errors.celular = "Minimo 5 caracteres";
+      errors.celular = 'Minimo 5 caracteres'
     }
 
     if (!correo.trim()) {
-      errors.correo = "Requerido";
+      errors.correo = 'Requerido'
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(correo)) {
-      errors.correo = "Correo Inválido";
+      errors.correo = 'Correo Inválido'
     }
-    return errors;
-  };
-  const [isAccepted, setIsAccepted] = useState(false);
+    return errors
+  }
+  const [isAccepted, setIsAccepted] = useState(false)
   // console.log("valor de isAccepted", isAccepted);
   const {
     handleChange,
@@ -56,28 +55,28 @@ const FomularioRegistro = ({ openModal}) => {
     errors,
     touched,
     handleBlur,
-    resetForm,
+    resetForm
   } = useFormik({
     initialValues: {
-      nombres: "",
-      apellidos: "",
-      empresa: "",
-      pais: "",
-      celular: "",
-      correo: "",
+      nombres: '',
+      apellidos: '',
+      empresa: '',
+      pais: '',
+      celular: '',
+      correo: ''
     },
     onSubmit: (values) => {
-      console.log(values);
+      console.log(values)
       RegistrarParticipantes({
         apellidos: values.apellidos,
         nombres: values.nombres,
         correo: values.correo,
         nroCelular: values.celular,
         pais: values.pais,
-        empresa: values.empresa,
+        empresa: values.empresa
       }).then((rpta) => {
-        openModal();
-         resetForm();
+        openModal()
+        resetForm()
         // if (rpta === "ok") {
         //   if (loading === false) {
         //     setIsAccepted(false);
@@ -87,14 +86,14 @@ const FomularioRegistro = ({ openModal}) => {
         // } else {
         //   openModalCorreo();
         // }
-      });
+      })
     },
-    validate,
-  });
+    validate
+  })
 
   const handleConfirmation = () => {
-    setIsAccepted(!isAccepted);
-  };
+    setIsAccepted(!isAccepted)
+  }
   return (
     <form
       onSubmit={handleSubmit}
@@ -118,7 +117,7 @@ const FomularioRegistro = ({ openModal}) => {
 
         <div className="md:w-5/13 w-full">
           <label htmlFor="apellidos" className="text-xs text-gray-600">
-          {t('Apellidos.1')}*
+            {t('Apellidos.1')}*
           </label>
           <InputText
             id="apellidos"
@@ -134,7 +133,7 @@ const FomularioRegistro = ({ openModal}) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="empresa" className="text-xs text-gray-600">
-          {t('Empresa.1')}*
+            {t('Empresa.1')}*
           </label>
           <InputText
             id="empresa"
@@ -148,7 +147,7 @@ const FomularioRegistro = ({ openModal}) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="pais" className="text-xs text-gray-600">
-          {t('Pais.1')}*
+            {t('Pais.1')}*
           </label>
           <InputText
             id="pais"
@@ -162,7 +161,7 @@ const FomularioRegistro = ({ openModal}) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="celular" className="text-xs text-gray-600">
-          {t('Celular.1')}*
+            {t('Celular.1')}*
           </label>
           <InputText
             id="celular"
@@ -176,7 +175,7 @@ const FomularioRegistro = ({ openModal}) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="correo" className="text-xs text-gray-600">
-          {t('Correo.1')}*
+            {t('Correo.1')}*
           </label>
           <InputText
             id="correo"
@@ -202,9 +201,8 @@ const FomularioRegistro = ({ openModal}) => {
       <button disabled></button>
       <div className="w-52  mt-10  mx-auto">
         <button
-          className={`${
-            isAccepted ? "bg-secondary-600" : "bg-gray-500 cursor-not-allowed"
-          } text-white pt-2 pb-3 flex justify-center
+          className={`${isAccepted ? 'bg-secondary-600' : 'bg-gray-500 cursor-not-allowed'
+            } text-white pt-2 pb-3 flex justify-center
      items-center w-full text-lg md:text-xl  rounded-3xl hover:opacity-80 transition-all duration-300 
      focus:outline-none focus:shadow-outline `}
           disabled={!isAccepted}
@@ -214,7 +212,7 @@ const FomularioRegistro = ({ openModal}) => {
         </button>
       </div>
     </form>
-  );
-};
+  )
+}
 
-export default FomularioRegistro;
+export default FomularioRegistro

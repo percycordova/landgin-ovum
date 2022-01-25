@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 // import type { InputHTMLAttributes } from "react";
 
 // interface Props extends InputHTMLAttributes<HTMLInputElement> {}
@@ -12,7 +12,7 @@ const InputText = ({ ...props }) => {
         {...props}
       />
     </>
-  );
-};
+  )
+}
 
-export default InputText;
+export default InputText

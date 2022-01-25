@@ -1,15 +1,14 @@
-import i18n from 'i18next';
-import Backend from 'i18next-xhr-backend';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next'
+import Backend from 'i18next-xhr-backend'
+import LanguageDetector from 'i18next-browser-languagedetector'
+import { initReactI18next } from 'react-i18next'
 
-const fallbackLng = ['es'];
-const availableLanguages = ['en', 'es', 'por'];
-
+const fallbackLng = ['es']
+const availableLanguages = ['en', 'es', 'por']
 
 const options = {
   // order and from where user language should be detected
-  order: [ 'navigator', 'htmlTag', 'path', 'subdomain'],
+  order: ['navigator', 'htmlTag', 'path', 'subdomain'],
 
   // keys or params to lookup language from
   lookupQuerystring: 'lng',
@@ -49,9 +48,9 @@ i18n
     interpolation: {
       escapeValue: false
     },
-    react:{
-      useSuspense:false
-    },
-  });
+    react: {
+      useSuspense: false
+    }
+  })
 
-export default i18n;
+export default i18n

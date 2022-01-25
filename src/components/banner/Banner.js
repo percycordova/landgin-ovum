@@ -1,9 +1,9 @@
-import React from "react";
-import Idiomas from "../idiomas/Idiomas";
-import { useTranslation } from "react-i18next";
+import React from 'react'
+import Idiomas from '../idiomas/Idiomas'
+import { useTranslation } from 'react-i18next'
 
 const Banner = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <div className=" banner relative z-10 py-9 text-white">
       {/* version mobil */}
@@ -44,7 +44,7 @@ const Banner = () => {
           target="_blank"
           rel="noopener"
         >
-          {t("Button.1")}
+          {t('Button.1')}
         </a>
       </div>
       <div className="absolute z-20 bottom-0 banner__gradiente w-full h-4"></div>
@@ -61,7 +61,7 @@ const Banner = () => {
         className="hidden md:block absolute -bottom-44 left-0 opacity-20 "
       />
     </div>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner
