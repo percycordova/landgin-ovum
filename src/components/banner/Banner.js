@@ -1,9 +1,7 @@
 import React from 'react'
 import Idiomas from '../idiomas/Idiomas'
-import { useTranslation } from 'react-i18next'
 
-const Banner = () => {
-  const { t } = useTranslation()
+const Banner = ({ idiomas }) => {
   return (
     <div className=" banner relative z-10 py-9 text-white">
       {/* version mobil */}
@@ -25,11 +23,11 @@ const Banner = () => {
         <div className="banner__cards md:absolute md:-bottom-6  flex gap-x-2 md:gap-x-6 mt-4 md:mt-0 justify-center">
           {/* <img src="/asociacion.svg " />
           <img src="/anavih.svg " /> */}
-          <img src="/Logo-organizado2 1.svg " alt="" className="md:w-80 w-60"/>
+          <img src="/Logo-organizado2 1.svg " alt="" className="md:w-80 w-60" />
         </div>
       </div>
       <p className="font-bold text-2.5xl md:text-5xl  z-20 relative mt-10 text-center banner__fecha">
-       {t('Banner.1')}
+        {idiomas.Banner.value}
       </p>
       <p className="text-center z-20 text-base md:text-4xl relative mt-4 banner__san-pedro">
         San Pedro Sula, Honduras
@@ -44,7 +42,7 @@ const Banner = () => {
           target="_blank"
           rel="noopener"
         >
-          {t('Button.1')}
+          {idiomas.Button.value1}
         </a>
       </div>
       <div className="absolute z-20 bottom-0 banner__gradiente w-full h-4"></div>

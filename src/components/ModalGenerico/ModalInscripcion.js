@@ -1,8 +1,6 @@
 import React from 'react'
 import ModalCustomer from './Modal'
-import { useTranslation } from 'react-i18next'
-const ModalInscripcion = ({ isOpen, closeModal }) => {
-  const { t } = useTranslation()
+const ModalInscripcion = ({ isOpen, closeModal, idiomas }) => {
   return (
     <>
       <ModalCustomer isOpen={isOpen} closeModal={closeModal}>
@@ -30,17 +28,17 @@ const ModalInscripcion = ({ isOpen, closeModal }) => {
           </div>
 
           <p className="text-gray-600 text-2xl md:text-4.5xl font-medium text-center md:mt-3 mt-6 mb-4 font-roboto">
-            {t('ModalInscripcion.1')}
+            {idiomas.ModalInscripcion.value1}
           </p>
           <div className="text-center md:text-lg text-sm font-light">
             <p>
-            {t('ModalInscripcion.2')}
+            {idiomas.ModalInscripcion.value2}
             </p>
             <p className="my-4">
-            {t('ModalInscripcion.3')}
+            {idiomas.ModalInscripcion.value3}
             </p>
 
-            <p>{t('ModalInscripcion.4')}</p>
+            <p>{idiomas.ModalInscripcion.value4}</p>
           </div>
         </div>
       </ModalCustomer>

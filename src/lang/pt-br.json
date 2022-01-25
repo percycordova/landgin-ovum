@@ -1,0 +1,51 @@
+{
+  "Button": {
+    "value1": "Baixar Informação",
+    "value2": "Enviar"
+  },
+  "PermanezcaConectado": {
+    "value": "Permaneça Conectado"
+  },
+  "Nombres": {
+    "value": "Nomes"
+  },
+  "Apellidos": {
+    "value": "Sobrenomes"
+  },
+  "Empresa": {
+    "value": "O negócio"
+  },
+  "Correo": {
+    "value": "Correspondência"
+  },
+  "Celular": {
+    "value": "Celular"
+  },
+  "Pais": {
+    "value": "País"
+  },
+  "AceptoLa": {
+    "value": "Aceito a"
+  },
+  "PoliticaPrivacidad": {
+    "value": "política de privacidade"
+  },
+  "Informacion": {
+    "value": "Em formação"
+  },
+  "DerechosReservados": {
+    "value": "Todos os direitos reservados"
+  },
+  "DesarrolladoPor":{
+    "value":"Desenvolvido por JOTA Comunicação Abrangente"
+  },
+  "Banner":{
+    "value":"6 a 9 de Setembro"
+  },
+  "ModalInscripcion": {
+    "value1": "¡Obrigado!",
+    "value2": "¡Obrigado! Recebemos sua mensagem, nos vemos nos dias 6, 7, 8 e 9 de setembro.",
+    "value3": "Estamos felizes por você viver a experiência OVUM 2022 e participar deste evento internacional, que reunirá toda a comunidade avícola.",
+    "value4": "¡Em breve entraremos em contato novamente!"
+  }
+}

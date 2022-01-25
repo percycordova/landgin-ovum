@@ -1,12 +1,11 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 const InputCheckCuadrado = ({
   name,
   id,
   isAccepted = false,
-  handleConfirmation
+  handleConfirmation,
+  idiomas
 }) => {
-  const { t } = useTranslation()
   return (
     <div className="mt-7 flex items-center">
       <input type="checkbox" name={name} id={id} className="hidden" />
@@ -15,9 +14,9 @@ const InputCheckCuadrado = ({
         className="pl-8 relative cursor-pointer text-sm"
         onClick={handleConfirmation}
       >
-        {t('AceptoLa.1')} {' '}
+        {idiomas.AceptoLa.value} {' '}
         <span className="font-bold border-b border-black">
-          {t('PoliticaPrivacidad.1')}
+          {idiomas.PoliticaPrivacidad.value}
         </span>
         <span
           className={`absolute flex justify-center items-center w-6 h-6 
