@@ -4,8 +4,9 @@ import InputCheckCuadrado from "../inputCheck/InputCheckCuadrado";
 import { useFormik } from "formik";
 import InputText from "../inputs/InputText";
 import useGestionarRegistroParticipantes from "../../Gestionadores/useGestionarRegistroParticipantes";
-
+import { useTranslation } from "react-i18next";
 const FomularioRegistro = ({ openModal}) => {
+  const { t } = useTranslation();
   const { RegistrarParticipantes, loading } =
     useGestionarRegistroParticipantes();
   const validate = ({ nombres, apellidos, empresa, pais, celular, correo }) => {
@@ -102,7 +103,7 @@ const FomularioRegistro = ({ openModal}) => {
       <div className="flex  flex-col md:flex-row flex-wrap  justify-between">
         <div className="md:w-5/13 w-full">
           <label htmlFor="nombres" className="text-xs text-gray-600">
-            Nombres*
+            {t('Nombres.1')}*
           </label>
           <InputText
             id="nombres"
@@ -117,7 +118,7 @@ const FomularioRegistro = ({ openModal}) => {
 
         <div className="md:w-5/13 w-full">
           <label htmlFor="apellidos" className="text-xs text-gray-600">
-            Apellidos*
+          {t('Apellidos.1')}*
           </label>
           <InputText
             id="apellidos"
@@ -133,7 +134,7 @@ const FomularioRegistro = ({ openModal}) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="empresa" className="text-xs text-gray-600">
-            Empresa*
+          {t('Empresa.1')}*
           </label>
           <InputText
             id="empresa"
@@ -147,7 +148,7 @@ const FomularioRegistro = ({ openModal}) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="pais" className="text-xs text-gray-600">
-            País*
+          {t('Pais.1')}*
           </label>
           <InputText
             id="pais"
@@ -161,7 +162,7 @@ const FomularioRegistro = ({ openModal}) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="celular" className="text-xs text-gray-600">
-            Celular*
+          {t('Celular.1')}*
           </label>
           <InputText
             id="celular"
@@ -175,7 +176,7 @@ const FomularioRegistro = ({ openModal}) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="correo" className="text-xs text-gray-600">
-            Correo*
+          {t('Correo.1')}*
           </label>
           <InputText
             id="correo"
@@ -209,7 +210,7 @@ const FomularioRegistro = ({ openModal}) => {
           disabled={!isAccepted}
           type="submit"
         >
-          Enviar
+          {t('Button.2')}
         </button>
       </div>
     </form>

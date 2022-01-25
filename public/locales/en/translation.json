@@ -1,0 +1,54 @@
+{
+  "Button": {
+    "1": "Download Information",
+    "2": "Send"
+  },
+  "PermanezcaConectado": {
+    "1": "Stay Connected"
+  },
+  "Thanks": {
+    "1": "Thank you"
+  },
+  "Nombres": {
+    "1": "Names"
+  },
+  "Apellidos": {
+    "1": "Surnames"
+  },
+  "Empresa": {
+    "1": "Business"
+  },
+  "Correo": {
+    "1": "Mail"
+  },
+  "Celular": {
+    "1": "Cell phone"
+  },
+  "Pais": {
+    "1": "Country"
+  },
+  "AceptoLa": {
+    "1": "I accept the"
+  },
+  "PoliticaPrivacidad": {
+    "1": "Privacy Policy"
+  },
+  "Informacion": {
+    "1": "Information"
+  },
+  "DerechosReservados": {
+    "1": "All rights reserved"
+  },
+  "DesarrolladoPor": {
+    "1": "Developed by JOTA Comprehensive Communication"
+  },
+  "Banner": {
+    "1": "September 6 to 9"
+  },
+  "ModalInscripcion": {
+    "1": "¡Thanks!",
+    "2": "¡Thanks! We have received your message, see you on September 6, 7, 8 and 9.",
+    "3": "We are happy that you live the OVUM 2022 experience and participate in this international event, which will bring together the entire poultry community.",
+    "4": "¡Soon we will contact you again!"
+  }
+}
