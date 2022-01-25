@@ -208,7 +208,7 @@ const FomularioRegistro = ({ openModal, idiomas }) => {
           disabled={!isAccepted}
           type="submit"
         >
-          {idiomas.Button.value2}*
+          {idiomas.Button.value2}
         </button>
       </div>
     </form>

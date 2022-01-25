@@ -4,7 +4,7 @@ module.exports = {
 
     locales: ['en-US', 'es-pe', 'pt-br'],
 
-    defaultLocale: 'en-US'
+    defaultLocale: 'es-pe'
 
   }
 }

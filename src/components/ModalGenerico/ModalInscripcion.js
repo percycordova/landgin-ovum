@@ -18,11 +18,11 @@ const ModalInscripcion = ({ isOpen, closeModal, idiomas }) => {
               className="hidden  md:block"
             />
             <div className="flex gap-x-2 mt-6 md:hidden">
-              <img src="/asociacion.svg" alt="" className=" w-28 border p-0" />
+              <img src="/asociacion.svg" alt="" className=" w-28  p-0" />
               <img
                 src="/image55.svg"
                 alt=""
-                className="w-20 md:w-28 h-12 md:h-20 object-cove border"
+                className="w-20 md:w-28 h-12 md:h-20 object-cove "
               />
             </div>
           </div>
