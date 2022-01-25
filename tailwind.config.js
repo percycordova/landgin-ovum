@@ -12,7 +12,7 @@ const themeColors = {
     700: '#008077',
     800: '#004e47',
     900: '#001c19',
-    950:'#173D35',
+    950: '#173D35'
   },
   secondary: {
     50: '#ffe8f8',
@@ -26,14 +26,17 @@ const themeColors = {
     800: '#3e0f2b',
     900: '#1b0211'
   },
-  gray:{
-    500:'#c4c4c4',
-    600:'#4E5057'
+  gray: {
+    500: '#c4c4c4',
+    600: '#4E5057'
   }
 }
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: [
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}'
+  ],
   darkMode: 'class', // or 'media' or 'class'
   important: true,
   theme: {
@@ -96,7 +99,7 @@ module.exports = {
         '6xl': ['3.75rem', { lineHeight: '1' }],
         '7xl': ['4.5rem', { lineHeight: '1' }],
         '8xl': ['6rem', { lineHeight: '1' }],
-        '9xl': ['8rem', { lineHeight: '1' }],
+        '9xl': ['8rem', { lineHeight: '1' }]
       },
       fontWeight: {
         thin: '100',
@@ -107,12 +110,9 @@ module.exports = {
         semibold: '600',
         bold: '700',
         extrabold: '800',
-        black: '900',
+        black: '900'
       },
 
-
-
-      
       /**
        * Extended spacing values for width and height utilities.
        * This way, we won't be adding these to other utilities
@@ -187,17 +187,17 @@ module.exports = {
         '9/12': '75%',
         '10/12': '83.333333%',
         '11/12': '91.666667%',
-        '25':'6.25rem',
-        '26':'6.5rem',
-        '70':'17rem',
-        '100': '20rem',
-        '140': '37rem',
-        '200': '55rem',
+        25: '6.25rem',
+        26: '6.5rem',
+        70: '17rem',
+        100: '20rem',
+        140: '37rem',
+        200: '55rem',
         full: '100%',
         screen: '100vw',
         min: 'min-content',
         max: 'max-content',
-        fit: 'fit-content',
+        fit: 'fit-content'
       }),
       minWidth: (theme) => ({
         ...theme('spacing'),
