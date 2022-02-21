@@ -116,7 +116,7 @@ const FomularioRegistro = ({ openModal, idiomas }) => {
 
         <div className="md:w-5/13 w-full">
           <label htmlFor="apellidos" className="text-xs text-gray-600">
-          {idiomas.Apellidos.value}*
+            {idiomas.Apellidos.value}*
           </label>
           <InputText
             id="apellidos"
@@ -132,7 +132,7 @@ const FomularioRegistro = ({ openModal, idiomas }) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="empresa" className="text-xs text-gray-600">
-          {idiomas.Empresa.value}*
+            {idiomas.Empresa.value}*
           </label>
           <InputText
             id="empresa"
@@ -146,7 +146,7 @@ const FomularioRegistro = ({ openModal, idiomas }) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="pais" className="text-xs text-gray-600">
-          {idiomas.Pais.value}*
+            {idiomas.Pais.value}*
           </label>
           <InputText
             id="pais"
@@ -160,7 +160,7 @@ const FomularioRegistro = ({ openModal, idiomas }) => {
         </div>
         <div className="md:w-5/13 w-full">
           <label htmlFor="celular" className="text-xs text-gray-600">
-          {idiomas.Celular.value}*
+            {idiomas.Celular.value}*
           </label>
           <InputText
             id="celular"

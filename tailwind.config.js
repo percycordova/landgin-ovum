@@ -29,6 +29,9 @@ const themeColors = {
   gray: {
     500: '#c4c4c4',
     600: '#4E5057'
+  },
+  pink: {
+    700: '#B4038F'
   }
 }
 

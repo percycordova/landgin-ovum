@@ -1,6 +1,7 @@
 import { ApolloProvider } from '@apollo/client'
 import client from '../apollo/index'
 import '../styles/index.css'
+import 'swiper/css/bundle'
 const MyApp = ({ Component, pageProps }) => {
   return (
     <ApolloProvider client={client}>

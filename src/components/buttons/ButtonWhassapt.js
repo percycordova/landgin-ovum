@@ -6,6 +6,7 @@ const ButtonWhassapt = () => {
       className="fixed  bottom-14 md:bottom-2 right-2 z-30">
       <img src="/icons/wp.svg" alt="" />
     </a>
+
   )
 }
 
