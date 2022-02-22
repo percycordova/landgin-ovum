@@ -6,6 +6,8 @@ import Footer from '../components/footer/Footer'
 import ModalInscripcion from '../components/ModalGenerico/ModalInscripcion'
 import { useModal } from '../hooks/useModal'
 import Acerca from '../sections/landing/acerca'
+import Conferencia from '../sections/landing/conferencia'
+import Estructura from '../sections/landing/estructura'
 import LoUltimo from '../sections/landing/loUltimo'
 
 const Home = (props) => {
@@ -24,9 +26,11 @@ const Home = (props) => {
 
       <main className="">
         <Banner idiomas={props} />
-        <div className="md:w-9/12 mt-5 max-w-7xl mx-auto">
+        <div className="">
           <Acerca />
           <LoUltimo />
+          <Conferencia />
+          <Estructura />
           <section className=" p-8 flex flex-col justify-center items-center">
             <h6 className="text-xl sm:text-3xl text-center ">
               {props.PermanezcaConectado.value}

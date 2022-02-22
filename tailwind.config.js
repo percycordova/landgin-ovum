@@ -27,11 +27,24 @@ const themeColors = {
     900: '#1b0211'
   },
   gray: {
+    100: '#F4F5F7', // fondo
     500: '#c4c4c4',
     600: '#4E5057'
   },
   pink: {
     700: '#B4038F'
+  },
+  green: {
+    200: '#9DCD8A', // fondo de card
+    300: '#6CBE4C', // title
+    800: '#173D35' // fondo de card
+  },
+  blue: {
+    500: '#007598' // fondo de card
+  },
+  yellow: {
+    300: '#F3EB5F', // fondo de card
+    700: '#FFC60B' // fondo de card
   }
 }
 
@@ -211,7 +224,10 @@ module.exports = {
         ...theme('spacing'),
         ...theme('extendedSpacing'),
         screen: '100vw'
-      })
+      }),
+      boxShadow: {
+        '3xl': '-1px 1px 11px -1px rgba(0,0,0,0.51)'
+      }
     }
   },
   variants: {
