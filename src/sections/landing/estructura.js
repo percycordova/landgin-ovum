@@ -93,7 +93,7 @@ const Estructura = () => {
               <img className="w-full" src={item.img} alt="Sunset in the mountains" />
               <div className={`relative px-6 pt-4 pb-10 ${bgColor(item.id)} ${textColor(item.id)} rounded-b-2xl`}>
                 <div className="font-bold text-xl mb-2">{item.title}</div>
-                <p className="font-light text-sm lg:text-base w-4/5 text-justify">
+                <p className="font-light text-sm lg:text-lg w-4/5 text-justify">
                   {item.text}
                 </p>
                 <img src="/LineaCardIzq.svg" className='absolute -bottom-2 right-0' alt="" />

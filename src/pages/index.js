@@ -6,9 +6,12 @@ import Footer from '../components/footer/Footer'
 import ModalInscripcion from '../components/ModalGenerico/ModalInscripcion'
 import { useModal } from '../hooks/useModal'
 import Acerca from '../sections/landing/acerca'
+import BannerLanding from '../sections/landing/bannerLanding'
 import Conferencia from '../sections/landing/conferencia'
+import Conferencista from '../sections/landing/conferencista'
 import Estructura from '../sections/landing/estructura'
 import LoUltimo from '../sections/landing/loUltimo'
+import Programa from '../sections/landing/programa'
 
 const Home = (props) => {
   const [isOpen, openModal, closeModal] = useModal(false)
@@ -31,6 +34,9 @@ const Home = (props) => {
           <LoUltimo />
           <Conferencia />
           <Estructura />
+          <Programa />
+          <Conferencista />
+          <BannerLanding />
           <section className=" p-8 flex flex-col justify-center items-center">
             <h6 className="text-xl sm:text-3xl text-center ">
               {props.PermanezcaConectado.value}

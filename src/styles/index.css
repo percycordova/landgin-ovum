@@ -108,3 +108,7 @@
   width: 20px !important;
   height: 20px !important;
 }
+
+.custom_img {
+  background-image: url('../../public/banner.png');
+}

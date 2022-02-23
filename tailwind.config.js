@@ -35,16 +35,25 @@ const themeColors = {
     700: '#B4038F'
   },
   green: {
+    100: '#D5EFCA', // fondo horario
     200: '#9DCD8A', // fondo de card
     300: '#6CBE4C', // title
+    400: '#6ABF4A', // border bottom de card
     800: '#173D35' // fondo de card
   },
   blue: {
+    300: '#B5D2DB', // fondo horario
     500: '#007598' // fondo de card
   },
   yellow: {
     300: '#F3EB5F', // fondo de card
     700: '#FFC60B' // fondo de card
+  },
+  brown: {
+    300: '#D9CAA5' // fondo horario
+  },
+  purple: {
+    300: '#DABEDC' // fondo horario
   }
 }
 
