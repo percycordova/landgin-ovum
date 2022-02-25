@@ -99,16 +99,6 @@
   align-items: center;
 }
 
-.swiper-button-prev{
-   width: 20px;
-   height: 20px;
-}
-.swiper-button-next{
-  
-  width: 20px !important;
-  height: 20px !important;
-}
-
 .custom_img {
   background-image: url('../../public/banner.png');
 }

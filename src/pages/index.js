@@ -6,11 +6,16 @@ import Footer from '../components/footer/Footer'
 import ModalInscripcion from '../components/ModalGenerico/ModalInscripcion'
 import { useModal } from '../hooks/useModal'
 import Acerca from '../sections/landing/acerca'
+import Auspiciadores from '../sections/landing/auspiciadores'
 import BannerLanding from '../sections/landing/bannerLanding'
 import Conferencia from '../sections/landing/conferencia'
 import Conferencista from '../sections/landing/conferencista'
+import Conoce from '../sections/landing/conoce'
 import Estructura from '../sections/landing/estructura'
+import Feria from '../sections/landing/feria'
 import LoUltimo from '../sections/landing/loUltimo'
+import Organizadores from '../sections/landing/organizadores'
+import Patrocinadores from '../sections/landing/patrocinadores'
 import Programa from '../sections/landing/programa'
 
 const Home = (props) => {
@@ -37,6 +42,11 @@ const Home = (props) => {
           <Programa />
           <Conferencista />
           <BannerLanding />
+          <Conoce />
+          <Feria />
+          <Patrocinadores />
+          <Auspiciadores />
+          <Organizadores />
           <section className=" p-8 flex flex-col justify-center items-center">
             <h6 className="text-xl sm:text-3xl text-center ">
               {props.PermanezcaConectado.value}

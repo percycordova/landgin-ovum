@@ -45,10 +45,10 @@ const Conferencista = () => {
               }
             }}
             modules={[Navigation, Pagination]}
-            className="mySwiper"
+            className='mySwiper'
           >
             <SwiperSlide>
-              <div className="flex items-center justify-center  mb-3">
+              <div className="flex items-center justify-center  pb-10">
                 <div className="relative bg-white font-semibold text-center rounded-3xl border  px-5 pt-5 pb-10 max-w-xs">
                   <img className="mb-3 w-60 h-60   mx-auto" src="/conferencista-1.png" alt="product designer" />
                   <h1 className="text-2xl text-black"> Ken Huges (Irlanda)</h1>
