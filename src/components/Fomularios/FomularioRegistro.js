@@ -96,7 +96,7 @@ const FomularioRegistro = ({ openModal, idiomas }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className=" md:w-8/12 mt-5 max-w-5xl mx-auto  bg-white"
+      className=" w-11/12 md:w-8/12 mt-5 max-w-5xl mx-auto  bg-white"
     >
       <div className="flex  flex-col md:flex-row flex-wrap  justify-between">
         <div className="md:w-5/13 w-full">

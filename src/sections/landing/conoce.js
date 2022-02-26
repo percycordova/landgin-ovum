@@ -58,16 +58,25 @@ const Conoce = () => {
           </div>
         </div>
       </div>
-      <div className=" w-full md:w-9/12 mt-5 max-w-7xl mx-auto p-3 lg:p-0">
-        <div className="">
+      <div className=" w-full md:w-9/12 mt-5 max-w-7xl mx-auto p-0 lg:p-0">
+        <div className="w-full mx-auto">
           <Swiper
             style={{
               '--swiper-navigation-color': '#6CBE4C',
-              '--swiper-pagination-color': '#6CBE4C'
+              '--swiper-navigation-size': '20px',
+              '--swiper-pagination-color': '#6CBE4C',
+              '--swiper-pagination-active-color': '#6CBE4C',
+              '--swiper-pagination-background': '#fff',
+              '--swiper-pagination-active-background': '#fff',
+              '--swiper-pagination-border-color': '#fff',
+              '--swiper-pagination-size': '10px',
+              '--swiper-pagination-spacing': '10px',
+              '--swiper-pagination-bullet-size': '10px'
             }}
             slidesPerView={1}
             spaceBetween={30}
             navigation={true}
+            loop={true}
             pagination={{
               clickable: true
             }}
@@ -89,19 +98,23 @@ const Conoce = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <div className="mx-10 mt-5">
+              <div className=" pb-10 pt-3">
                 <img src="/avianca-1.png" className='w-full h-auto' alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/avianca-2.png" className='w-full h-auto' alt="" />
+              <div className=" pb-10 pt-3">
+                <img src="/avianca-2.png" className='w-full h-auto' alt="" />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/avianca-3.png" className='w-full h-auto' alt="" />
+              <div className=" pb-10 pt-3">
+                <img src="/avianca-3.png" className='w-full h-auto' alt="" />
+              </div>
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="mt-7">
+        <div className="mt-7 p-8">
           <h2 className="text-green-400 text-2xl mb-5 lg:mb-3 text-left">
             Avianca
           </h2>

@@ -61,27 +61,27 @@ const Patrocinadores = () => {
             className='mySwiper'
           >
             <SwiperSlide>
-              <div className="mx-15 lg:mx-0">
+              <div className="mx-15 md:mx-0 lg:mx-0">
                 <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6  h-auto' alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mx-15 lg:mx-0">
+              <div className="mx-15 md:mx-0">
                 <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mx-15 lg:mx-0">
+              <div className="mx-15 md:mx-0">
                 <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mx-15 lg:mx-0">
+              <div className="mx-15 md:mx-0">
                 <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mx-15 lg:mx-0">
+              <div className="mx-15 md:mx-0">
                 <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
               </div>
             </SwiperSlide>
