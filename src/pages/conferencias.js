@@ -4,12 +4,12 @@ import ButtonWhassapt from '../components/buttons/ButtonWhassapt'
 /* import FomularioRegistro from '../components/Fomularios/FomularioRegistro' */
 import Footer from '../components/footer/Footer'
 import { useModal } from '../hooks/useModal'
+import Grid from '../sections/conferencia/grid'
 import BannerLanding from '../sections/landing/bannerLanding'
 import Organizadores from '../sections/landing/organizadores'
 import Patrocinadores from '../sections/landing/patrocinadores'
-import Grid from '../sections/loUltimo/grid'
 
-const LoUltimo = (props) => {
+const Conferencia = (props) => {
   const [isOpen, openModal, closeModal] = useModal(false)
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
   return (
@@ -55,7 +55,7 @@ const LoUltimo = (props) => {
     </div>
   )
 }
-export default LoUltimo
+export default Conferencia
 
 // eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {

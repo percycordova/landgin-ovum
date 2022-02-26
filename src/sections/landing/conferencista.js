@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -81,9 +82,11 @@ const Conferencista = () => {
         </div>
         {/* fin slider en mobile */}
         <div className="flex justify-center mt-8 ">
-          <button className="bg-pink-700 text-white text-lg font-normal py-1 max-w-52 w-full rounded-full z-10">
-            Ver todo
-          </button>
+          <Link href="/conferencista">
+            <button className="bg-pink-700 text-white text-lg font-normal py-1 max-w-52 w-full rounded-full z-10">
+              Ver todo
+            </button>
+          </Link>
         </div>
       </div>
     </section>

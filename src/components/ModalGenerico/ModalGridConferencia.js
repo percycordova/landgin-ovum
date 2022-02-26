@@ -9,7 +9,7 @@ import 'swiper/css/navigation'
 // import required modules
 import { Navigation } from 'swiper'
 
-const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
+const ModalGridConferencia = ({ isOpen, closeModal, data, initialSlide, size }) => {
   const swiper = useRef(null)
   const setSwiper = (newSwiper) => {
     swiper.current = newSwiper
@@ -42,25 +42,30 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
           >
             {data.map(item => (
               <SwiperSlide key={item.id} >
-                <div className="w-full mx-auto max-w-lg overflow-hidden " >
-                  <div className="relative">
-                    <img className="w-full h-90 object-cover" src={item.img} alt="Sunset in the mountains" />
-                    <div className="absolute bottom-0 w-full px-4 py-1 bg-gray-600 bg-opacity-80 text-white ">
-                      <h3 className='text-xl '>Visítanos en</h3>
-                      <h3 className='text-lg font-extralight'>IPPE 2022 - Booth B6981 </h3>
+                <div className=" mx-auto w-full  h-72 overflow-hidden " >
+                  <div className='relative  pt-4 mx-12 pb-10 rounded-b-2xl'>
+                    <div className="">
+                      <h6 className="text-sm font-medium text-blue-500">{item.dia}</h6>
                     </div>
+                    <div className="font-bold text-xl mb-2">{item.title}</div>
+                    <p className="font-light text-sm lg:text-base mt-4 text-justify">
+                      {item.text}
+                    </p>
                   </div>
+                </div>
+
+                {/* <div className=" mx-auto max-w-80 h-72 rounded-2xl overflow-hidden border cursor-pointer" onClick={onClick}>
                   <div className='relative px-6 pt-4 pb-10 rounded-b-2xl'>
                     <div className="">
                       <h6 className="text-sm font-medium text-blue-500">{item.dia}</h6>
                     </div>
                     <div className="font-bold text-xl mb-2">{item.title}</div>
-                    <p className="font-light text-sm lg:text-base mt-4 w-4/5 text-justify">
+                    <p className="font-light text-base lg:text-lg mt-7  text-justify">
                       {item.text}
                     </p>
                     <img src="/LineaCardIzq.svg" className='absolute -bottom-2 right-0' alt="" />
                   </div>
-                </div>
+                </div> */}
               </SwiperSlide>
             ))}
           </Swiper>
@@ -70,4 +75,4 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
   )
 }
 
-export default ModalGrid
+export default ModalGridConferencia

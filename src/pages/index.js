@@ -75,6 +75,7 @@ const Home = (props) => {
 }
 export default Home
 
+// eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {
   const response = await import(`../lang/${locale}.json`)
   return {
