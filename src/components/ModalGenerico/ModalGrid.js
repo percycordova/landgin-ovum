@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ModalCustomer from './Modal'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
