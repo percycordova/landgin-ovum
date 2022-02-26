@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ModalCustomer from './Modal'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -8,7 +8,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 // import required modules
-import { Navigation } from 'swiper'
+import { Navigation, Virtual } from 'swiper'
 
 const ModalGrid = ({ isOpen, closeModal, data, initialSlide }) => {
   console.log(initialSlide)
@@ -21,20 +21,21 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide }) => {
               '--swiper-navigation-color': '#C4C4C4',
               height: '100%'
             }}
-            loop={true}
-            grabCursor={true}
             initialSlide={initialSlide}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false
-            }}
+            // loop={true}
+            // grabCursor={true}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false
+            // }}
             slidesPerView={1}
             spaceBetween={30}
-            modules={[Navigation]}
+            virtual
+            modules={[Navigation, Virtual]}
             className='mySwiper'
           >
             {data.map(item => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.id} virtualIndex={item.id}>
                 <div className=" mx-auto max-w-sm rounded-2xl overflow-hidden border cursor-pointer" >
                   <img className="w-full h-64 object-cover" src={item.img} alt="Sunset in the mountains" />
                   <div className='relative px-6 pt-4 pb-10 rounded-b-2xl'>

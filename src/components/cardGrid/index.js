@@ -1,12 +1,12 @@
 import React from 'react'
 
-const CardGrid = ({ openModal, item, setInitialSlide }) => {
-  const positionSlider = (item) => {
-    openModal()
-    setInitialSlide(item - 1)
-  }
+const CardGrid = ({ item, onClick }) => {
+  // const positionSlider = (item) => {
+  //   setInitialSlide(item - 1)
+  //   openModal()
+  // }
   return (
-    <div className=" mx-auto max-w-sm rounded-2xl overflow-hidden border cursor-pointer" onClick={() => positionSlider(item.id)}>
+    <div className=" mx-auto max-w-sm rounded-2xl overflow-hidden border cursor-pointer" onClick={onClick}>
       <img className="w-full h-64 object-cover" src={item.img} alt="Sunset in the mountains" />
       <div className='relative px-6 pt-4 pb-10 rounded-b-2xl'>
         <div className="">
