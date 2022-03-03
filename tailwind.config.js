@@ -108,7 +108,11 @@ module.exports = {
         50: '12.5rem',
         90: '22.5rem'
       },
-
+      margin: {
+        '-100': '-400px',
+        '-110': '-440px',
+        '-120': '-480px'
+      },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],
         sm: ['0.875rem', { lineHeight: '1.25rem' }],
@@ -173,7 +177,9 @@ module.exports = {
         480: '120rem'
       },
       height: (theme) => ({
-        ...theme('extendedSpacing')
+        ...theme('extendedSpacing'),
+        73: '18.8rem',
+        74: '19rem'
       }),
       minHeight: (theme) => ({
         ...theme('spacing'),
