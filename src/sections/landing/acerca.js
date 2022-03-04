@@ -6,6 +6,7 @@ const Acerca = () => {
       <div className=" md:w-9/12 mt-5 max-w-7xl mx-auto  bg-white">
         <h6 className="text-3xl lg:text-4xl text-center font-medium mb-8">
           ACERCA DE OVUM
+
         </h6>
         <div className="w-full flex flex-col lg:flex-row gap-8">
           <div className="w-full">

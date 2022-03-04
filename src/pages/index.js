@@ -5,7 +5,7 @@ import FomularioRegistro from '../components/Fomularios/FomularioRegistro'
 import Footer from '../components/footer/Footer'
 import ModalInscripcion from '../components/ModalGenerico/ModalInscripcion'
 import { useModal } from '../hooks/useModal'
-import Acerca from '../sections/landing/acerca'
+import Acerca from '../sections/landing/Acerca'
 import Auspiciadores from '../sections/landing/auspiciadores'
 import BannerLanding from '../sections/landing/bannerLanding'
 import Conferencia from '../sections/landing/conferencia'
@@ -26,7 +26,7 @@ const Home = (props) => {
       <Head>
         <title>OVUM 2022</title>
         <meta
-          name="description"
+          name="description "
           content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
         />
         <link rel="icon" href="/favicon.ico" />
