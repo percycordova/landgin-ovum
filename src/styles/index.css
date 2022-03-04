@@ -145,3 +145,9 @@
 .custom_img {
   background-image: url("../../public/banner.png");
 }
+.swiper-button-next{
+right: 0px !important;
+}
+.swiper-button-prev{
+left: 0px !important;
+}

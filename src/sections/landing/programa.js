@@ -140,7 +140,7 @@ const Programa = () => {
             </div>
           </div>
           <div className="col-span-12">
-            <div className="flex justify-center text-blue-500 items-center font-medium text-lg uppercase text-center mb-2 py-1 h-11">
+            <div className="flex justify-center text-blue-500 items-center font-semibold text-lg uppercase text-center mb-2 py-1 h-11">
               Almuerzo 12:00 - 15:00
             </div>
           </div>

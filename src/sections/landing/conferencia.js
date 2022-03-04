@@ -12,7 +12,7 @@ import 'swiper/css/pagination'
 import { Navigation, Pagination } from 'swiper'
 const Conferencia = () => {
   return (
-    <section className="relative bg-gray-100 flex flex-col justify-center items-center py-16">
+    <section className="relative bg-gray-100 flex flex-col justify-center items-center py-16 px-2">
       <div className="absolute bottom-0 left-0">
         <img src="/LineaConferenciaIzq.svg" className='w-30 md:w-40 ' alt="" />
       </div>
@@ -48,7 +48,7 @@ const Conferencia = () => {
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 24
+                spaceBetween: -32
 
               }
             }}
@@ -57,7 +57,7 @@ const Conferencia = () => {
           >
 
             <SwiperSlide>
-              <div className="w-full p-2 h-80 px-10 lg:px-0">
+              <div className="w-full p-2 h-80 px-8 pb-1">
                 <div className=" bg-white  h-full px-6 lg:px-8 py-5 rounded-b-3xl rounded-tl-3xl shadow-md ">
                   <div className="">
                     <h4 className='text-green-300 '>Dia 1</h4>
@@ -70,7 +70,7 @@ const Conferencia = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full p-2 h-80 px-10 lg:px-0">
+              <div className="w-full p-2 h-80 px-8">
                 <div className=" bg-white  h-full px-6 lg:px-8 py-5 rounded-b-3xl rounded-tl-3xl shadow-md ">
                   <div className="">
                     <h4 className='text-green-300 '>Dia 1</h4>
@@ -83,7 +83,7 @@ const Conferencia = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full p-2 h-80 px-10 lg:px-0">
+              <div className="w-full p-2 h-80 px-8">
                 <div className=" bg-white  h-full px-6 lg:px-8 py-5 rounded-b-3xl rounded-tl-3xl shadow-md ">
                   <div className="">
                     <h4 className='text-green-300 '>Dia 1</h4>
@@ -96,7 +96,7 @@ const Conferencia = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full p-2 h-80 px-10 lg:px-0">
+              <div className="w-full p-2 h-80 px-8">
                 <div className=" bg-white  h-full px-6 lg:px-8 py-5 rounded-b-3xl rounded-tl-3xl shadow-md ">
                   <div className="">
                     <h4 className='text-green-300 '>Dia 2</h4>
@@ -109,7 +109,7 @@ const Conferencia = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full p-2 h-80 px-10 lg:px-0 ">
+              <div className="w-full p-2 h-80 px-8 ">
                 <div className=" bg-white  h-full px-6 lg:px-8 py-5 rounded-b-3xl rounded-tl-3xl shadow-md ">
                   <div className="">
                     <h4 className='text-green-300 '>Dia 3</h4>

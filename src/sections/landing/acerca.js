@@ -22,7 +22,7 @@ const Acerca = () => {
             </p>
             <div className="text-lg font-normal text-black mt-5 lg:mt-1">
               <p>Luis Eduardo Valle</p>
-              <p>Presidente Anavih - Ovum 2022</p>
+              <p className='text-gray-700'>Presidente Anavih - Ovum 2022</p>
             </div>
           </div>
         </div>
