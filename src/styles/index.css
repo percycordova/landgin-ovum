@@ -19,6 +19,48 @@
   min-height: 100%;
   background: linear-gradient(3.57deg, #1A3C34 -9.22%, rgba(26, 60, 52, 0) 123.08%);
 } */
+.pp {
+  /* background-image: url("/fondo-mobile.svg"); */
+  /* border:1px solid red; */
+  overflow: hidden;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(
+    177.81deg,
+    #345259 38.23%,
+    #223e47 53.63%,
+    #0a222f 79.08%,
+    #011826 93.89%
+  );
+}
+.pp2 {
+  min-width: 100%;
+  height: 200px;
+  object-fit: fill;
+}
+.fondo-nb-top-desktop {
+  height: 400px;
+  min-width: 100%;
+}
+.btn-banner {
+  left: 43%;
+}
+.linea {
+  min-width: 100vw;
+  height: 400px;
+  object-fit: fill;
+}
+/* .banner_gradiente_2 {
+  background: linear-gradient(
+    177.81deg,
+    #345259 38.23%,
+    #223e47 53.63%,
+    #0a222f 79.08%,
+    #011826 93.89%
+  );
+} */
 .banner__cards {
   right: 47%;
 }
@@ -78,14 +120,14 @@
   padding-bottom: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  scrollbar-color: #B4038F rgba(0, 0, 0, 0.75);
+  scrollbar-color: #b4038f rgba(0, 0, 0, 0.75);
   scrollbar-width: thin;
 }
 .modalClose {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  background: #B4038F;
+  background: #b4038f;
   color: white;
   font-size: 2rem;
   width: 3rem;
@@ -100,5 +142,5 @@
 }
 
 .custom_img {
-  background-image: url('../../public/banner.png');
+  background-image: url("../../public/banner.png");
 }
