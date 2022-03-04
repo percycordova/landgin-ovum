@@ -67,7 +67,7 @@ const Banner = ({ idiomas }) => {
           <p className="text-center z-20 text-base md:text-4xl relative  banner__san-pedro">
             San Pedro Sula, Honduras
           </p>
-          <div className="flex justify-center  z-30 mt-6 lg:absolute lg:bottom-0 xl:bottom-10 btn-banner  w-64 mx-auto  ">
+          <div className="flex justify-center  z-30 mt-6 lg:absolute lg:bottom-0 xl:bottom-13 btn-banner  w-64 mx-auto  ">
             <a
               className={`bg-secondary-600 text-white pt-2 pb-3 flex justify-center
                        items-center w-full text-lg md:text-xl  rounded-3xl 
