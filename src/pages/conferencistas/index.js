@@ -1,16 +1,17 @@
 import Head from 'next/head'
-import Banner from '../components/banner/Banner'
-import ButtonWhassapt from '../components/buttons/ButtonWhassapt'
-/* import FomularioRegistro from '../components/Fomularios/FomularioRegistro' */
-import Footer from '../components/footer/Footer'
-import { useModal } from '../hooks/useModal'
-import Grid from '../sections/conferencia/grid'
-import BannerLanding from '../sections/landing/bannerLanding'
-import Organizadores from '../sections/landing/organizadores'
-import Patrocinadores from '../sections/landing/patrocinadores'
+import ButtonWhassapt from '../../components/buttons/ButtonWhassapt'
+import FomularioRegistro from '../../components/Fomularios/FomularioRegistro'
+import Footer from '../../components/footer/Footer'
+import ModalInscripcion from '../../components/ModalGenerico/ModalInscripcion'
+import { useModal } from '../../hooks/useModal'
+import Grid from '../../sections/conferencista/grid'
+import BannerLanding from '../../sections/landing/bannerLanding'
+import Organizadores from '../../sections/landing/organizadores'
+import Patrocinadores from '../../sections/landing/patrocinadores'
 
 const Conferencista = (props) => {
   const [isOpen, openModal, closeModal] = useModal(false)
+  const [isOpenInscripcion, openModalInscripcion, closeModalInscripcion] = useModal(false)
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
   return (
     <div className=''>
@@ -24,7 +25,6 @@ const Conferencista = (props) => {
       </Head>
 
       <main className="">
-        <Banner idiomas={props} />
         <div className="">
           <Grid {...{ openModal, closeModal, isOpen }} />
           <BannerLanding />
@@ -34,7 +34,7 @@ const Conferencista = (props) => {
             <h6 className="text-xl sm:text-3xl text-center ">
               {props.PermanezcaConectado.value}
             </h6>
-            {/* <FomularioRegistro openModal={openModal} idiomas={props} /> */}
+            <FomularioRegistro openModal={openModalInscripcion} idiomas={props} />
             <div className="md:w-9/12  w-full border-b border-gray-500 mt-10"></div>
             <div className="text-center mt-8">
               <p className="text-3xl mb-3">{props.Informacion.value}</p>
@@ -51,6 +51,10 @@ const Conferencista = (props) => {
       </main>
       <Footer idiomas={props} />
       <ButtonWhassapt />
+      <ModalInscripcion
+        isOpen={isOpenInscripcion}
+        closeModal={closeModalInscripcion}
+        idiomas={props} />
       {/* <ModalErrorCorreoRegistrado isOpen={isOpenModalCorreo} closeModal={closeModalCorreo}/> */}
     </div>
   )
@@ -58,7 +62,7 @@ const Conferencista = (props) => {
 export default Conferencista
 // eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {
-  const response = await import(`../lang/${locale}.json`)
+  const response = await import(`../../lang/${locale}.json`)
   return {
     props: {
       Correo: response.default.Correo,

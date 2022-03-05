@@ -1,25 +1,16 @@
 import Head from 'next/head'
-import Banner from '../components/banner/Banner'
-import ButtonWhassapt from '../components/buttons/ButtonWhassapt'
-import FomularioRegistro from '../components/Fomularios/FomularioRegistro'
-import Footer from '../components/footer/Footer'
-import ModalInscripcion from '../components/ModalGenerico/ModalInscripcion'
-// import ModalErrorCorreoRegistrado from '../components/ModalGenerico/ModalErrorCorreoRegistrado'
-import { useModal } from '../hooks/useModal'
-import Acerca from '../sections/landing/acerca'
-import Auspiciadores from '../sections/landing/auspiciadores'
-import BannerLanding from '../sections/landing/bannerLanding'
-import Conferencia from '../sections/landing/conferencia'
-import Conferencista from '../sections/landing/conferencista'
-import Conoce from '../sections/landing/conoce'
-import Estructura from '../sections/landing/estructura'
-import Feria from '../sections/landing/feria'
-import LoUltimo from '../sections/landing/loUltimo'
-import Organizadores from '../sections/landing/organizadores'
-import Patrocinadores from '../sections/landing/patrocinadores'
-import Programa from '../sections/landing/programa'
+import ButtonWhassapt from '../../components/buttons/ButtonWhassapt'
+import FomularioRegistro from '../../components/Fomularios/FomularioRegistro'
+import Footer from '../../components/footer/Footer'
+import ModalInscripcion from '../../components/ModalGenerico/ModalInscripcion'
+import { useModal } from '../../hooks/useModal'
+import Grid from '../../sections/conferencia/grid'
+import BannerLanding from '../../sections/landing/bannerLanding'
+import Organizadores from '../../sections/landing/organizadores'
+import Patrocinadores from '../../sections/landing/patrocinadores'
 
-const Home = (props) => {
+const Conferencia = (props) => {
+  const [isOpen, openModal, closeModal] = useModal(false)
   const [isOpenInscripcion, openModalInscripcion, closeModalInscripcion] = useModal(false)
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
   return (
@@ -27,26 +18,17 @@ const Home = (props) => {
       <Head>
         <title>OVUM 2022</title>
         <meta
-          name="description "
+          name="description"
           content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="">
-        <Banner idiomas={props} />
         <div className="">
-          <Acerca />
-          <LoUltimo />
-          <Conferencia />
-          <Estructura />
-          <Programa />
-          <Conferencista />
+          <Grid {...{ openModal, closeModal, isOpen }} />
           <BannerLanding />
-          <Conoce />
-          <Feria />
           <Patrocinadores />
-          <Auspiciadores />
           <Organizadores />
           <section className=" p-8 flex flex-col justify-center items-center">
             <h6 className="text-xl sm:text-3xl text-center ">
@@ -69,16 +51,19 @@ const Home = (props) => {
       </main>
       <Footer idiomas={props} />
       <ButtonWhassapt />
-      <ModalInscripcion isOpen={isOpenInscripcion} closeModal={closeModalInscripcion} idiomas={props} />
+      <ModalInscripcion
+        isOpen={isOpenInscripcion}
+        closeModal={closeModalInscripcion}
+        idiomas={props} />
       {/* <ModalErrorCorreoRegistrado isOpen={isOpenModalCorreo} closeModal={closeModalCorreo}/> */}
     </div>
   )
 }
-export default Home
+export default Conferencia
 
 // eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {
-  const response = await import(`../lang/${locale}.json`)
+  const response = await import(`../../lang/${locale}.json`)
   return {
     props: {
       Correo: response.default.Correo,

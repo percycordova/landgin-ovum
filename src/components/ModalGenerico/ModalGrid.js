@@ -22,7 +22,7 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
   return (
     <>
       <ModalCustomer isOpen={isOpen} closeModal={closeModal} size={size}>
-        <div className="">
+        <div className="sm:px-2 pt-6 max-w-140">
           <Swiper
             /*  style={{
                '--swiper-navigation-color': '#C4C4C4'
@@ -42,7 +42,7 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
           >
             {data.map(item => (
               <SwiperSlide key={item.id} >
-                <div className="w-full mx-auto max-w-lg overflow-hidden " >
+                <div className="w-full mx-auto max-w-lg overflow-hidden sm:px-8" >
                   <div className="relative">
                     <img className="w-full h-90 object-cover" src={item.img} alt="Sunset in the mountains" />
                     <div className="absolute bottom-0 w-full px-4 py-1 bg-gray-600 bg-opacity-80 text-white ">

@@ -50,10 +50,10 @@ const Grid = ({ openModal, closeModal, isOpen }) => {
     <>
       <section className="relative bg-white flex flex-col justify-center items-center py-14">
         <div className="w-full md:w-9/12 mt-5 max-w-7xl mx-auto p-8 lg:p-0">
-          <h6 className="text-3xl lg:text-4xl text-center font-medium mb-8 text-blue-500">
-            CONFERENCISTA
+          <h6 className="text-3xl lg:text-4xl text-center font-medium mb-8 ">
+            CONFERENCIAS
           </h6>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 ">
             {data.map((item, i) => (
               <CardGridConferencia key={item.id} item={item} onClick={() => {
                 console.log({ i })
@@ -65,7 +65,7 @@ const Grid = ({ openModal, closeModal, isOpen }) => {
           </div>
         </div>
       </section>
-      <ModalGridConferencia isOpen={isOpen} closeModal={closeModal} data={data} size='small' initialSlide={initialSlide} setInitialSlide={setInitialSlide} />
+      <ModalGridConferencia isOpen={isOpen} closeModal={closeModal} data={data} initialSlide={initialSlide} setInitialSlide={setInitialSlide} />
     </>
   )
 }

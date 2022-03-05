@@ -11,7 +11,7 @@ import 'swiper/css/pagination'
 
 // import required modules
 import { EffectFade, Navigation, Pagination } from 'swiper'
-/* import Button from '../../components/buttons/Button' */
+// import Button from '../../../components/buttons/Button'
 
 const LoUltimo = () => {
   return (

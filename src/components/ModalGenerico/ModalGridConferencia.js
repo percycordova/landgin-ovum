@@ -22,7 +22,7 @@ const ModalGridConferencia = ({ isOpen, closeModal, data, initialSlide, size }) 
   return (
     <>
       <ModalCustomer isOpen={isOpen} closeModal={closeModal} size={size}>
-        <div className="">
+        <div className="max-w-120 px-0">
           <Swiper
             /*  style={{
                '--swiper-navigation-color': '#C4C4C4'
@@ -42,8 +42,8 @@ const ModalGridConferencia = ({ isOpen, closeModal, data, initialSlide, size }) 
           >
             {data.map(item => (
               <SwiperSlide key={item.id} >
-                <div className=" mx-auto w-full  h-72 overflow-hidden " >
-                  <div className='relative  pt-4 mx-12 pb-10 rounded-b-2xl'>
+                <div className=" mx-auto w-full  h-auto overflow-hidden " >
+                  <div className='relative  pt-4 px-8 sm:mx-12 pb-10 rounded-b-2xl'>
                     <div className="">
                       <h6 className="text-sm font-medium text-blue-500">{item.dia}</h6>
                     </div>
