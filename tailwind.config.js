@@ -39,7 +39,8 @@ const themeColors = {
     200: '#9DCD8A', // fondo de card
     300: '#6CBE4C', // title
     400: '#6ABF4A', // border bottom de card
-    800: '#173D35' // fondo de card
+    800: '#173D35', // fondo de card
+    900: '#163027'
   },
   blue: {
     300: '#B5D2DB', // fondo horario

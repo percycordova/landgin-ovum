@@ -3,6 +3,7 @@ import Banner from '../components/banner/Banner'
 import ButtonWhassapt from '../components/buttons/ButtonWhassapt'
 import FomularioRegistro from '../components/Fomularios/FomularioRegistro'
 import Footer from '../components/footer/Footer'
+import Header from '../components/header'
 import ModalInscripcion from '../components/ModalGenerico/ModalInscripcion'
 // import ModalErrorCorreoRegistrado from '../components/ModalGenerico/ModalErrorCorreoRegistrado'
 import { useModal } from '../hooks/useModal'
@@ -34,6 +35,7 @@ const Home = (props) => {
       </Head>
 
       <main className="">
+        <Header />
         <Banner idiomas={props} />
         <div className="">
           <Acerca />
@@ -49,9 +51,6 @@ const Home = (props) => {
           <Auspiciadores />
           <Organizadores />
           <section className=" p-8 flex flex-col justify-center items-center">
-            <h6 className="text-xl sm:text-3xl text-center ">
-              {props.PermanezcaConectado.value}
-            </h6>
             <FomularioRegistro openModal={openModalInscripcion} idiomas={props} />
             <div className="md:w-9/12  w-full border-b border-gray-500 mt-10"></div>
             <div className="text-center mt-8">

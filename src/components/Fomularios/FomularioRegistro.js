@@ -94,124 +94,130 @@ const FomularioRegistro = ({ openModal, idiomas }) => {
     setIsAccepted(!isAccepted)
   }
   return (
-    <form
-      onSubmit={handleSubmit}
-      className=" w-11/12 md:w-8/12 mt-5 max-w-5xl mx-auto  bg-white"
-    >
-      <div className="flex  flex-col md:flex-row flex-wrap  justify-between">
-        <div className="md:w-5/13 w-full">
-          <label htmlFor="nombres" className="text-xs text-gray-600">
-            {idiomas.Nombres.value}*
-          </label>
-          <InputText
-            id="nombres"
-            onChange={handleChange}
-            value={values.nombres}
-            onBlur={handleBlur}
-          />
-          {touched.nombres && errors.nombres && (
-            <span className="text-xs mb-4 text-red-600">{errors.nombres}</span>
-          )}
+    <div className='py-8' id='registro'>
+      <h6 className="text-xl sm:text-3xl text-center ">
+        {idiomas.PermanezcaConectado.value}
+      </h6>
+      <form
+        onSubmit={handleSubmit}
+        className=" w-11/12 md:w-8/12 mt-5 max-w-5xl mx-auto  bg-white"
+      >
+        <div className="flex  flex-col md:flex-row flex-wrap  justify-between">
+          <div className="md:w-5/13 w-full">
+            <label htmlFor="nombres" className="text-xs text-gray-600">
+              {idiomas.Nombres.value}*
+            </label>
+            <InputText
+              id="nombres"
+              onChange={handleChange}
+              value={values.nombres}
+              onBlur={handleBlur}
+            />
+            {touched.nombres && errors.nombres && (
+              <span className="text-xs mb-4 text-red-600">{errors.nombres}</span>
+            )}
+          </div>
+
+          <div className="md:w-5/13 w-full">
+            <label htmlFor="apellidos" className="text-xs text-gray-600">
+              {idiomas.Apellidos.value}*
+            </label>
+            <InputText
+              id="apellidos"
+              onChange={handleChange}
+              value={values.apellidos}
+              onBlur={handleBlur}
+            />
+            {touched.apellidos && errors.apellidos && (
+              <span className="text-xs mb-4 text-red-600">
+                {errors.apellidos}
+              </span>
+            )}
+          </div>
+          <div className="md:w-5/13 w-full">
+            <label htmlFor="empresa" className="text-xs text-gray-600">
+              {idiomas.Empresa.value}*
+            </label>
+            <InputText
+              id="empresa"
+              onChange={handleChange}
+              value={values.empresa}
+              onBlur={handleBlur}
+            />
+            {touched.empresa && errors.empresa && (
+              <span className="text-xs mb-4 text-red-600">{errors.empresa}</span>
+            )}
+          </div>
+          <div className="md:w-5/13 w-full">
+            <label htmlFor="pais" className="text-xs text-gray-600">
+              {idiomas.Pais.value}*
+            </label>
+            <InputText
+              id="pais"
+              onChange={handleChange}
+              value={values.pais}
+              onBlur={handleBlur}
+            />
+            {touched.pais && errors.pais && (
+              <span className="text-xs mb-4 text-red-600">{errors.pais}</span>
+            )}
+          </div>
+          <div className="md:w-5/13 w-full">
+            <label htmlFor="celular" className="text-xs text-gray-600">
+              {idiomas.Celular.value}*
+            </label>
+            <InputText
+              id="celular"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.celular}
+            />
+            {touched.celular && errors.celular && (
+              <span className="text-xs mb-4 text-red-600">{errors.celular}</span>
+            )}
+          </div>
+          <div className="md:w-5/13 w-full">
+            <label htmlFor="correo" className="text-xs text-gray-600">
+              {idiomas.Correo.value}*
+            </label>
+            <InputText
+              id="correo"
+              type="email"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.correo}
+            />
+            {touched.correo && errors.correo && (
+              <span className="text-xs mb-4 text-red-600">{errors.correo}</span>
+            )}
+          </div>
+          <div className="md:w-5/13 w-full">
+            <InputCheckCuadrado
+              name="confirmar"
+              id="confirmar"
+              handleConfirmation={handleConfirmation}
+              isAccepted={isAccepted}
+              idiomas={idiomas}
+            />
+          </div>
         </div>
 
-        <div className="md:w-5/13 w-full">
-          <label htmlFor="apellidos" className="text-xs text-gray-600">
-            {idiomas.Apellidos.value}*
-          </label>
-          <InputText
-            id="apellidos"
-            onChange={handleChange}
-            value={values.apellidos}
-            onBlur={handleBlur}
-          />
-          {touched.apellidos && errors.apellidos && (
-            <span className="text-xs mb-4 text-red-600">
-              {errors.apellidos}
-            </span>
-          )}
-        </div>
-        <div className="md:w-5/13 w-full">
-          <label htmlFor="empresa" className="text-xs text-gray-600">
-            {idiomas.Empresa.value}*
-          </label>
-          <InputText
-            id="empresa"
-            onChange={handleChange}
-            value={values.empresa}
-            onBlur={handleBlur}
-          />
-          {touched.empresa && errors.empresa && (
-            <span className="text-xs mb-4 text-red-600">{errors.empresa}</span>
-          )}
-        </div>
-        <div className="md:w-5/13 w-full">
-          <label htmlFor="pais" className="text-xs text-gray-600">
-            {idiomas.Pais.value}*
-          </label>
-          <InputText
-            id="pais"
-            onChange={handleChange}
-            value={values.pais}
-            onBlur={handleBlur}
-          />
-          {touched.pais && errors.pais && (
-            <span className="text-xs mb-4 text-red-600">{errors.pais}</span>
-          )}
-        </div>
-        <div className="md:w-5/13 w-full">
-          <label htmlFor="celular" className="text-xs text-gray-600">
-            {idiomas.Celular.value}*
-          </label>
-          <InputText
-            id="celular"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.celular}
-          />
-          {touched.celular && errors.celular && (
-            <span className="text-xs mb-4 text-red-600">{errors.celular}</span>
-          )}
-        </div>
-        <div className="md:w-5/13 w-full">
-          <label htmlFor="correo" className="text-xs text-gray-600">
-            {idiomas.Correo.value}*
-          </label>
-          <InputText
-            id="correo"
-            type="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.correo}
-          />
-          {touched.correo && errors.correo && (
-            <span className="text-xs mb-4 text-red-600">{errors.correo}</span>
-          )}
-        </div>
-        <div className="md:w-5/13 w-full">
-          <InputCheckCuadrado
-            name="confirmar"
-            id="confirmar"
-            handleConfirmation={handleConfirmation}
-            isAccepted={isAccepted}
-            idiomas={idiomas}
-          />
-        </div>
-      </div>
-
-      <button disabled></button>
-      <div className="w-52  mt-10  mx-auto">
-        <button
-          className={`${isAccepted ? 'bg-secondary-600' : 'bg-gray-500 cursor-not-allowed'
-            } text-white pt-2 pb-3 flex justify-center
+        <button disabled></button>
+        <div className="w-52  mt-10  mx-auto">
+          <button
+            className={`${isAccepted ? 'bg-secondary-600' : 'bg-gray-500 cursor-not-allowed'
+              } text-white pt-2 pb-3 flex justify-center
      items-center w-full text-lg md:text-xl  rounded-3xl hover:opacity-80 transition-all duration-300 
      focus:outline-none focus:shadow-outline `}
-          disabled={!isAccepted}
-          type="submit"
-        >
-          {idiomas.Button.value2}
-        </button>
-      </div>
-    </form>
+            disabled={!isAccepted}
+            type="submit"
+          >
+            {idiomas.Button.value2}
+          </button>
+        </div>
+      </form>
+    </div>
+
   )
 }
 

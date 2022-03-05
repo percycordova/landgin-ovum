@@ -20,7 +20,7 @@ const Patrocinadores = () => {
     }
   } */
   return (
-    <section className="relative bg-gray-50 flex flex-col justify-center items-center py-8">
+    <section className="relative bg-gray-50 flex flex-col justify-center items-center py-8" id='patrocinadores'>
       <div className="w-full md:w-9/12 mt-5 max-w-7xl mx-auto p-0 lg:p-0">
         <h6 className="text-3xl lg:text-4xl text-center font-normal mb-8 text-green-300">
           PATROCINADORES

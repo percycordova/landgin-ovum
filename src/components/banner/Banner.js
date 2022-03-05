@@ -1,25 +1,10 @@
 import React from 'react'
-import Idiomas from '../idiomas/Idiomas'
 
 const Banner = ({ idiomas }) => {
   return (
 
     <div className="  relative z-10 py-2 text-white " >
 
-      {/* <div className=" banner relative z-10 py-2 text-white"> */}
-      {/* version mobil */}
-      {/*  <img
-        src="/grupo-rayas2-mobil.svg"
-        alt=""
-        className="absolute top-0 right-0 opacity-40  md:hidden"
-      /> */}
-      {/* desktop */}
-      {/*     <img
-        src="/grupo-rayas2.svg"
-        alt=""
-        className="hidden md:block absolute top-0 right-0 opacity-20 "
-      /> */}
-      <Idiomas />
       <div className="logo bg-white md:flex-row flex flex-col md:justify-center  items-center mt-3 mb-9 relative">
         <div className="hidden sm:w-full sm:flex gap-x-14 items-start justify-center mb-5">
           <img src="/asociacion.png " className="w-40 lg:w-50 xl:w-60 z-30" />
@@ -31,26 +16,7 @@ const Banner = ({ idiomas }) => {
           <img src="/Logo-organizado2 1.svg " alt="" className="sm:hidden z-30 w-80" />
         </div>
       </div>
-      {/* <div className="relative">
-        <img src="/fondo-mobile-nb-top.png" className='absolute  sm:hidden w-full  -mt-48 z-20' alt="" />
-        <img src="/fondo-nb-top.png" className='absolute hidden sm:block w-full lg:top-0  -mt-48 lg:-mt-100 2xl:-mt-110  z-20' alt="" />
 
-        <img src="/fondo-medio.png" className='absolute  lg:top-0  w-full -mt-52 h-120 sm:-mt-52 sm:h-128 lg:-mt-90 z-0 lg:h-screen' alt="" />
-      </div> */}
-
-      {/* <div className="absolute z-20 bottom-0 banner__gradiente w-full h-4"></div> */}
-      {/* version mobil */}
-      {/*  <img
-        src="/grupo-rayas-mobil.svg"
-        alt=""
-        className="absolute -bottom-5 left-0  md:hidden opacity-40"
-      />
-
-      <img
-        src="/grupo-rayas.svg"
-        alt=""
-        className="hidden md:block absolute -bottom-44 left-0 opacity-20 "
-      /> */}
       <div className=" pp relative w-full  lg:-mt-64 ">
         <img src="/fondo-mobile-nb-top.png" className='-mt-20 absolute pp2  lg:hidden ' alt="" />
         <img src="/fondo-nb-top.png"
@@ -82,9 +48,7 @@ const Banner = ({ idiomas }) => {
           </div>
           <img src="/fondo-blanco-bottom.png" className='absolute bottom-0  w-full    z-0 ' alt="" />
         </div>
-        {/* <div className='relative'>
-        <img src="/fondo-nb-top.png" alt="" className='top-30 z-50 absolute w-full ' />
-      </div> */}
+
       </div>
     </div >
   )

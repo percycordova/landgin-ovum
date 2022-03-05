@@ -11,8 +11,8 @@ const Idiomas = () => {
     })
   }
   return (
-    <div className="flex justify-start md:justify-end md:mr-36 ">
-      <ul className="inline-flex  text-black relative z-70 font-sm gap-x-1  p-2">
+    <div className="flex items-center ">
+      <ul className="inline-flex text-xl  text-green-900 relative z-70 font-sm gap-x-1  p-2">
         <li
           className="cursor-pointer hover:-translate-y-1 transform transition-all duration-300"
           onClick={() => cambiarIdioma('es-pe')}

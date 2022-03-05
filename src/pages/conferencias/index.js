@@ -2,6 +2,7 @@ import Head from 'next/head'
 import ButtonWhassapt from '../../components/buttons/ButtonWhassapt'
 import FomularioRegistro from '../../components/Fomularios/FomularioRegistro'
 import Footer from '../../components/footer/Footer'
+import Header from '../../components/header'
 import ModalInscripcion from '../../components/ModalGenerico/ModalInscripcion'
 import { useModal } from '../../hooks/useModal'
 import Grid from '../../sections/conferencia/grid'
@@ -15,6 +16,7 @@ const Conferencia = (props) => {
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
   return (
     <div className=''>
+
       <Head>
         <title>OVUM 2022</title>
         <meta
@@ -25,15 +27,13 @@ const Conferencia = (props) => {
       </Head>
 
       <main className="">
+        <Header />
         <div className="">
           <Grid {...{ openModal, closeModal, isOpen }} />
           <BannerLanding />
           <Patrocinadores />
           <Organizadores />
           <section className=" p-8 flex flex-col justify-center items-center">
-            <h6 className="text-xl sm:text-3xl text-center ">
-              {props.PermanezcaConectado.value}
-            </h6>
             <FomularioRegistro openModal={openModalInscripcion} idiomas={props} />
             <div className="md:w-9/12  w-full border-b border-gray-500 mt-10"></div>
             <div className="text-center mt-8">
