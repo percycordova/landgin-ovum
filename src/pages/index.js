@@ -35,7 +35,7 @@ const Home = (props) => {
       </Head>
 
       <main className="">
-        <Header />
+        <Header idiomas={props}/>
         <Banner idiomas={props} />
         <div className="">
           <Acerca />
