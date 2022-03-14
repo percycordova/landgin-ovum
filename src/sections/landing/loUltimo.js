@@ -16,7 +16,7 @@ import { EffectFade, Navigation, Pagination } from 'swiper'
 const LoUltimo = () => {
   return (
     <section className=" p-8 flex flex-col justify-center items-center">
-      <div className="w-full md:w-9/12 mt-5 max-w-7xl mx-auto bg-white">
+      <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto bg-white">
         <h6 className="text-3xl lg:text-4xl text-center font-medium mb-8 text-blue-500">
           LO ÚLTIMO
         </h6>

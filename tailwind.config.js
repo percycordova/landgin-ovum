@@ -224,6 +224,7 @@ module.exports = {
         100: '20rem',
         140: '37rem',
         200: '55rem',
+        250: '62.5rem',
         full: '100%',
         screen: '100vw',
         min: 'min-content',

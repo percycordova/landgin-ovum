@@ -11,7 +11,7 @@ import { Navigation, Pagination } from 'swiper'
 const Conoce = () => {
   return (
     <section className=" bg-white flex flex-col justify-center items-center py-16">
-      <div className=" w-full md:w-9/12 mt-5 max-w-7xl mx-auto p-3 lg:p-0">
+      <div className=" w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-3 lg:p-0">
         <div className="relative">
           <img src='/conoce-honduras.png' className='w-full h-auto' />
           <h2 className='absolute bottom-8 left-5 md:left-10 md:bottom-16 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl::text-7xl lg:top-15 lg:left-15  text-white'>CONOCÉ <br /><span className='font-bold'> HONDURAS</span></h2>

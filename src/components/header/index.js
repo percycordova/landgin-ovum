@@ -22,7 +22,7 @@ const Header = ({ idiomas }) => {
         <Idiomas />
         <div><HamburguesBtn show={showMenu} handleClick={handleBtnClick} /></div>
         {showMenu && <ul className='flex flex-col gap-y-2 bg-white z-99 text-base absolute left-0 top-16 w-full'>
-          <li className='p-4 cursor-pointer border-b border-black' onClick={() => setShowMenu(false)}><Link href="/">Ovum 2022</Link> </li>
+          <li className='p-4 cursor-pointer border-b border-black hover:bg-gray-900' onClick={() => setShowMenu(false)}><Link href="/">Ovum 2022</Link> </li>
           <li className='p-4 cursor-pointer border-b border-black'><a href="#programa" onClick={() => setShowMenu(false)}>Programa</a> </li>
           <li className='p-4  cursor-pointer border-b border-black'><a href="#patrocinadores" onClick={() => setShowMenu(false)}>Patrocinadores</a> </li>
           <li className='p-4  cursor-pointer border-b border-black'><a href="#registro" onClick={() => setShowMenu(false)}>Registro</a> </li>

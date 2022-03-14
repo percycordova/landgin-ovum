@@ -79,7 +79,7 @@ const bgColor = (id) => {
 const Programa = () => {
   return (
     <section className="relative bg-gray-100 flex flex-col justify-center items-center py-14" id='programa'>
-      <div className="w-full md:w-9/12 mt-5 max-w-7xl mx-auto p-8 lg:p-0 bg-gray-100 lg:bg-white lg:shadow-xl rounded-2xl z-99">
+      <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-8 lg:p-0 bg-gray-100 lg:bg-white lg:shadow-xl rounded-2xl z-99">
         <h6 className="hidden lg:block text-3xl lg:text-4xl text-center font-medium mb-4 text-gray-600 mt-10">
           PROGRAMA
         </h6>

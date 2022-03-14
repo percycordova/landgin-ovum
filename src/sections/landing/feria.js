@@ -12,7 +12,7 @@ import { Navigation, Pagination } from 'swiper'
 const Feria = () => {
   return (
     <section className="relative bg-white flex flex-col justify-center items-center pb-16">
-      <div className="w-full md:w-9/12 mt-5 max-w-7xl mx-auto p-8 lg:p-0">
+      <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-8 lg:p-0">
         <h6 className="text-3xl lg:text-4xl text-center font-medium mb-8 ">
         FERIA OVUM 2022
         </h6>
