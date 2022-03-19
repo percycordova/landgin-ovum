@@ -37,7 +37,7 @@ const Conoce = () => {
         </div>
       </div>
       <div className="relative w-full mx-auto p-3 lg:p-0 bg-gray-100">
-        <img src="/leopardo.png" className='absolute hidden lg:block lg:w-64 xl:w-70 2xl:w-80 h-auto top-0 right-0' alt="" />
+        <img src="/loro.png" className='absolute hidden lg:block  lg:w-50  -top-20 right-0' alt="" />
         <div className="w-full mx-auto md:w-9/12 max-w-7xl flex flex-col md:flex-row-reverse gap-8 my-10 p-8 md:p-0  ">
           <div className="w-full z-10">
             <img src='/conoce-2.png' className='w-full h-full object-cover ' alt="video" />

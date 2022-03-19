@@ -11,6 +11,7 @@ const themeColors = {
     600: '#00b3a6',
     700: '#008077',
     800: '#004e47',
+    850:' #1B3C33',
     900: '#001c19',
     950: '#173D35'
   },
@@ -39,6 +40,7 @@ const themeColors = {
     200: '#9DCD8A', // fondo de card
     300: '#6CBE4C', // title
     400: '#6ABF4A', // border bottom de card
+    500: '#355258',
     800: '#173D35', // fondo de card
     900: '#163027'
   },
@@ -48,7 +50,8 @@ const themeColors = {
   },
   yellow: {
     300: '#F3EB5F', // fondo de card
-    700: '#FFC60B' // fondo de card
+    700: '#FFC60B' ,// fondo de card
+    800:'#FFC700'
   },
   brown: {
     300: '#D9CAA5' // fondo horario
@@ -221,6 +224,7 @@ module.exports = {
         25: '6.25rem',
         26: '6.5rem',
         70: '17rem',
+        73:'18.625rem',
         100: '20rem',
         140: '37rem',
         200: '55rem',

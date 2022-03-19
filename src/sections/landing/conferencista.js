@@ -93,7 +93,7 @@ const Conferencista = () => {
         {/* fin slider en mobile */}
         <div className="flex justify-center mt-8 ">
           <Link href="/conferencistas">
-            <button className="bg-pink-700 text-white text-lg font-normal py-1 max-w-52 w-full rounded-full z-10">
+            <button className="bg-pink-700 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full z-10">
               Ver todo
             </button>
           </Link>

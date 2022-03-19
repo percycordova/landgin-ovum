@@ -23,6 +23,7 @@ import Programa from '../sections/landing/programa'
 const Home = (props) => {
   const [isOpenInscripcion, openModalInscripcion, closeModalInscripcion] = useModal(false)
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
+
   return (
     <div className=''>
       <Head>
@@ -35,7 +36,7 @@ const Home = (props) => {
       </Head>
 
       <main className="">
-        <Header idiomas={props}/>
+        <Header idiomas={props} />
         <Banner idiomas={props} />
         <div className="">
           <Acerca />
