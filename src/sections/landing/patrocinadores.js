@@ -1,13 +1,13 @@
 /* import { useState } from 'react' */
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/navigation'
+import "swiper/css";
+import "swiper/css/navigation";
 
 // import required modules
-import { Navigation, Autoplay } from 'swiper'
+import { Navigation, Autoplay } from "swiper";
 
 const Patrocinadores = () => {
   /* const [width, setWidth] = useState(true)
@@ -20,76 +20,156 @@ const Patrocinadores = () => {
     }
   } */
   return (
-    <section className="relative bg-gray-50 flex flex-col justify-center items-center py-8" id='patrocinadores'>
+    <section
+      className="relative bg-gray-50 flex flex-col justify-center items-center py-8"
+      id="patrocinadores"
+    >
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-0 lg:p-0">
         <h6 className="text-3xl lg:text-4xl text-center font-normal mb-8 text-green-300">
           PATROCINADORES
         </h6>
 
-        {/* slider en mobile */}
+        <div className="hidden lg:grid grid-cols-4 gap-x-4 gap-y-10">
         <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+        </div>
+        {/* slider en mobile */}
+        <div className="lg:hidden">
           <Swiper
             style={{
-              '--swiper-navigation-color': '#C4C4C4',
-              height: '100%'
+              "--swiper-navigation-color": "#C4C4C4",
+              height: "100%",
             }}
             loop={true}
             grabCursor={true}
             autoplay={{
               delay: 2500,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
             slidesPerView={1}
             spaceBetween={30}
             breakpoints={{
               640: {
                 slidesPerView: 2,
-                spaceBetween: 20
+                spaceBetween: 20,
               },
               768: {
                 slidesPerView: 3,
-                spaceBetween: 10
+                spaceBetween: 10,
               },
               1024: {
                 slidesPerView: 4,
                 spaceBetween: 10,
-                navigation: false
-
-              }
+                navigation: false,
+              },
             }}
             modules={[Autoplay, Navigation]}
-            className='mySwiper'
+            className="mySwiper"
           >
             <SwiperSlide>
               <div className="mx-15 md:mx-0 lg:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6  h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6  h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="mx-15 md:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6 h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="mx-15 md:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6 h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="mx-15 md:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6 h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="mx-15 md:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6 h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
           </Swiper>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Patrocinadores
+export default Patrocinadores;

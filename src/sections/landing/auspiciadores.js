@@ -1,13 +1,13 @@
 /* import { useState } from 'react' */
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/navigation'
+import "swiper/css";
+import "swiper/css/navigation";
 
 // import required modules
-import { Navigation, Autoplay } from 'swiper'
+import { Navigation, Autoplay } from "swiper";
 
 const Auspiciadores = () => {
   /* const [width, setWidth] = useState(true)
@@ -26,74 +26,152 @@ const Auspiciadores = () => {
           AUSPICIADORES
         </h6>
 
+        <div className="hidden lg:grid grid-cols-4 gap-x-4 gap-y-10">
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+        </div>
+
         {/* slider en mobile */}
-        <div className="">
+        <div className="lg:hidden">
           <Swiper
             style={{
-              '--swiper-navigation-color': '#C4C4C4',
-              height: '100%'
+              "--swiper-navigation-color": "#C4C4C4",
+              height: "100%",
             }}
             loop={true}
             grabCursor={true}
             autoplay={{
               delay: 7500,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
             slidesPerView={1}
             spaceBetween={30}
             breakpoints={{
               380: {
                 slidesPerView: 2,
-                spaceBetween: 5
+                spaceBetween: 5,
               },
               640: {
                 slidesPerView: 2,
-                spaceBetween: 20
+                spaceBetween: 20,
               },
               768: {
                 slidesPerView: 3,
-                spaceBetween: 10
+                spaceBetween: 10,
               },
               1024: {
                 slidesPerView: 4,
                 spaceBetween: 10,
-                navigation: false
-
-              }
+                navigation: false,
+              },
             }}
             modules={[Autoplay, Navigation]}
-            className='mySwiper'
+            className="mySwiper"
           >
             <SwiperSlide>
               <div className="mx-4 lg:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6  h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6  h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="mx-4 lg:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6 h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="mx-4 lg:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6 h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="mx-4 lg:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6 h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="mx-4 lg:mx-0">
-                <img src="/logo-ovum.png" className='mx-auto filter grayscale w-5/6 h-auto' alt="" />
+                <img
+                  src="/logo-ovum.png"
+                  className="mx-auto filter grayscale w-5/6 h-auto"
+                  alt=""
+                />
               </div>
             </SwiperSlide>
           </Swiper>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Auspiciadores
+export default Auspiciadores;
