@@ -16,24 +16,25 @@ import { maxHeight } from "tailwindcss/defaultTheme";
 
 const LoUltimo = () => {
   return (
-    <section className=" p-8 flex flex-col justify-center items-center relative overflow-x-hidden">
-     <img src="/lo-ultimo-rayas.png" alt="" className="absolute -right-15 top-10"/>
-     <img src="/lo-ultimo-rayas2.png" alt="" className="absolute -right-8 bottom-48"/>
+    <section className=" p-8 flex flex-col justify-center items-center  overflow-x-hidden">
+
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto bg-white">
         <h6 className="text-3xl lg:text-4xl text-center font-medium mb-8 text-blue-500">
           LO ÚLTIMO
         </h6>
         {/* grid en lg */}
-        <div className="hidden lg:block ">
+        <div className="hidden lg:block relative">
+          <img src="/lo-ultimo-rayas.png" alt="" className="absolute -right-56 -top-10" />
+          <img src="/lo-ultimo-rayas2.png" alt="" className="absolute -right-48 bottom-15" />
           <div className="flex justify-between">
             <div className="">
               <div className="relative  ">
-              <img src="/ippe.png" alt=""  className="absolute top-3 right-2"/>
+                <img src="/ippe.png" alt="" className="absolute top-3 right-2" />
                 <div className="bg-indigo-300 w-full h-full">
                   <img
                     src="/lo-ultimo-portada.png"
                     className="object-cover "
-                    style={{width:"688px" , height:'528px'}}
+                    style={{ width: "688px", height: '528px' }}
                   />
                 </div>
                 <div className="absolute bottom-0 w-full px-10 py-3 bg-green-500 bg-opacity-90 text-white ">
@@ -85,7 +86,7 @@ const LoUltimo = () => {
                   <img
                     src="/img-slider.png"
                     className="object-cover"
-                    style={{ height: "164px",minWidth:"100%" }}
+                    style={{ height: "164px", minWidth: "100%" }}
                   />
                   <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
                     <h3 className="">¡Vuelve </h3>

@@ -22,11 +22,17 @@ html{
   min-height: 100%;
   background: linear-gradient(3.57deg, #1A3C34 -9.22%, rgba(26, 60, 52, 0) 123.08%);
 } */
+.pee{
+  display: block;
+  object-fit: fill;
+  max-height: 1400px;
+  rotate: -25deg;
+}
 .pp {
   /* background-image: url("/fondo-mobile.svg"); */
   /* border:1px solid red; */
   overflow: hidden;
-  height: 100%;
+  height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
