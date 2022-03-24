@@ -57,7 +57,7 @@ const Banner = ({ idiomas }) => {
           <div className="flex justify-center  z-30 mt-6 lg:absolute lg:bottom-10 2xl:bottom-16 btn-banner  w-64 mx-auto  ">
             <a
               className={`bg-secondary-600 text-white pt-2 pb-3 flex justify-center
-                       items-center w-full text-lg md:text-xl  rounded-3xl lg:hidden
+                       items-center w-full text-lg md:text-xl  rounded-3xl 
                        hover:opacity-80 transition-all duration-300 focus:outline-none 
                        focus:shadow-outline cursor-pointer mb-4`}
               href="/pdfs/PATROCINIOS-OVUM-2022.pdf"
