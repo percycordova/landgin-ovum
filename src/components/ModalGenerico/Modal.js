@@ -3,7 +3,7 @@ const ModalCustomer = ({ children, isOpen, closeModal, size }) => {
   const handleModalClick = (e) => {
     e.stopPropagation()
   }
-  console.log(size)
+  // console.log(size)
   const modalSize = (size) => {
     if (size === 'small') {
       return 'w-80 p-0 shadow-none'

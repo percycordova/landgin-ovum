@@ -24,7 +24,7 @@ const Banner = ({ idiomas }) => {
       </div>
       {/* fin logos */}
 
-      <div className=" pp relative w-full  lg:-mt-64 ">
+      <div className=" pp h-120 lg:h-160 relative w-full  lg:-mt-64 ">
         <img
           src="/fondo-mobile-nb-top.png"
           className="-mt-20 absolute pp2  lg:hidden "
@@ -54,7 +54,7 @@ const Banner = ({ idiomas }) => {
           <p className="text-center z-20 text-base md:text-4xl relative  banner__san-pedro">
             San Pedro Sula, Honduras
           </p>
-          <div className="flex justify-center  z-30 mt-6 lg:absolute lg:bottom-10 2xl:bottom-16 btn-banner  w-64 mx-auto  ">
+          <div className="flex justify-center  z-30 mt-12 lg:absolute lg:bottom-15 2xl:bottom-18 btn-banner  w-64 mx-auto  ">
             <a
               className={`bg-secondary-600 text-white pt-2 pb-3 flex justify-center
                        items-center w-full text-lg md:text-xl  rounded-3xl 

@@ -25,7 +25,7 @@ const Home = (props) => {
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
 
   return (
-    <div className=''>
+    <div className='font-sans'>
       <Head>
         <title>OVUM 2022</title>
         <meta

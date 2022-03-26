@@ -53,7 +53,7 @@ const themeColors = {
   },
   yellow: {
     300: "#F3EB5F", // fondo de card
-    400:"#F3DA4C",
+    400: "#F3DA4C",
     700: "#FFC60B", // fondo de card
     800: "#FFC700",
   },
@@ -73,7 +73,8 @@ module.exports = {
     extend: {
       colors: { ...themeColors },
       fontFamily: {
-        sans: `"Poppins", ${defaultTheme.fontFamily.sans.join(",")}`,
+        // sans: `"Poppins", ${defaultTheme.fontFamily.sans.join(",")}`,
+        sans: ["Open Sans"],
         mono: `"IBM Plex Mono", ${defaultTheme.fontFamily.mono.join(",")}`,
       },
       opacity: {
@@ -185,6 +186,7 @@ module.exports = {
         ...theme("extendedSpacing"),
         73: "18.8rem",
         74: "19rem",
+        75:"20.9rem"
       }),
       minHeight: (theme) => ({
         ...theme("spacing"),
@@ -228,6 +230,7 @@ module.exports = {
         70: "17rem",
         73: "18.625rem",
         100: "20rem",
+        115:"29.3rem",
         140: "37rem",
         200: "55rem",
         250: "62.5rem",
@@ -246,6 +249,7 @@ module.exports = {
         ...theme("spacing"),
         ...theme("extendedSpacing"),
         screen: "100vw",
+        115:"29.3rem",
       }),
       boxShadow: {
         "3xl": "-1px 1px 11px -1px rgba(0,0,0,0.51)",
