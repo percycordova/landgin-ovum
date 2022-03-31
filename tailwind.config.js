@@ -29,7 +29,9 @@ const themeColors = {
     900: "#1b0211",
   },
   gray: {
-    100: "#F4F5F7", // fondo
+    100: "#F4F5F7",
+    300:"#F6F6F6",
+    400: "#ECECEC", // fondo
     500: "#c4c4c4",
     600: "#4E5057",
     800: " #263A43",
@@ -119,6 +121,9 @@ module.exports = {
         "-110": "-440px",
         "-120": "-480px",
       },
+      padding:{
+        0.5:"0.125rem"
+      },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1rem" }],
         sm: ["0.875rem", { lineHeight: "1.25rem" }],
@@ -186,7 +191,7 @@ module.exports = {
         ...theme("extendedSpacing"),
         73: "18.8rem",
         74: "19rem",
-        75:"20.9rem"
+        75: "20.9rem"
       }),
       minHeight: (theme) => ({
         ...theme("spacing"),
@@ -230,7 +235,7 @@ module.exports = {
         70: "17rem",
         73: "18.625rem",
         100: "20rem",
-        115:"29.3rem",
+        115: "29.3rem",
         140: "37rem",
         200: "55rem",
         250: "62.5rem",
@@ -249,7 +254,7 @@ module.exports = {
         ...theme("spacing"),
         ...theme("extendedSpacing"),
         screen: "100vw",
-        115:"29.3rem",
+        115: "29.3rem",
       }),
       boxShadow: {
         "3xl": "-1px 1px 11px -1px rgba(0,0,0,0.51)",

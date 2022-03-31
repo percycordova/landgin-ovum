@@ -21,7 +21,11 @@ const Header = ({ idiomas }) => {
     <>
       {/* header desktop */}
       <div className="hidden xl:flex xl:justify-center">
-        <div className={`inline-flex mx-auto justify-center items-center pt-6 ${mostrarLogo?' border-b':'pb-6'}  gap-30 `}>
+        <div
+          className={`inline-flex mx-auto justify-center items-center pt-6 ${
+            mostrarLogo ? " border-b" : "pb-6"
+          }  gap-30 `}
+        >
           <Menu mostrarLogo={mostrarLogo} />
           <div className="flex gap-3">
             <Idiomas />
@@ -54,10 +58,11 @@ const Header = ({ idiomas }) => {
                 Patrocinadores
               </a>{" "}
             </li>
-            <li className="p-4  cursor-pointer border-b border-black">
-              <a href="#registro" onClick={() => setShowMenu(false)}>
-                Registro
-              </a>{" "}
+            <li
+              className="p-4  cursor-pointer border-b border-black"
+              onClick={() => setShowMenu(false)}
+            >
+              <Link href="/">Registro</Link>
             </li>
           </ul>
         )}

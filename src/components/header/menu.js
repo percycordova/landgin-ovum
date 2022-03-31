@@ -12,7 +12,7 @@ const Menu = ({mostrarLogo}) => {
         </li>}
       
       <li className="py-4 px-2 cursor-pointer ">
-        <a href="#registro">Regístrate</a>{" "}
+      <Link href="/registro">Registrate</Link>
       </li>
       <li className="py-4 px-2 cursor-pointer ">
         <a href="#programa">Programa</a>{" "}
