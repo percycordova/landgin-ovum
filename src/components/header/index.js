@@ -62,7 +62,7 @@ const Header = ({ idiomas }) => {
               className="p-4  cursor-pointer border-b border-black"
               onClick={() => setShowMenu(false)}
             >
-              <Link href="/">Registro</Link>
+              <Link href="/registro">Registrate</Link>
             </li>
           </ul>
         )}

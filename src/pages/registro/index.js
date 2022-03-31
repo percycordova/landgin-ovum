@@ -2,7 +2,7 @@ import Head from "next/head";
 import ButtonWhassapt from "../../components/buttons/ButtonWhassapt";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header";
-
+import Link from "next/link";
 const Registro = (props) => {
   return (
     <div className="">
@@ -17,7 +17,7 @@ const Registro = (props) => {
 
       <main className="">
         <Header />
-        <div className="max-w-256 border mx-auto pt-8 pb-15 mt-10">
+        <div className="max-w-256 border mx-auto pt-8 pb-15 mt-10 mb-20 ">
           <h2 className="text-gray-600 text-2xl pl-8 md:text-2.5xl  md:pl-24 mb-3">
             Registro
           </h2>
@@ -28,7 +28,7 @@ const Registro = (props) => {
             <h3 className="text-2xl md:text-3xl font-light text-center text-gray-600">
               Inversión del 6 al 9 de Septiembre
             </h3>
-            <div className=" border mt-12 py-3 md:py-7 text-gray-600 rounded-xl px-1 md:px-7 flex flex-col gap-y-1">
+            <div className=" border mt-12 py-5 md:py-7 text-gray-600 rounded-xl px-1 md:px-7 flex flex-col gap-y-1">
               <h4 className="text-2xl font-bold text-center mb-4 ">
                 TARIFARIO
               </h4>
@@ -67,14 +67,16 @@ const Registro = (props) => {
                         w-full text-base rounded-xl text-center py-2  sm:rounded-3xl 
                        hover:opacity-80 transition-all duration-300 focus:outline-none md:max-w-36"
                   >
-                    Comprar
+                    <Link href="/registro/pago-anticipado">Comprar</Link>                    
                   </button>
                 </div>
               </div>
               {/* tarifario 2 */}
               <div className=" md:gap-0  flex bg-gray-300 items-center">
                 <div className="w-2/3  text-gray-600  md:px-7 px-2 py-4 ">
-                  <p className="text-sm font-bold md:text-base">Precio regular</p>
+                  <p className="text-sm font-bold md:text-base">
+                    Precio regular
+                  </p>
                   <p className="text-sm md:text-base">
                     Acceso a la inauguración, clausura, conferencias, zona
                     ferial y almuerzos
@@ -101,7 +103,9 @@ const Registro = (props) => {
                 <div className="w-2/3  text-gray-600  md:px-7 px-2 py-4 ">
                   <p className="text-sm font-bold md:text-base">Estudiantes</p>
 
-                  <p className="font-light text-sm md:text-base">Cupos limitados</p>
+                  <p className="font-light text-sm md:text-base">
+                    Cupos limitados
+                  </p>
                 </div>
                 <div className="w-1/3  px-2 py-4 lg:pr-6 flex flex-col items-center lg:flex-row lg:justify-between lg:items-center">
                   <p className="text-center mb-1 text-gray-600  text-lg">
@@ -119,7 +123,9 @@ const Registro = (props) => {
               {/* traifario 4 */}
               <div className=" md:gap-0  flex bg-gray-400 items-center">
                 <div className="w-2/3  text-gray-600 md:px-7 px-2 py-4 ">
-                  <p className="text-sm font-bold md:text-base">Feria Virtual </p>
+                  <p className="text-sm font-bold md:text-base">
+                    Feria Virtual{" "}
+                  </p>
                   <p className="font-medium text-sm md:text-base">
                     Acceso a zona ferial virtual, webinar, ponencias, salas,
                     seminiarios, stand de empresas, talleres e investigaciones
@@ -152,7 +158,10 @@ const Registro = (props) => {
                   <p className="text-sm text-secondary-600 md:text-base">
                     programas turísticos Cupos limitados
                   </p>
-                  <p className="font-light text-sm md:text-base"> Cupos limitados</p>
+                  <p className="font-light text-sm md:text-base">
+                    {" "}
+                    Cupos limitados
+                  </p>
                 </div>
                 <div className="w-1/3  px-2 py-4 lg:pr-6 flex flex-col items-center lg:flex-row lg:justify-between lg:items-center ">
                   <p className="text-center mb-1 text-gray-600  text-lg">
@@ -167,6 +176,25 @@ const Registro = (props) => {
                   </button>
                 </div>
               </div>
+            </div>
+            <div className="px-2 md:px-8 mt-11 ">
+              <h4 className="text-sm md:text-base text-secondary-600 font-bold">
+                LOS PRECIO INCLUYE IMPUESTOS (HONDURAS)
+              </h4>
+              <p className="text-sm md:text-base my-2 ">
+                *Precio de pago anticipado hasta el{" "}
+                <span className="text-red-600 font-bold">31/05/22</span>, no aplica para
+                Acompañante Ovum y estudiantes.
+              </p>
+              <p className="text-sm md:text-base mb-1">
+                - No se aceptarán anulaciones de inscripciones al evento, la
+                empresa o el participante deberán asumir el valor total de la
+                inscripción.
+              </p>
+              <p className="text-sm md:text-base">
+                - La sustitución de una persona inscrita por otra podrá
+                efectuarse **<span className="font-bold">5 DÍAS ANTES</span>**  del inicio del evento.
+              </p>
             </div>
           </div>
         </div>
