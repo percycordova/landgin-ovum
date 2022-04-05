@@ -50,14 +50,14 @@ const Home = (props) => {
             name="description"
             content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
           />
-          <meta name="image" content="/logo-mobile.png" />
+          <meta name="image" content="/logo-ovum.png" />
 
           <meta name="twitter:title" content="OVUM 2022" />
           <meta
             name="twitter:description"
             content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
           />
-          <meta name="twitter:image" content="/logo-mobile.png" />
+          <meta name="twitter:image" content="/logo-ovum.png" />
           <meta
             name="twitter:url"
             content="https://ovum-next-gamma.vercel.app/"
@@ -71,8 +71,8 @@ const Home = (props) => {
             property="og:url"
             content="https://ovum-next-gamma.vercel.app/"
           />
-          <meta property="og:image" content="/logo-mobile.png" />
-          <meta property="og:image:secure_url" content="/logo-mobile.png" />
+          <meta property="og:image" content="/logo-ovum.png" />
+          <meta property="og:image:secure_url" content="/logo-ovum.png" />
           <meta property="og:image:type" content="image/jpg" />
           <meta property="og:image:width" content="400" />
           <meta property="og:image:height" content="300" />
