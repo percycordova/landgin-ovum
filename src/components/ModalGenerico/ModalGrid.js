@@ -40,11 +40,11 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
             modules={[Navigation]}
             className='mySwiper'
           >
-            {data.map(item => (
+            {data.map((item, index) => (
               <SwiperSlide key={item.id} >
                 <div className="w-full mx-auto max-w-lg overflow-hidden sm:px-8" >
                   <div className="relative">
-                    <img className="w-full h-90 object-cover" src={item.img} alt="Sunset in the mountains" />
+                    <img className="w-full h-90 object-cover" src={item?.imagenPrincipal.url} alt={item?.imagenPrincipal.descripcion} />
                     <div className="absolute bottom-0 w-full px-4 py-1 bg-gray-600 bg-opacity-80 text-white ">
                       <h3 className='text-xl '>Visítanos en</h3>
                       <h3 className='text-lg font-extralight'>IPPE 2022 - Booth B6981 </h3>
@@ -52,11 +52,11 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
                   </div>
                   <div className='relative px-6 pt-4 pb-10 rounded-b-2xl'>
                     <div className="">
-                      <h6 className="text-sm font-medium text-blue-500">{item.dia}</h6>
+                      <h6 className="text-sm font-medium text-blue-500">Día {index + 1}</h6>
                     </div>
-                    <div className="font-bold text-xl mb-2">{item.title}</div>
+                    <div className="font-bold text-xl mb-2">{item?.tituloEspa}</div>
                     <p className="font-light text-sm lg:text-base mt-4 w-4/5 text-justify">
-                      {item.text}
+                      {item.descripcionEspa}
                     </p>
                     <img src="/LineaCardIzq.svg" className='absolute -bottom-2 right-0' alt="" />
                   </div>

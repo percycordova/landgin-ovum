@@ -1,54 +1,61 @@
-import React, { useState } from 'react'
-import CardGridConferencista from '../../components/cardGrid/cardGridConferencista'
-import ModalGridConferencista from '../../components/ModalGenerico/ModalGridConferencista'
+import React, { useState } from "react";
+import CardGridConferencista from "../../components/cardGrid/cardGridConferencista";
+import ModalGridConferencista from "../../components/ModalGenerico/ModalGridConferencista";
+import useConferenciasServices from "../../Gestionadores/useConferenciasServices";
 const Grid = ({ openModal, closeModal, isOpen }) => {
-  const [initialSlide, setInitialSlide] = useState(0)
+  const [initialSlide, setInitialSlide] = useState(0);
   const data = [
     {
       id: 1,
-      autor: 'Ken Hugues',
-      pais: 'Irlanda',
-      img: '/conferencista-1.png',
-      resumen: '“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”'
+      autor: "Ken Hugues",
+      pais: "Irlanda",
+      img: "/conferencista-1.png",
+      resumen:
+        "“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”",
     },
     {
       id: 2,
-      autor: 'Ken Hugues',
-      pais: 'Irlanda',
-      img: '/conferencista-2.png',
-      resumen: '“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”'
+      autor: "Ken Hugues",
+      pais: "Irlanda",
+      img: "/conferencista-2.png",
+      resumen:
+        "“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”",
     },
     {
       id: 3,
-      autor: 'Ken Hugues',
-      pais: 'Irlanda',
-      img: '/conferencista-3.png',
-      resumen: '“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”'
+      autor: "Ken Hugues",
+      pais: "Irlanda",
+      img: "/conferencista-3.png",
+      resumen:
+        "“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”",
     },
     {
       id: 4,
-      autor: 'Ken Hugues',
-      pais: 'Irlanda',
-      img: '/conferencista-1.png',
-      resumen: '“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”'
+      autor: "Ken Hugues",
+      pais: "Irlanda",
+      img: "/conferencista-1.png",
+      resumen:
+        "“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”",
     },
     {
       id: 5,
-      autor: 'Ken Hugues',
-      pais: 'Irlanda',
-      img: '/conferencista-2.png',
-      resumen: '“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”'
+      autor: "Ken Hugues",
+      pais: "Irlanda",
+      img: "/conferencista-2.png",
+      resumen:
+        "“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”",
     },
     {
       id: 6,
-      autor: 'Ken Hugues',
-      pais: 'Irlanda',
-      img: '/conferencista-3.png',
-      resumen: '“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”'
-    }
-
-  ]
-
+      autor: "Ken Hugues",
+      pais: "Irlanda",
+      img: "/conferencista-3.png",
+      resumen:
+        "“Lider global del comportamiento del consumidor y comprador  global del comportamiento del consumidor y comprador”",
+    },
+  ];
+  const { loadingGetData, db } = useConferenciasServices();
+  console.log("conferencista ", db);
   return (
     <>
       <section className="relative bg-white flex flex-col justify-center items-center py-14">
@@ -57,20 +64,33 @@ const Grid = ({ openModal, closeModal, isOpen }) => {
             CONFERENCISTAS
           </h6>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-            {data.map((item, i) => (
-              <CardGridConferencista key={item.id} item={item} onClick={() => {
-                // console.log({ i })
-                setInitialSlide(i)
-                openModal()
-              }} />
-            ))
-            }
+            {loadingGetData ? (
+              <div>Cargando...</div>
+            ) : (
+              db.map((item, i) => (
+                <CardGridConferencista
+                  key={item?.conferencistaId}
+                  item={item}
+                  onClick={() => {
+                    // console.log({ i })
+                    setInitialSlide(i);
+                    openModal();
+                  }}
+                />
+              ))
+            )}
           </div>
         </div>
       </section>
-      <ModalGridConferencista isOpen={isOpen} closeModal={closeModal} data={data} initialSlide={initialSlide} setInitialSlide={setInitialSlide} />
+      <ModalGridConferencista
+        isOpen={isOpen}
+        closeModal={closeModal}
+        data={db}
+        initialSlide={initialSlide}
+        setInitialSlide={setInitialSlide}
+      />
     </>
-  )
-}
+  );
+};
 
-export default Grid
+export default Grid;

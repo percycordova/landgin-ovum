@@ -23,20 +23,152 @@ export type Scalars = {
   Upload: any;
 };
 
+export type Blog = {
+  __typename?: 'Blog';
+  blogId?: Maybe<Scalars['Int']>;
+  created_at?: Maybe<Scalars['DateTime']>;
+  descripcionEspa?: Maybe<Scalars['String']>;
+  descripcionIngl?: Maybe<Scalars['String']>;
+  descripcionPort?: Maybe<Scalars['String']>;
+  imagenPrincipal?: Maybe<Imagenes>;
+  tituloEspa?: Maybe<Scalars['String']>;
+  tituloIngl?: Maybe<Scalars['String']>;
+  tituloPort?: Maybe<Scalars['String']>;
+  updated_at?: Maybe<Scalars['DateTime']>;
+};
+
+export type BlogInput = {
+  blogId?: InputMaybe<Scalars['Int']>;
+  descripcionEspa?: InputMaybe<Scalars['String']>;
+  descripcionIngl?: InputMaybe<Scalars['String']>;
+  descripcionPort?: InputMaybe<Scalars['String']>;
+  imagenPrincipal?: InputMaybe<Scalars['Int']>;
+  tituloEspa?: InputMaybe<Scalars['String']>;
+  tituloIngl?: InputMaybe<Scalars['String']>;
+  tituloPort?: InputMaybe<Scalars['String']>;
+};
+
+export type Conferencistas = {
+  __typename?: 'Conferencistas';
+  conferencistaId?: Maybe<Scalars['Int']>;
+  created_at?: Maybe<Scalars['DateTime']>;
+  descripcionEspa?: Maybe<Scalars['String']>;
+  descripcionIngl?: Maybe<Scalars['String']>;
+  descripcionPort?: Maybe<Scalars['String']>;
+  imagenPrincipal?: Maybe<Imagenes>;
+  nombreEspa?: Maybe<Scalars['String']>;
+  nombreIngl?: Maybe<Scalars['String']>;
+  nombrePort?: Maybe<Scalars['String']>;
+  updated_at?: Maybe<Scalars['DateTime']>;
+};
+
+export type ConferencistasInput = {
+  conferencistaId?: InputMaybe<Scalars['Int']>;
+  descripcionEspa?: InputMaybe<Scalars['String']>;
+  descripcionIngl?: InputMaybe<Scalars['String']>;
+  descripcionPort?: InputMaybe<Scalars['String']>;
+  imagenPrincipal?: InputMaybe<Scalars['Int']>;
+  nombreEspa?: InputMaybe<Scalars['String']>;
+  nombreIngl?: InputMaybe<Scalars['String']>;
+  nombrePort?: InputMaybe<Scalars['String']>;
+};
+
+export type GetAllBlog = {
+  __typename?: 'GetAllBlog';
+  data?: Maybe<Array<Blog>>;
+  nroTotalItems?: Maybe<Scalars['Int']>;
+};
+
+export type GetAllConferencistas = {
+  __typename?: 'GetAllConferencistas';
+  data?: Maybe<Array<Conferencistas>>;
+  nroTotalItems?: Maybe<Scalars['Int']>;
+};
+
 export type GetRegistroParticipante = {
   __typename?: 'GetRegistroParticipante';
   NroItems?: Maybe<Scalars['Int']>;
   data?: Maybe<Array<RegistroParticipante>>;
 };
 
+export type Imagenes = {
+  __typename?: 'Imagenes';
+  descripcion?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+  url?: Maybe<Scalars['String']>;
+};
+
+export type ImagenesInput = {
+  created_at?: InputMaybe<Scalars['DateTime']>;
+  descripcion?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  updated_at?: InputMaybe<Scalars['DateTime']>;
+  url?: InputMaybe<Scalars['String']>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
+  CreateImage?: Maybe<Imagenes>;
+  CreateaBlog?: Maybe<Blog>;
+  CreateaConferencista?: Maybe<Conferencistas>;
+  DeleteBlog?: Maybe<Scalars['String']>;
+  DeleteConferencista?: Maybe<Scalars['String']>;
+  DeleteImage?: Maybe<Scalars['String']>;
   RegistroParticipantes?: Maybe<RegistroParticipante>;
+  UpdateBlog?: Maybe<Blog>;
+  UpdateConferencista?: Maybe<Conferencistas>;
+  UpdateImage?: Maybe<Imagenes>;
+};
+
+
+export type MutationCreateImageArgs = {
+  imagen: Scalars['Upload'];
+  input?: InputMaybe<ImagenesInput>;
+};
+
+
+export type MutationCreateaBlogArgs = {
+  input?: InputMaybe<BlogInput>;
+};
+
+
+export type MutationCreateaConferencistaArgs = {
+  input?: InputMaybe<ConferencistasInput>;
+};
+
+
+export type MutationDeleteBlogArgs = {
+  input?: InputMaybe<BlogInput>;
+};
+
+
+export type MutationDeleteConferencistaArgs = {
+  input?: InputMaybe<ConferencistasInput>;
+};
+
+
+export type MutationDeleteImageArgs = {
+  input: ImagenesInput;
 };
 
 
 export type MutationRegistroParticipantesArgs = {
   input: RegistroParticipanteInput;
+};
+
+
+export type MutationUpdateBlogArgs = {
+  input?: InputMaybe<BlogInput>;
+};
+
+
+export type MutationUpdateConferencistaArgs = {
+  input?: InputMaybe<ConferencistasInput>;
+};
+
+
+export type MutationUpdateImageArgs = {
+  input?: InputMaybe<ImagenesInput>;
 };
 
 /** Allows ordering a list of records. */
@@ -91,14 +223,41 @@ export type PaginatorInfo = {
 
 export type Query = {
   __typename?: 'Query';
+  GetAllBlog?: Maybe<GetAllBlog>;
+  GetAllConferencistas?: Maybe<GetAllConferencistas>;
   GetAllRegistroPersonas?: Maybe<GetRegistroParticipante>;
+  GetIdgBlog?: Maybe<Blog>;
+  GetIdgConferencista?: Maybe<Conferencistas>;
+  GetImagenes?: Maybe<Array<Imagenes>>;
   GetReporteExcel?: Maybe<Scalars['String']>;
+};
+
+
+export type QueryGetAllBlogArgs = {
+  numberPaginate?: InputMaybe<Scalars['Int']>;
+  page?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type QueryGetAllConferencistasArgs = {
+  numberPaginate?: InputMaybe<Scalars['Int']>;
+  page?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QueryGetAllRegistroPersonasArgs = {
   numberPaginate?: InputMaybe<Scalars['Int']>;
   page?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type QueryGetIdgBlogArgs = {
+  blogId?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type QueryGetIdgConferencistaArgs = {
+  conferencistaId?: InputMaybe<Scalars['Int']>;
 };
 
 export type RegistroParticipante = {
@@ -147,6 +306,22 @@ export type RegistroParticipantesMutationVariables = Exact<{
 
 export type RegistroParticipantesMutation = { __typename?: 'Mutation', RegistroParticipantes?: { __typename?: 'RegistroParticipante', nombres?: string | null | undefined, apellidos?: string | null | undefined, correo?: string | null | undefined, nroCelular?: string | null | undefined, pais?: string | null | undefined, empresa?: string | null | undefined } | null | undefined };
 
+export type GetAllBlogQueryVariables = Exact<{
+  page?: InputMaybe<Scalars['Int']>;
+  numberPaginate?: InputMaybe<Scalars['Int']>;
+}>;
+
+
+export type GetAllBlogQuery = { __typename?: 'Query', GetAllBlog?: { __typename?: 'GetAllBlog', nroTotalItems?: number | null | undefined, data?: Array<{ __typename?: 'Blog', blogId?: number | null | undefined, tituloEspa?: string | null | undefined, tituloPort?: string | null | undefined, tituloIngl?: string | null | undefined, descripcionEspa?: string | null | undefined, descripcionPort?: string | null | undefined, descripcionIngl?: string | null | undefined, imagenPrincipal?: { __typename?: 'Imagenes', id?: string | null | undefined, descripcion?: string | null | undefined, url?: string | null | undefined } | null | undefined }> | null | undefined } | null | undefined };
+
+export type GetAllConferencistasQueryVariables = Exact<{
+  page?: InputMaybe<Scalars['Int']>;
+  numberPaginate?: InputMaybe<Scalars['Int']>;
+}>;
+
+
+export type GetAllConferencistasQuery = { __typename?: 'Query', GetAllConferencistas?: { __typename?: 'GetAllConferencistas', nroTotalItems?: number | null | undefined, data?: Array<{ __typename?: 'Conferencistas', conferencistaId?: number | null | undefined, nombreEspa?: string | null | undefined, nombrePort?: string | null | undefined, nombreIngl?: string | null | undefined, descripcionEspa?: string | null | undefined, descripcionPort?: string | null | undefined, descripcionIngl?: string | null | undefined, created_at?: any | null | undefined, updated_at?: any | null | undefined, imagenPrincipal?: { __typename?: 'Imagenes', id?: string | null | undefined, descripcion?: string | null | undefined, url?: string | null | undefined } | null | undefined }> | null | undefined } | null | undefined };
+
 
 export const RegistroParticipantesDocument = gql`
     mutation RegistroParticipantes($input: RegistroParticipanteInput!) {
@@ -186,3 +361,105 @@ export function useRegistroParticipantesMutation(baseOptions?: Apollo.MutationHo
 export type RegistroParticipantesMutationHookResult = ReturnType<typeof useRegistroParticipantesMutation>;
 export type RegistroParticipantesMutationResult = Apollo.MutationResult<RegistroParticipantesMutation>;
 export type RegistroParticipantesMutationOptions = Apollo.BaseMutationOptions<RegistroParticipantesMutation, RegistroParticipantesMutationVariables>;
+export const GetAllBlogDocument = gql`
+    query GetAllBlog($page: Int, $numberPaginate: Int) {
+  GetAllBlog(page: $page, numberPaginate: $numberPaginate) {
+    nroTotalItems
+    data {
+      blogId
+      tituloEspa
+      tituloPort
+      tituloIngl
+      descripcionEspa
+      descripcionPort
+      descripcionIngl
+      imagenPrincipal {
+        id
+        descripcion
+        url
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetAllBlogQuery__
+ *
+ * To run a query within a React component, call `useGetAllBlogQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetAllBlogQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetAllBlogQuery({
+ *   variables: {
+ *      page: // value for 'page'
+ *      numberPaginate: // value for 'numberPaginate'
+ *   },
+ * });
+ */
+export function useGetAllBlogQuery(baseOptions?: Apollo.QueryHookOptions<GetAllBlogQuery, GetAllBlogQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetAllBlogQuery, GetAllBlogQueryVariables>(GetAllBlogDocument, options);
+      }
+export function useGetAllBlogLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetAllBlogQuery, GetAllBlogQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetAllBlogQuery, GetAllBlogQueryVariables>(GetAllBlogDocument, options);
+        }
+export type GetAllBlogQueryHookResult = ReturnType<typeof useGetAllBlogQuery>;
+export type GetAllBlogLazyQueryHookResult = ReturnType<typeof useGetAllBlogLazyQuery>;
+export type GetAllBlogQueryResult = Apollo.QueryResult<GetAllBlogQuery, GetAllBlogQueryVariables>;
+export const GetAllConferencistasDocument = gql`
+    query GetAllConferencistas($page: Int, $numberPaginate: Int) {
+  GetAllConferencistas(page: $page, numberPaginate: $numberPaginate) {
+    nroTotalItems
+    data {
+      conferencistaId
+      nombreEspa
+      nombrePort
+      nombreIngl
+      descripcionEspa
+      descripcionPort
+      descripcionIngl
+      imagenPrincipal {
+        id
+        descripcion
+        url
+      }
+      created_at
+      updated_at
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetAllConferencistasQuery__
+ *
+ * To run a query within a React component, call `useGetAllConferencistasQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetAllConferencistasQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetAllConferencistasQuery({
+ *   variables: {
+ *      page: // value for 'page'
+ *      numberPaginate: // value for 'numberPaginate'
+ *   },
+ * });
+ */
+export function useGetAllConferencistasQuery(baseOptions?: Apollo.QueryHookOptions<GetAllConferencistasQuery, GetAllConferencistasQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetAllConferencistasQuery, GetAllConferencistasQueryVariables>(GetAllConferencistasDocument, options);
+      }
+export function useGetAllConferencistasLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetAllConferencistasQuery, GetAllConferencistasQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetAllConferencistasQuery, GetAllConferencistasQueryVariables>(GetAllConferencistasDocument, options);
+        }
+export type GetAllConferencistasQueryHookResult = ReturnType<typeof useGetAllConferencistasQuery>;
+export type GetAllConferencistasLazyQueryHookResult = ReturnType<typeof useGetAllConferencistasLazyQuery>;
+export type GetAllConferencistasQueryResult = Apollo.QueryResult<GetAllConferencistasQuery, GetAllConferencistasQueryVariables>;

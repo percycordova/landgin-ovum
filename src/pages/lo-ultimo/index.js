@@ -14,6 +14,7 @@ const LoUltimo = (props) => {
   const [isOpen, openModal, closeModal] = useModal(false)
   const [isOpenInscripcion, openModalInscripcion, closeModalInscripcion] = useModal(false)
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
+
   return (
     <div className=''>
       <Head>
@@ -26,7 +27,7 @@ const LoUltimo = (props) => {
       </Head>
 
       <main className="">
-        <Header/>
+        <Header />
         <div className="">
           <Grid {...{ openModal, closeModal, isOpen }} />
           <BannerLanding />

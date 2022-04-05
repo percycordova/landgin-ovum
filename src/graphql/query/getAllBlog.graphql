@@ -1,0 +1,19 @@
+query GetAllBlog($page: Int, $numberPaginate: Int) {
+  GetAllBlog(page: $page, numberPaginate: $numberPaginate) {
+    nroTotalItems
+    data {
+      blogId
+      tituloEspa
+      tituloPort
+      tituloIngl
+      descripcionEspa
+      descripcionPort
+      descripcionIngl
+      imagenPrincipal {
+        id
+        descripcion
+        url
+      }
+    }
+  }
+}

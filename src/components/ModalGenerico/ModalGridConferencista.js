@@ -41,12 +41,12 @@ const ModalGridConferencista = ({ isOpen, closeModal, data, initialSlide, size }
             className='mySwiper'
           >
             {data.map(item => (
-              <SwiperSlide key={item.id} >
+              <SwiperSlide key={item.conferencistaId} >
                 <div className="flex items-center justify-center ">
                   <div className="relative bg-white font-semibold text-center rounded-3xl border  px-5 pt-5 pb-10 max-w-xs">
-                    <img className="mb-3 w-60 h-60   mx-auto" src={item.img} alt="product designer" />
-                    <h1 className="text-2xl text-black"> {item.autor} ({item.pais})</h1>
-                    <p className="text-lg font-extralight text-black mt-4">{item.resumen}</p>
+                    <img className="mb-3 w-60 h-60 rounded-full  mx-auto" src={item?.imagenPrincipal.url} alt={item?.imagenPrincipal.descripcion} />
+                    <h1 className="text-2xl text-black"> {item?.nombreEspa}</h1>
+                    <p className="text-lg font-extralight text-black mt-4">{item?.descripcionEspa}</p>
                     <div className="absolute bottom-0 left-0 h-5 w-full bg-green-400 rounded-b-full"></div>
                   </div>
                 </div>

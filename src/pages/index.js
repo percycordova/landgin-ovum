@@ -27,13 +27,60 @@ const Home = (props) => {
   return (
     <div className='font-sans'>
       <Head>
-        <title>OVUM 2022</title>
-        <meta
-          name="description "
-          content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+          <title>OVUM 2022</title>
+          <meta
+            name="description"
+            content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
+          />
+          <meta property="og:title" content="OVUM 2022" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:url"
+            content="https://ovum-next-gamma.vercel.app/"
+          />
+          <meta
+            name="keywords"
+            content="OVUM, OVUM 22, CONGRESO AVICULTURA, CONGRESO, AVICULTURA"
+          />
+          <meta name="robots" content="index,follow" />
+          <meta name="googlebot" content="index,follow" />
+          <meta name="viewport" content="width=device-width" />
+          <meta name="title" content="OVUM 2022" />
+          <meta
+            name="description"
+            content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
+          />
+          <meta name="image" content="/logo-mobile.png" />
+
+          <meta name="twitter:title" content="OVUM 2022" />
+          <meta
+            name="twitter:description"
+            content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
+          />
+          <meta name="twitter:image" content="/logo-mobile.png" />
+          <meta
+            name="twitter:url"
+            content="https://ovum-next-gamma.vercel.app/"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+
+          <meta property="og:title" content="OVUM 2022" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="OVUM 2022" />
+          <meta
+            property="og:url"
+            content="https://ovum-next-gamma.vercel.app/"
+          />
+          <meta property="og:image" content="/logo-mobile.png" />
+          <meta property="og:image:secure_url" content="/logo-mobile.png" />
+          <meta property="og:image:type" content="image/jpg" />
+          <meta property="og:image:width" content="400" />
+          <meta property="og:image:height" content="300" />
+          <meta
+            property="og:description"
+            content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
+          />
+        </Head>
 
       <main className="">
         <Header idiomas={props} />

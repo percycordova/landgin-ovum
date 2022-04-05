@@ -1,0 +1,21 @@
+query GetAllConferencistas($page:Int,$numberPaginate:Int){
+  GetAllConferencistas(page:$page,numberPaginate:$numberPaginate) {
+    nroTotalItems
+    data{
+      conferencistaId
+      nombreEspa
+      nombrePort
+      nombreIngl
+      descripcionEspa
+      descripcionPort
+      descripcionIngl
+      imagenPrincipal {
+        id
+        descripcion
+        url
+      }
+      created_at
+      updated_at
+    }
+  }  
+}
