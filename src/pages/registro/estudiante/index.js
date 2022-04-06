@@ -1,47 +1,12 @@
 import Head from "next/head";
 import { useState } from "react";
-import AcordionPagoAnticipado from "../../../components/acordion/AcordionPagoAnticipado";
 import ButtonWhassapt from "../../../components/buttons/ButtonWhassapt";
 import Footer from "../../../components/footer/Footer";
 import Header from "../../../components/header";
 import InputText from "../../../components/inputs/InputText";
 
-const defaulStateDatosParticipantes = {
-  nombres: "",
-  apellidos: "",
-  dni: "",
-  correo: "",
-  ciudad: "",
-  cargo: "",
-  celular: "",
-  alergias: "",
-  esInvitado: false,
-  empresa: "",
-};
-
-const PagoAnticipado = (props) => {
+const Estudiante = (props) => {
   const [cantidad, setCantidad] = useState(1);
-  const [montoTotal, setMontoTotal] = useState(560);
-  const [rows, setRows] = useState([defaulStateDatosParticipantes]);
-
-  const handleOnChangeAcordion = (index, name, value) => {
-    const copyRows = [...rows];
-    copyRows[index] = {
-      ...copyRows[index],
-      [name]: value,
-    };
-    setRows(copyRows);
-  };
-  const handleOnAdd = () => {
-    setRows(rows.concat(defaulStateDatosParticipantes));
-  };
-
-  const handleOnRemove = (index) => {
-    const copyRows = [...rows];
-    copyRows.splice(index, 1);
-    setRows(copyRows);
-  };
-
   return (
     <div className="">
       <Head>
@@ -64,24 +29,25 @@ const PagoAnticipado = (props) => {
           </div>
 
           <h3 className="text-xl md:text-3xl pl-8 font-bold mt-10 md:pl-24 text-gray-600">
-            Pago anticipado $560 USD
+          Estudiantes $300 USD
           </h3>
           <div className="px-4 sm:px-12 mt-12">
             <hr />
           </div>
           <form action="" className="mt-8">
-            {/* Datos de la facturacion */}
-            <div className="px-5 lg:px-20 text-gray-600">
+            
+            {/* datos de participantes */}
+            <div className="mt-8 px-5 lg:px-20 text-gray-600">
               <p className="text-xl font-medium mb-5">
-                Datos de la facturación
+                Ingresar datos de participante
               </p>
               <div className="flex flex-col gap-y-4 lg:flex-row lg:items-center lg:gap-x-15 mb-4">
                 <div className="w-full">
                   <label
                     htmlFor="nombres"
-                    className="text-xs sm:text-base text-gray-600"
+                    className="text-xs text-gray-600 sm:text-base"
                   >
-                    Empresa*{" "}
+                    Nombres*{" "}
                   </label>
                   <InputText id="nombres" />
                 </div>
@@ -90,7 +56,7 @@ const PagoAnticipado = (props) => {
                     htmlFor="nombres"
                     className="text-xs text-gray-600 sm:text-base"
                   >
-                    RTN o equivalente*{" "}
+                    Apellidos*{" "}
                   </label>
                   <InputText id="nombres" />
                 </div>
@@ -102,7 +68,7 @@ const PagoAnticipado = (props) => {
                     htmlFor="nombres"
                     className="text-xs text-gray-600 sm:text-base"
                   >
-                    Dirección de empresa*{" "}
+                    DNI*{" "}
                   </label>
                   <InputText id="nombres" />
                 </div>
@@ -111,7 +77,7 @@ const PagoAnticipado = (props) => {
                     htmlFor="nombres"
                     className="text-xs text-gray-600 sm:text-base"
                   >
-                    Rubro o actividad{" "}
+                    Correo*{" "}
                   </label>
                   <InputText id="nombres" />
                 </div>
@@ -123,7 +89,7 @@ const PagoAnticipado = (props) => {
                     htmlFor="nombres"
                     className="text-xs text-gray-600 sm:text-base"
                   >
-                    Contacto contable/ tesoreria/facturación{" "}
+                    Ciudad
                   </label>
                   <InputText id="nombres" />
                 </div>
@@ -132,95 +98,50 @@ const PagoAnticipado = (props) => {
                     htmlFor="nombres"
                     className="text-xs text-gray-600 sm:text-base"
                   >
-                    País{" "}
+                    Centro de estudios
                   </label>
                   <InputText id="nombres" />
                 </div>
               </div>
-            </div>
-            {/* fin datos de facturacion */}
-            <div className="px-4 sm:px-12 mt-12">
-              <hr />
-            </div>
-            {/* participantes */}
-            <div className="px-5 lg:px-20 text-gray-600 mt-8">
-              <p className="text-xl font-medium mb-5">Participantes</p>
+
               <div className="flex flex-col gap-y-4 lg:flex-row lg:items-start lg:gap-x-15 mb-4">
                 <div className="w-full">
                   <label
                     htmlFor="nombres"
                     className="text-xs text-gray-600 sm:text-base"
                   >
-                    Cantidad de inscripciones a comprar
+                    Nro de Carnet de estudiante
                   </label>
-                  <div className="w-full mt-1 flex items-center pl-7 h-13 text-gray-600 relative bg-white border border-gray-500 rounded-lg ">
-                    <span className="absolute left-5">{cantidad}</span>
-                    <div
-                      className="absolute -right-1 bg-gray-500 h-13 w-8 flex flex-col"
-                      style={{ top: "-1px" }}
-                    >
-                      <span
-                        className="w-8 h-1/2  justify-center items-center flex text-white border-b border-white  px-2 cursor-pointer"
-                        onClick={() => {
-                          setCantidad((c) => c + 1);
-                          setMontoTotal(montoTotal + 560);
-                        }}
-                      >
-                        +
-                      </span>
-                      <span
-                        className="w-8 h-1/2  text-white px-2  justify-center items-center flex border-t border-white cursor-pointer"
-                        onClick={() => {
-                          if (cantidad > 1) {
-                            setCantidad((c) => c - 1);
-                            setMontoTotal(montoTotal - 560);
-                          }
-                        }}
-                      >
-                        -
-                      </span>
-                    </div>
-                  </div>
+                  <InputText id="nombres" />
                 </div>
                 <div className="w-full">
                   <label
                     htmlFor="nombres"
                     className="text-xs text-gray-600 sm:text-base"
                   >
-                    Total
+                    Celular*
                   </label>
-                  <div className="w-full mt-1 flex items-center pl-7 h-13 text-gray-600 relative bg-white border border-gray-500 rounded-lg ">
-                    <span className="absolute left-5 font-bold text-lg">
-                      $ {montoTotal}.00
-                    </span>
-                  </div>
-                  <span className="text-secondary-600 text-xs font-bold sm:text-sm">
-                    US $560.00 por participante inc. impuestos (Pre-venta)
+                  <InputText id="nombres" />
+                </div>
+                
+              </div>
+
+              <div className="flex flex-col gap-y-4 lg:flex-row lg:items-center mt-2 lg:gap-x-15 mb-4">
+               
+                <div className="w-full">
+                  <label
+                    htmlFor="nombres"
+                    className="text-xs text-gray-600 sm:text-sm"
+                  >
+                  Sufres algún tipo de Alergia, Hipertensión, Diabetes u otro?
+                  </label>
+                  <InputText id="nombres" />
+                  <span className="text-xs text-gray-600 font-light sm:text-sm">
+                    Si respondes Si, menciona cuales
                   </span>
                 </div>
+               
               </div>
-            </div>
-            {/* fin de participantes */}
-            <div className="px-4 sm:px-12 mt-12">
-              <hr />
-            </div>
-            {/* datos de participantes */}
-            <div className="mt-8 px-5 lg:px-20 text-gray-600">
-              <p className="text-xl font-medium mb-5">
-                Ingresar datos de los participantes
-              </p>
-              {rows.map((row, index) => (
-                <AcordionPagoAnticipado
-                  {...row}
-                  onChange={(name, value) =>
-                    handleOnChangeAcordion(index, name, value)
-                  }
-                  key={index}
-                  index={index}
-                  onRemove={() => handleOnRemove(index)}
-                  tamañoArray={rows.length}
-                />
-              ))}
             </div>
             {/* fin datos de participantes */}
             <div className="px-4 sm:px-12 mt-12">
@@ -234,14 +155,7 @@ const PagoAnticipado = (props) => {
 
               <div className="w-full">
                 <div className="w-full mt-1 flex items-center pl-7 h-13 text-gray-600 relative bg-white border border-gray-500 rounded-xl ">
-                  <span
-                    className="absolute left-1 cursor-pointer text-3xl px-4 py-1"
-                    onClick={() => {
-                      if (rows.length < cantidad) {
-                        handleOnAdd();
-                      }
-                    }}
-                  >
+                  <span className="absolute left-1 cursor-pointer text-3xl px-4 py-1">
                     +
                   </span>
                 </div>
@@ -265,7 +179,7 @@ const PagoAnticipado = (props) => {
     </div>
   );
 };
-export default PagoAnticipado;
+export default Estudiante;
 
 // eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {

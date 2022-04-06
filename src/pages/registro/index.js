@@ -116,7 +116,7 @@ const Registro = (props) => {
                         w-full text-base rounded-xl text-center py-2  sm:rounded-3xl 
                        hover:opacity-80 transition-all duration-300 focus:outline-none md:max-w-36"
                   >
-                    Comprar
+                       <Link href="/registro/estudiante">Comprar</Link>      
                   </button>
                 </div>
               </div>
