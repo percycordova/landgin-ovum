@@ -36,9 +36,9 @@ const PagoAnticipado = (props) => {
     setRows(rows.concat(defaulStateDatosParticipantes));
   };
 
-  const handleOnRemove = (index) => {
+  const handleOnRemove = () => {
     const copyRows = [...rows];
-    copyRows.splice(index, 1);
+    copyRows.splice(rows.length-1, 1);
     setRows(copyRows);
   };
 
@@ -164,6 +164,7 @@ const PagoAnticipado = (props) => {
                         onClick={() => {
                           setCantidad((c) => c + 1);
                           setMontoTotal(montoTotal + 560);
+                          handleOnAdd()
                         }}
                       >
                         +
@@ -174,6 +175,7 @@ const PagoAnticipado = (props) => {
                           if (cantidad > 1) {
                             setCantidad((c) => c - 1);
                             setMontoTotal(montoTotal - 560);
+                            handleOnRemove()
                           }
                         }}
                       >
@@ -217,8 +219,6 @@ const PagoAnticipado = (props) => {
                   }
                   key={index}
                   index={index}
-                  onRemove={() => handleOnRemove(index)}
-                  tamañoArray={rows.length}
                 />
               ))}
             </div>
@@ -227,7 +227,7 @@ const PagoAnticipado = (props) => {
               <hr />
             </div>
             {/* Ingresar datos de inscritos por cantidad indicada  */}
-            <div className="px-5 lg:px-20 text-gray-600 mt-8">
+            {/* <div className="px-5 lg:px-20 text-gray-600 mt-8">
               <p className="text-xl font-medium mb-5">
                 Ingresar datos de inscritos por cantidad indicada{" "}
               </p>
@@ -246,7 +246,7 @@ const PagoAnticipado = (props) => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* fin de ingresar datos de inscritos por cantidad indicada  */}
             <div className="flex justify-center px-5">
               <button

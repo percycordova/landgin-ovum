@@ -3,7 +3,6 @@ import InputText from "../inputs/InputText";
 
 const AcordionPagoAnticipado = ({
   onChange = () => {},
-  onRemove = () => {},
   nombres,
   apellidos,
   dni,
@@ -15,7 +14,7 @@ const AcordionPagoAnticipado = ({
   esInvitado,
   empresa,
   index,
-  tamañoArray
+
 }) => {
   const [mostrar, setMostrar] = useState(false);
   return (
@@ -23,16 +22,6 @@ const AcordionPagoAnticipado = ({
       <div className="py-3 relative bg-secondary-600 mb-7 rounded-lg">
         <p className="text-white text-center font-semibold">
           Datos del participante {index + 1}
-        </p>
-        <p
-          className="text-white font-bold absolute top-2 p-1 right-20 cursor-pointer"
-          onClick={() => {
-            if (tamañoArray > 1) {
-              onRemove();
-            }
-          }}
-        >
-          Eliminar
         </p>
         <img
           src="/icons/flecha-hacia-abajo.png"
