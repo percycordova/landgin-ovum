@@ -25,66 +25,71 @@ const Organizadores = () => {
         <h6 className="text-3xl lg:text-4xl text-center font-normal mb-8 text-blue-500">
           ORGANIZADORES
         </h6>
-        <div className="hidden lg:grid grid-cols-4 gap-x-4 gap-y-10">
-          <div className="">
-            <img
-              src="/logo-ovum.png"
-              className="mx-auto filter grayscale w-5/6  h-auto"
-              alt=""
-            />
-          </div>
-          <div className="">
-            <img
-              src="/logo-ovum.png"
-              className="mx-auto filter grayscale w-5/6  h-auto"
-              alt=""
-            />
-          </div>
-          <div className="">
-            <img
-              src="/logo-ovum.png"
-              className="mx-auto filter grayscale w-5/6  h-auto"
-              alt=""
-            />
-          </div>
-          <div className="">
-            <img
-              src="/logo-ovum.png"
-              className="mx-auto filter grayscale w-5/6  h-auto"
-              alt=""
-            />
-          </div>
-          <div className="">
-            <img
-              src="/logo-ovum.png"
-              className="mx-auto filter grayscale w-5/6  h-auto"
-              alt=""
-            />
-          </div>
-          <div className="">
-            <img
-              src="/logo-ovum.png"
-              className="mx-auto filter grayscale w-5/6  h-auto"
-              alt=""
-            />
-          </div>
-          <div className="">
-            <img
-              src="/logo-ovum.png"
-              className="mx-auto filter grayscale w-5/6  h-auto"
-              alt=""
-            />
-          </div>
-          <div className="">
-            <img
-              src="/logo-ovum.png"
-              className="mx-auto filter grayscale w-5/6  h-auto"
-              alt=""
-            />
-          </div>
+        <div className="flex justify-center flex-wrap">
+          <img src="/asociacion.png " className=" lg:w-64 h-32 object-cover" />
+          <img src="/anavih.png " className=" lg:w-60 h-32 object-cover" />
         </div>
+        {/* version desktop */}
+        {/* <div className="hidden lg:grid grid-cols-4 gap-x-4 gap-y-10">
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+          <div className="">
+            <img
+              src="/logo-ovum.png"
+              className="mx-auto filter grayscale w-5/6  h-auto"
+              alt=""
+            />
+          </div>
+        </div> */}
         {/* slider en mobile */}
-        <div className="lg:hidden">
+        {/* <div className="lg:hidden">
           <Swiper
             style={{
               "--swiper-navigation-color": "#C4C4C4",
@@ -166,7 +171,7 @@ const Organizadores = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-        </div>
+        </div> */}
       </div>
     </section>
   );

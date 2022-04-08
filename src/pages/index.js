@@ -28,6 +28,7 @@ const Home = (props) => {
     <div className='font-sans'>
       <Head>
           <title>OVUM 2022</title>
+          <link rel="icon" href="/Captura_1.ico" />
           <meta
             name="description"
             content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
@@ -88,15 +89,15 @@ const Home = (props) => {
         <div className="">
           <Acerca />
           <LoUltimo />
-          <Conferencia />
+          {/* <Conferencia /> */}
           <Estructura />
           <Programa />
-          <Conferencista />
+          {/* <Conferencista /> */}
           <BannerLanding />
           <Conoce />
-          <Feria />
-          <Patrocinadores />
-          <Auspiciadores />
+          {/* <Feria /> */}
+          {/* <Patrocinadores /> */}
+          {/* <Auspiciadores /> */}
           <Organizadores />
           <section className=" p-8 flex flex-col justify-center items-center">
             <FomularioRegistro openModal={openModalInscripcion} idiomas={props} />
