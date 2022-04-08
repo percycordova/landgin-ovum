@@ -28,7 +28,7 @@ const LoUltimo = (props) => {
 
       <main className="">
         <Header />
-        <div className="">
+        <div className="lg:w-256 max-w-7xl mx-auto">
           <Grid {...{ openModal, closeModal, isOpen }} />
           <BannerLanding />
           <Patrocinadores />

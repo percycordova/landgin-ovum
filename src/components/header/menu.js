@@ -5,16 +5,16 @@ const Menu = ({mostrarLogo}) => {
 
 
   return (
-    <ul className="flex gap-x-2 text-base font-normal items-center text-gray-600">
+    <ul className="flex  text-base font-normal items-center text-gray-600">
     
       { mostrarLogo &&<li className="py-4 px-2 cursor-pointer ">
-          <Link href="/"><img src="/logo-navbar.png" alt="" /></Link>
+          <Link href="/"><img src="/logo-navbar.png" alt="" className="h-18 w-32 object-cover"/></Link>
         </li>}
       
-      <li className="py-4 px-2 cursor-pointer ">
+      <li className="py-4 px-2 cursor-pointer">
       <Link href="/registro">Registrate</Link>
       </li>
-      <li className="py-4 px-2 cursor-pointer ">
+      <li className="py-4 px-2 cursor-pointer">
         <a href="#programa">Programa</a>{" "}
       </li>
       <li className="py-4 px-2 cursor-pointer ">

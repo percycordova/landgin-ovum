@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useState } from "react";
 import AcordionPagoAnticipado from "../../../components/acordion/AcordionPagoAnticipado";
 import ButtonWhassapt from "../../../components/buttons/ButtonWhassapt";
@@ -38,7 +39,7 @@ const PagoAnticipado = (props) => {
 
   const handleOnRemove = () => {
     const copyRows = [...rows];
-    copyRows.splice(rows.length-1, 1);
+    copyRows.splice(rows.length - 1, 1);
     setRows(copyRows);
   };
 
@@ -62,10 +63,15 @@ const PagoAnticipado = (props) => {
           <div className="px-4 sm:px-2">
             <hr />
           </div>
+          <div className="flex items-center mt-10">
+            <Link href="/registro">
+              <img src="/icons/flecha-izquierda.png" alt="" className="w-10 ml-3 cursor-pointer" />
+            </Link>
+            <h3 className="text-xl md:text-3xl pl-4 font-bold md:pl-8  text-gray-600">
+              Pago anticipado $560 USD
+            </h3>
+          </div>
 
-          <h3 className="text-xl md:text-3xl pl-8 font-bold mt-10 md:pl-24 text-gray-600">
-            Pago anticipado $560 USD
-          </h3>
           <div className="px-4 sm:px-12 mt-12">
             <hr />
           </div>

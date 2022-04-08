@@ -17,14 +17,15 @@ const Header = ({ idiomas }) => {
     }
   }, [pathname]);
 
+
   return (
     <>
       {/* header desktop */}
-      <div className="hidden xl:flex xl:justify-center">
+      <div className="hidden lg:flex ">
         <div
-          className={`inline-flex mx-auto justify-center items-center pt-6 ${
+          className={`inline-flex lg:w-256 max-w-7xl mx-auto justify-between items-center pt-6 ${
             mostrarLogo ? " border-b" : "pb-6"
-          }  gap-30 `}
+          }   `}
         >
           <Menu mostrarLogo={mostrarLogo} />
           <div className="flex gap-3">
@@ -35,7 +36,7 @@ const Header = ({ idiomas }) => {
       </div>
 
       {/* header mobile */}
-      <div className="relative flex justify-between items-start py-3 px-4 xl:hidden">
+      <div className="relative flex justify-between items-start py-3 px-4 lg:hidden">
         <Idiomas />
         <div>
           <HamburguesBtn show={showMenu} handleClick={handleBtnClick} />
