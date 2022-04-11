@@ -157,6 +157,12 @@ html {
 
 .custom_img {
   background-image: url("../../public/backk.png");
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+
 }
 .swiper-button-next {
   right: 0px !important;
