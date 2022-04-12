@@ -43,8 +43,11 @@ const LoUltimo = () => {
           {loadingGetData ? (
             <div>Cargando...</div>
           ) : (
-            <div className="flex justify-between">
-              <div className="">
+            <div className="flex cursor-pointer justify-between">
+              <div className="" onClick={() => {
+                setInitialSlide(0);
+                openModal();
+              }}>
                 <div className="relative  ">
                   <img
                     src="/ippe.png"
@@ -53,17 +56,17 @@ const LoUltimo = () => {
                   />
                   <div className="bg-indigo-300 w-full h-full">
                     <img
-                      src={db.slice(db.length - 1)[0]?.imagenPrincipal?.url}
+                      src={db.slice(0)[0]?.imagenPrincipal?.url}
                       alt={
-                        db.slice(db.length - 1)[0]?.imagenPrincipal?.descripcion
+                        db.slice(0)[0]?.imagenPrincipal?.descripcion
                       }
                       className="object-cover "
                       style={{ width: "688px", height: "528px" }}
                     />
                   </div>
                   <div className="absolute bottom-0 w-full px-10 py-3 bg-green-500 bg-opacity-90 text-white ">
-                    <h3 className="text-2xl font-bold">
-                      {db.slice(db.length - 1)[0]?.tituloEspa}
+                    <h3 className="text-2xl font-bold w-100">
+                      {db.slice(0)[0]?.tituloEspa}
                       {/* ¡Equipo <span className="font-bold">OVUM 2022</span> */}
                     </h3>
                     {/* <h3 className="text-3xl ">A poco de el gran evento!</h3> */}
@@ -75,13 +78,13 @@ const LoUltimo = () => {
                   className="flex flex-col justify-between "
                   style={{ height: "528px" }}
                 >
-                  {db.slice(db.length - 4, db.length - 1).map((item,i) => (
+                  {db.slice(1, 4).map((item, i) => (
                     <div
                       key={item.blogId}
                       className="relative cursor-pointer"
                       style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
                       onClick={() => {
-                        setInitialSlide(i);
+                        setInitialSlide(i+1);
                         openModal();
                       }}
                     >
@@ -177,7 +180,7 @@ const LoUltimo = () => {
             modules={[EffectFade, Navigation, Pagination]}
             className="mySwiper"
           >
-            {!loadingGetData && db.slice(db.length - 5, db.length - 1).map(item =>
+            {!loadingGetData && db.slice(5).map(item =>
               <SwiperSlide>
                 <div className="relative">
                   <img src={item?.imagenPrincipal?.url} className="w-full h-48 object-cover" />
@@ -202,7 +205,7 @@ const LoUltimo = () => {
       <ModalGrid
         isOpen={isOpen}
         closeModal={closeModal}
-        data={db.slice(db.length - 4, db.length - 1)}
+        data={db.slice(0,4)}
         initialSlide={initialSlide}
         setInitialSlide={setInitialSlide}
       />
