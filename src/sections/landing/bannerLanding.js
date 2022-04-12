@@ -19,7 +19,7 @@ const BannerLanding = () => {
               en Honduras?
             </p>
             <div className="flex justify-center w-full   ">
-              <button className=" bg-pink-700 relative z-20 text-white text-xl font-normal py-2 max-w-52 w-full rounded-full ">
+              <button className=" bg-pink-700 relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
                 Consultanos
               </button>
             </div>
@@ -53,13 +53,13 @@ const BannerLanding = () => {
             />
           </div>
           <div className="flex justify-center w-full md:hidden  ">
-            <button className=" bg-pink-700 relative z-20 text-white text-xl font-normal py-2 max-w-52 w-full rounded-full ">
+            <button className=" bg-pink-700 relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
               Consultanos
             </button>
           </div>
         </div>
       </div>
-      <div className="bg-black w-full h-128 lg:h-90 top-0 flex justify-center absolute opacity-50 "></div>
+      {/* <div className="bg-black w-full h-128 lg:h-90 top-0 flex justify-center absolute opacity-50 "></div> */}
     </section>
   );
 };

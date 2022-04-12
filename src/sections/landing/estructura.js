@@ -51,7 +51,7 @@ const data = [
     id: 6,
     img: "/estructura-5.png",
     title: "TURISMO",
-    text: "El caribe hondureño y la mejestuosa cultura ancestral de la Ciudad de los Zorzales espera a todos los actores de nuestra industria avícola, para dar el marco apropiado en San Pedro Sula: EL OVUM 2022 ",
+    text: "El caribe hondureño y la majestuosa cultura ancestral de la Ciudad de los Zorzales espera a todos los actores de nuestra industria avícola, para dar el marco apropiado en San Pedro Sula. ¡El OVUM 2022!",
     typeImg: "ala-black",
   },
 ];
@@ -109,7 +109,7 @@ const Estructura = () => {
               className=" mx-auto max-w-sm rounded-2xl overflow-hidden "
             >
               <img
-                className="w-full"
+                className="w-full object-cover"
                 src={item.img}
                 alt="Sunset in the mountains"
               />
@@ -119,7 +119,7 @@ const Estructura = () => {
                 )} ${textColor(item.id)} rounded-b-2xl`}
               >
                 <div className=" text-xl mb-2">{item.title}</div>
-                <p className="font-light text-sm lg:text-lg  h-40 text-justify">
+                <p className="font-light text-sm lg:text-lg  h-44 text-justify">
                   {item.text}
                 </p>
 

@@ -43,7 +43,7 @@ const LoUltimo = () => {
                 />
                 <div className="bg-indigo-300 w-full h-full">
                   <img
-                    src="/lo-ultimo-portada.png"
+                    src="/lo-ultimo-01.png"
                     className="object-cover "
                     style={{ width: "688px", height: "528px" }}
                   />
@@ -52,7 +52,7 @@ const LoUltimo = () => {
                   <h3 className="text-2xl ">
                     ¡Equipo <span className="font-bold">OVUM 2022</span>
                   </h3>
-                  <h3 className="text-3xl ">presente en IPPE - Atlanta!</h3>
+                  <h3 className="text-3xl ">A poco de el gran evento!</h3>
                 </div>
               </div>
             </div>
@@ -64,14 +64,15 @@ const LoUltimo = () => {
                 >
                   <div className="">
                     <img
-                      src="/lo-ultimo-visitanos.png"
+                      src="/lo-ultimo-02.png"
                       className="w-full h-full object-fill"
+                      style={{ minWidth: "18.8rem" }}
                     />
                   </div>
                   <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
-                    <h3 className="">Visítanos en</h3>
-                    <h3 className="text-xl font-bold">
-                      IPPE 2022 - Booth B6981
+                    <h3 className="">Primer Congreso </h3>
+                    <h3 className=" font-bold">
+                      Latinoamericano de Avicultura
                     </h3>
                   </div>
                 </div>
@@ -80,14 +81,17 @@ const LoUltimo = () => {
                   style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
                 >
                   <img
-                    src="/lo-ultimo-lanzamiento.png"
+                    src="/lo-ultimo-03.png"
                     className="w-full   object-cover"
-                    style={{ height: "164px" }}
+                    style={{ height: "160px" }}
                   />
 
                   <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
-                    <h3 className="">Lanzamiento de</h3>
-                    <h3 className="text-xl font-bold"> OVUM 2022 en IBBE</h3>
+                    <h3 className="">San Pedro Sula, ciudad que </h3>
+                    <h3 className="text-xl font-bold">
+                      <span className="text-base font-normal">acogerá el </span>{" "}
+                      OVUM 2022{" "}
+                    </h3>
                   </div>
                 </div>
                 <div
@@ -95,13 +99,15 @@ const LoUltimo = () => {
                   style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
                 >
                   <img
-                    src="/img-slider.png"
+                    src="/lo-ultimo-04.png"
                     className="object-cover"
                     style={{ height: "164px", minWidth: "100%" }}
                   />
                   <div className="font-bold absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
-                    <h3 className="">¡Vuelve </h3>
-                    <h3 className="text-xl "> el OVUM 2022!</h3>
+                    <h3 className="text-xl ">¡El OVUM 2022</h3>
+                    <h3 className="font-normal">
+                      Ofrece las mejores instala ciones!
+                    </h3>
                   </div>
                 </div>
               </div>

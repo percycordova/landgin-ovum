@@ -35,7 +35,7 @@ const Conoce = () => {
 
         <div className="w-full flex flex-col justify-center">
           <h2 className="text-green-400 text-2xl mb-5 lg:mb-3 text-center lg:text-left">
-            San Pedro Sula como sede, hoteles, como llegar, gastronomía,
+           <span className="font-bold">San Pedro Sula como sede</span>, hoteles, como llegar, gastronomía,
             turismo.
           </h2>
           <p className=" text-gray-600 text-base lg:text-lg text-justify">
@@ -80,7 +80,7 @@ const Conoce = () => {
               contrastes de la cultura pop.
             </p>
             <div className="flex justify-center w-full  mt-8 ">
-              <button className=" bg-pink-700 text-white text-xl font-normal py-2 max-w-52 w-full rounded-full z-10">
+              <button className=" bg-pink-700 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full z-10">
                  <a href="https://elovum.com/TARIFAS-DE-HOTELES.pdf" target="_blank" rel="noopener noreferrer">Ver Hoteles</a>
               </button>
             </div>

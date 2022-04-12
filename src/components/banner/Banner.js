@@ -51,12 +51,12 @@ const Banner = ({ idiomas }) => {
           <p className="font-bold text-2.5xl md:text-5xl  z-20 mt-4 text-center banner__fecha">
             {idiomas.Banner.value}
           </p>
-          <p className="text-center z-20 text-base md:text-4xl relative  banner__san-pedro">
+          <p className="text-center z-20 text-base md:text-4xl relative  banner__san-pedro mt-2">
             San Pedro Sula, Honduras
           </p>
           <div className="flex justify-center  z-30 mt-12 lg:absolute lg:bottom-15 2xl:bottom-18 btn-banner  w-64 mx-auto  ">
             <a
-              className={`bg-secondary-600 text-white pt-2 pb-3 flex justify-center
+              className={`bg-secondary-600 text-white pt-3 pb-4 flex justify-center
                        items-center w-full text-lg md:text-xl  rounded-3xl 
                        hover:opacity-80 transition-all duration-300 focus:outline-none 
                        focus:shadow-outline cursor-pointer mb-4`}
