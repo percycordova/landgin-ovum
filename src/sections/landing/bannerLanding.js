@@ -15,7 +15,7 @@ const BannerLanding = () => {
           <div className=" max-w-120 ">
             <p className="text-3xl text-center relative z-20  mb-9">
               ¿Quieres participar de{" "}
-              <span className="font-bold">OVUM 2022</span>
+              <span className="font-bold">OVUM 2022 </span>
               en Honduras?
             </p>
             <div className="flex justify-center w-full   ">
@@ -42,8 +42,8 @@ const BannerLanding = () => {
             className="absolute z-20 bottom-0 "
           />
           <p className="text-3xl text-center relative z-20  mb-9">
-            ¿Quieres participar de <span className="font-bold">OVUM 2022</span>
-            en Honduras?
+            ¿Quieres participar de <span className="font-bold">OVUM 2022 </span>
+             en Honduras?
           </p>
           <div className="max-w-90 w-full  mb-11">
             <img

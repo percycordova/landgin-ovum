@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
 import ButtonWhassapt from '../../components/buttons/ButtonWhassapt'
 import FomularioRegistro from '../../components/Fomularios/FomularioRegistro'
 import Footer from '../../components/footer/Footer'
@@ -14,11 +15,15 @@ const LoUltimo = (props) => {
   const [isOpen, openModal, closeModal] = useModal(false)
   const [isOpenInscripcion, openModalInscripcion, closeModalInscripcion] = useModal(false)
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
-
+  useEffect(() => {
+     window.scroll({
+      top: 10
+    });
+  }, [])
   return (
     <div className=''>
       <Head>
-        <title>OVUM 2022</title>
+        <title>OVUM 2022 - LO ULTIMO</title>
         <meta
           name="description"
           content="OVUM 2022 XXVIII Congreso Latinoamericano de Avicultura"
@@ -28,10 +33,10 @@ const LoUltimo = (props) => {
 
       <main className="">
         <Header />
-        <div className="lg:w-256 max-w-7xl mx-auto">
+        <div className="">
           <Grid {...{ openModal, closeModal, isOpen }} />
           <BannerLanding />
-          <Patrocinadores />
+          {/* <Patrocinadores /> */}
           <Organizadores />
           <section className=" p-8 flex flex-col justify-center items-center">
             <FomularioRegistro openModal={openModalInscripcion} idiomas={props} />

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import useBlogServices from "../../Gestionadores/useBlogServices";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,11 +13,17 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectFade, Navigation, Pagination } from "swiper";
 import { maxHeight } from "tailwindcss/defaultTheme";
+import { useModal } from "../../hooks/useModal";
+import ModalGrid from "../../components/ModalGenerico/ModalGrid";
 // import Button from '../../../components/buttons/Button'
 
 const LoUltimo = () => {
+  const { loadingGetData, db } = useBlogServices();
+  const [isOpen, openModal, closeModal] = useModal(false)
+  const [initialSlide, setInitialSlide] = useState(0);
+
   return (
-    <section className=" p-8 flex flex-col justify-center items-center  overflow-x-hidden">
+    <section className=" p-8 flex flex-col justify-center items-center  overflow-x-hidden ">
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto bg-white">
         <h6 className="text-3xl lg:text-4.5xl text-center font-semibold mb-8 text-blue-500">
           LO ÚLTIMO
@@ -33,86 +40,122 @@ const LoUltimo = () => {
             alt=""
             className="absolute -right-48 bottom-15"
           />
-          <div className="flex justify-between">
-            <div className="">
-              <div className="relative  ">
-                <img
-                  src="/ippe.png"
-                  alt=""
-                  className="absolute top-3 right-2"
-                />
-                <div className="bg-indigo-300 w-full h-full">
+          {loadingGetData ? (
+            <div>Cargando...</div>
+          ) : (
+            <div className="flex justify-between">
+              <div className="">
+                <div className="relative  ">
                   <img
-                    src="/lo-ultimo-01.png"
-                    className="object-cover "
-                    style={{ width: "688px", height: "528px" }}
+                    src="/ippe.png"
+                    alt=""
+                    className="absolute top-3 right-2"
                   />
-                </div>
-                <div className="absolute bottom-0 w-full px-10 py-3 bg-green-500 bg-opacity-90 text-white ">
-                  <h3 className="text-2xl ">
-                    ¡Equipo <span className="font-bold">OVUM 2022</span>
-                  </h3>
-                  <h3 className="text-3xl ">A poco de el gran evento!</h3>
-                </div>
-              </div>
-            </div>
-            <div className="col-span-4 xl:col-span-4 ">
-              <div className="flex flex-col gap-y-5">
-                <div
-                  className="relative "
-                  style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
-                >
-                  <div className="">
+                  <div className="bg-indigo-300 w-full h-full">
                     <img
-                      src="/lo-ultimo-02.png"
-                      className="w-full h-full object-fill"
-                      style={{ minWidth: "18.8rem" }}
+                      src={db.slice(db.length - 1)[0]?.imagenPrincipal?.url}
+                      alt={
+                        db.slice(db.length - 1)[0]?.imagenPrincipal?.descripcion
+                      }
+                      className="object-cover "
+                      style={{ width: "688px", height: "528px" }}
                     />
                   </div>
-                  <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
-                    <h3 className="">Primer Congreso </h3>
-                    <h3 className=" font-bold">
-                      Latinoamericano de Avicultura
+                  <div className="absolute bottom-0 w-full px-10 py-3 bg-green-500 bg-opacity-90 text-white ">
+                    <h3 className="text-2xl font-bold">
+                      {db.slice(db.length - 1)[0]?.tituloEspa}
+                      {/* ¡Equipo <span className="font-bold">OVUM 2022</span> */}
                     </h3>
-                  </div>
-                </div>
-                <div
-                  className="relative"
-                  style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
-                >
-                  <img
-                    src="/lo-ultimo-03.png"
-                    className="w-full   object-cover"
-                    style={{ height: "160px" }}
-                  />
-
-                  <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
-                    <h3 className="">San Pedro Sula, ciudad que </h3>
-                    <h3 className="text-xl font-bold">
-                      <span className="text-base font-normal">acogerá el </span>{" "}
-                      OVUM 2022{" "}
-                    </h3>
-                  </div>
-                </div>
-                <div
-                  className="relative"
-                  style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
-                >
-                  <img
-                    src="/lo-ultimo-04.png"
-                    className="object-cover"
-                    style={{ height: "164px", minWidth: "100%" }}
-                  />
-                  <div className="font-bold absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
-                    <h3 className="text-xl ">¡El OVUM 2022</h3>
-                    <h3 className="font-normal">
-                      Ofrece las mejores instala ciones!
-                    </h3>
+                    {/* <h3 className="text-3xl ">A poco de el gran evento!</h3> */}
                   </div>
                 </div>
               </div>
+              <div className="col-span-4 xl:col-span-4 ">
+                <div
+                  className="flex flex-col justify-between "
+                  style={{ height: "528px" }}
+                >
+                  {db.slice(db.length - 4, db.length - 1).map((item,i) => (
+                    <div
+                      key={item.blogId}
+                      className="relative cursor-pointer"
+                      style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
+                      onClick={() => {
+                        setInitialSlide(i);
+                        openModal();
+                      }}
+                    >
+                      <div className="">
+                        <img
+                          src={item?.imagenPrincipal?.url}
+                          className=" object-fill"
+                          style={{ width: "18.625rem", height: "164px" }}
+                        />
+                      </div>
+                      <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
+                        {/* <h3 className="">Primer Congreso </h3> */}
+                        <h3 className=" font-bold">{item?.tituloEspa}</h3>
+                      </div>
+                    </div>
+                  ))}
+                  {/* <div
+                    className="relative "
+                    style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
+                  >
+                    <div className="">
+                      <img
+                        src="/lo-ultimo-02.png"
+                        className="w-full h-full object-fill"
+                        style={{ minWidth: "18.8rem" }}
+                      />
+                    </div>
+                    <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
+                      <h3 className="">Primer Congreso </h3>
+                      <h3 className=" font-bold">
+                        Latinoamericano de Avicultura
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    className="relative"
+                    style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
+                  >
+                    <img
+                      src="/lo-ultimo-03.png"
+                      className="w-full   object-cover"
+                      style={{ height: "160px" }}
+                    />
+
+                    <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
+                      <h3 className="">San Pedro Sula, ciudad que </h3>
+                      <h3 className="text-xl font-bold">
+                        <span className="text-base font-normal">
+                          acogerá el{" "}
+                        </span>{" "}
+                        OVUM 2022{" "}
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    className="relative"
+                    style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
+                  >
+                    <img
+                      src="/lo-ultimo-04.png"
+                      className="object-cover"
+                      style={{ height: "164px", minWidth: "100%" }}
+                    />
+                    <div className="font-bold absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
+                      <h3 className="text-xl ">¡El OVUM 2022</h3>
+                      <h3 className="font-normal">
+                        Ofrece las mejores instala ciones!
+                      </h3>
+                    </div>
+                  </div> */}
+                </div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
         {/* fin grid en lg */}
 
@@ -134,36 +177,17 @@ const LoUltimo = () => {
             modules={[EffectFade, Navigation, Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              <div className="relative">
-                <img src="/img-slider.png" className="w-full h-auto" />
-                <div className="absolute bottom-0 w-full px-4 py-2 bg-gray-600 bg-opacity-80 text-white ">
-                  <h3 className="text-base font-semibold">¡Vuelve </h3>
-                  <h3 className="text-lg font-semibold"> el OVUM 2022!</h3>
+            {!loadingGetData && db.slice(db.length - 5, db.length - 1).map(item =>
+              <SwiperSlide>
+                <div className="relative">
+                  <img src={item?.imagenPrincipal?.url} className="w-full h-48 object-cover" />
+                  <div className="absolute bottom-0 w-full px-4 py-2 bg-gray-600 bg-opacity-80 text-white ">
+                    {/* <h3 className="text-base font-semibold">¡Vuelve </h3> */}
+                    <h3 className="text-lg font-semibold">{item?.tituloEspa}</h3>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="relative">
-                <img src="/img-slider.png" className="w-full h-auto" />
-                <div className="absolute bottom-0 w-full px-4 py-2 bg-gray-600 bg-opacity-80 text-white ">
-                  <h3 className="text-base font-semibold">Visítanos en</h3>
-                  <h3 className="text-lg font-semibold">
-                    {" "}
-                    IPPE 2022 - Booth B6981
-                  </h3>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="relative">
-                <img src="/img-slider.png" className="w-full h-auto" />
-                <div className="absolute bottom-0 w-full px-4 py-2 bg-gray-600 bg-opacity-80 text-white ">
-                  <h3 className="text-base font-semibold">Lanzamiento de</h3>
-                  <h3 className="text-lg font-semibold">OVUM 2022 en IBBE</h3>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            )}
           </Swiper>
         </div>
         {/* fin slider en mobile */}
@@ -175,6 +199,13 @@ const LoUltimo = () => {
           </Link>
         </div>
       </div>
+      <ModalGrid
+        isOpen={isOpen}
+        closeModal={closeModal}
+        data={db.slice(db.length - 4, db.length - 1)}
+        initialSlide={initialSlide}
+        setInitialSlide={setInitialSlide}
+      />
     </section>
   );
 };

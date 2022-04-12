@@ -5,9 +5,10 @@ import useBlogServices from "../../Gestionadores/useBlogServices";
 
 const Grid = ({ openModal, closeModal, isOpen }) => {
   const { loadingGetData, db } = useBlogServices();
+  // console.log('db',db);
   const [initialSlide, setInitialSlide] = useState(0);
   return (
-    <>
+    <div className="lg:w-256 max-w-7xl mx-auto">
       <section className="relative bg-white flex flex-col justify-center items-center py-14">
         <div className="w-full mt-5 max-w-7xl mx-auto p-8 lg:p-0">
           <h6 className="text-3xl lg:text-4xl text-center font-medium mb-8">
@@ -40,7 +41,7 @@ const Grid = ({ openModal, closeModal, isOpen }) => {
         initialSlide={initialSlide}
         setInitialSlide={setInitialSlide}
       />
-    </>
+    </div>
   );
 };
 

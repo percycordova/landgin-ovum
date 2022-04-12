@@ -5,7 +5,7 @@ const CardGrid = ({ item, onClick, index }) => {
   //   setInitialSlide(item - 1)
   //   openModal()
   // }
-  console.log('que paso', item);
+  // console.log('que paso', item);
   return (
     <div className=" mx-auto max-w-80 rounded-2xl overflow-hidden border cursor-pointer" onClick={onClick}>
       <img className="w-full h-64 object-cover" src={item?.imagenPrincipal.url} alt="Sunset in the mountains" />

@@ -10,11 +10,15 @@ const useBlogServices = () => {
       page: 1,
     },
   });
+
+
+
   const db = data ? data?.GetAllBlog.data : [];
 
   return {
     db,
     loadingGetData,
+
   };
 };
 export default useBlogServices;

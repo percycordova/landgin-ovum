@@ -119,7 +119,7 @@ const Estructura = () => {
                 )} ${textColor(item.id)} rounded-b-2xl`}
               >
                 <div className=" text-xl mb-2">{item.title}</div>
-                <p className="font-light text-sm lg:text-lg  h-44 text-justify">
+                <p className="font-light text-sm lg:text-base  h-40 text-justify">
                   {item.text}
                 </p>
 
