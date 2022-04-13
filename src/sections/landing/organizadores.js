@@ -20,7 +20,7 @@ const Organizadores = () => {
     }
   } */
   return (
-    <section className="relative bg-white flex flex-col justify-center items-center py-8">
+    <section  className="relative bg-white flex flex-col justify-center items-center py-8">
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-0 lg:p-0">
         <h6 className="text-3xl lg:text-4xl text-center font-normal mb-8 text-blue-500">
           ORGANIZADORES

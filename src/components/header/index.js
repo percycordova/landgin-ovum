@@ -17,7 +17,6 @@ const Header = ({ idiomas }) => {
     }
   }, [pathname]);
 
-
   return (
     <>
       {/* header desktop */}
@@ -49,15 +48,16 @@ const Header = ({ idiomas }) => {
             >
               <Link href="/">Ovum 2022</Link>{" "}
             </li>
-            <li className="p-4 cursor-pointer border-b border-black">
-              <a href="#programa" onClick={() => setShowMenu(false)}>
-                Programa
-              </a>{" "}
+            <li
+              className="p-4 cursor-pointer border-b border-black"
+              onClick={() => setShowMenu(false)}
+            >
+              <Link href="/#programa">Programa</Link>
             </li>
-            <li className="p-4  cursor-pointer border-b border-black">
-              <a href="#patrocinadores" onClick={() => setShowMenu(false)}>
-                Patrocinadores
-              </a>{" "}
+            <li className="p-4  cursor-pointer border-b border-black"
+            onClick={() => setShowMenu(false)}
+            >
+              <Link href="/#patrocinadores">Patrocinadores</Link>
             </li>
             <li
               className="p-4  cursor-pointer border-b border-black"
