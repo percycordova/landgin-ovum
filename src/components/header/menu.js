@@ -18,11 +18,11 @@ const Menu = ({ mostrarLogo }) => {
         {/* <a href="#programa">Programa</a>{" "} */}
         <Link href="/#programa">Programa</Link>
       </li>
-      <li className="py-4 px-2 cursor-pointer hover:-translate-y-1 transform transition-all duration-300">
+      {/* <li className="py-4 px-2 cursor-pointer hover:-translate-y-1 transform transition-all duration-300">
         <Link href="/#patrocinadores">Patrocinadores</Link>
-      </li>
+      </li> */}
       <li className="py-4 px-2 cursor-pointer hover:-translate-y-1 transform transition-all duration-300">
-        <a href="#">Preguntas Frecuentes</a>{" "}
+        <Link href="/preguntas-frecuentes">Preguntas Frecuentes</Link>{" "}
       </li>
     </ul>
   );

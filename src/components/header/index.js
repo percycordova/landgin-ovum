@@ -41,29 +41,35 @@ const Header = ({ idiomas }) => {
           <HamburguesBtn show={showMenu} handleClick={handleBtnClick} />
         </div>
         {showMenu && (
-          <ul className="flex flex-col gap-y-2 bg-white z-99 text-base absolute left-0 top-16 w-full">
+          <ul className="flex flex-col bg-white z-99 text-base absolute left-0 top-16 w-full">
             <li
-              className="p-4 cursor-pointer border-b border-black hover:bg-gray-900"
+              className="p-5 cursor-pointer border-b border-black hover:border-white hover:bg-secondary-600 ease-out transition-all duration-300 hover:text-white"
               onClick={() => setShowMenu(false)}
             >
               <Link href="/">Ovum 2022</Link>{" "}
             </li>
             <li
-              className="p-4 cursor-pointer border-b border-black"
+               className="p-5 cursor-pointer border-b border-black hover:border-white hover:bg-secondary-600 ease-out transition-all duration-300 hover:text-white"
               onClick={() => setShowMenu(false)}
             >
               <Link href="/#programa">Programa</Link>
             </li>
-            <li className="p-4  cursor-pointer border-b border-black"
+            {/* <li className="p-4  cursor-pointer border-b border-black"
             onClick={() => setShowMenu(false)}
             >
               <Link href="/#patrocinadores">Patrocinadores</Link>
-            </li>
+            </li> */}
             <li
-              className="p-4  cursor-pointer border-b border-black"
+             className="p-5 cursor-pointer border-b border-black hover:border-white hover:bg-secondary-600 ease-out transition-all duration-300 hover:text-white"
               onClick={() => setShowMenu(false)}
             >
               <Link href="/registro">Registrate</Link>
+            </li>
+            <li
+              className="p-5 cursor-pointer border-b border-black hover:border-white hover:bg-secondary-600 ease-out transition-all duration-300 hover:text-white"
+              onClick={() => setShowMenu(false)}
+            >
+              <Link href="/preguntas-frecuentes">Preguntas Frecuentes</Link>
             </li>
           </ul>
         )}

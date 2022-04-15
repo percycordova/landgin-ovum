@@ -94,7 +94,7 @@ const FomularioRegistro = ({ openModal, idiomas }) => {
     setIsAccepted(!isAccepted)
   }
   return (
-    <div className='py-8' id='registro'>
+    <div className='py-8' id='consultanos'>
       <h6 className="text-xl sm:text-3xl text-center ">
         {idiomas.PermanezcaConectado.value}
       </h6>

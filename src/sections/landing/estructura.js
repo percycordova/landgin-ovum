@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Navigation, Pagination } from "swiper";
+import Link from "next/link";
 /* import Button from '../../components/buttons/Button' */
 
 const data = [
@@ -99,7 +100,7 @@ const Estructura = () => {
         className="absolute -right-15 bottom-30 "
       />
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-8 lg:p-0">
-        <h6 className="text-3xl lg:text-4xl text-center font-medium mb-8 text-blue-500">
+        <h6 className="text-3xl lg:text-3.5xl text-center font-medium mb-8 text-blue-500">
           ESTRUCTURA
         </h6>
         <div className="hidden lg:grid grid-cols-2 xl:grid-cols-3 gap-4">
@@ -120,7 +121,15 @@ const Estructura = () => {
               >
                 <div className=" text-xl mb-2">{item.title}</div>
                 <p className="font-light text-sm lg:text-base  h-40 text-justify">
-                  {item.text}
+                  <span className="mb-3 block">{item.text}</span>
+                  {/* <span className="text-white font-bold border-b border-white">
+                    <Link
+                      href="/sesiones"
+                      
+                    >
+                      Ver más
+                    </Link>
+                  </span> */}
                 </p>
 
                 {item.typeImg === "pollo" && (
@@ -194,7 +203,7 @@ const Estructura = () => {
                   <img
                     className="w-full"
                     src={item.img}
-                    alt="Sunset in the mountains"
+                    alt={item.descripcion}
                   />
                   <div
                     className={`px-6 pt-4 pb-10 ${bgColor(item.id)} ${textColor(
@@ -202,7 +211,7 @@ const Estructura = () => {
                     )} rounded-b-2xl`}
                   >
                     <div className="font-bold text-xl mb-2">{item.title}</div>
-                    <p className="font-light text-sm lg:text-base w-4/5 text-justify">
+                    <p className="font-light text-sm lg:text-base text-justify">
                       {item.text}
                     </p>
                   </div>

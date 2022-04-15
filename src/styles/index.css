@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 /* .banner {
   background-image: url("/fondo-medio.png");
@@ -100,9 +100,7 @@ html {
   );
 }
 
-.banner__san-pedro {
-  letter-spacing: 0.13rem;
-}
+
 
 /* modal */
 
@@ -141,8 +139,8 @@ html {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  background: #b4038f;
-  color: white;
+  background: #C7C7C7 ;
+  color: #B4038F;
   font-size: 2rem;
   width: 3rem;
   height: 3rem;

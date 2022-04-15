@@ -35,8 +35,8 @@ const Conoce = () => {
 
         <div className="w-full flex flex-col justify-center">
           <h2 className="text-green-400 text-2xl mb-5 lg:mb-3 text-center lg:text-left">
-           <span className="font-bold">San Pedro Sula como sede</span>, hoteles, como llegar, gastronomía,
-            turismo.
+            <span className="font-bold">San Pedro Sula como sede</span>,
+            hoteles, como llegar, gastronomía, turismo.
           </h2>
           <p className=" text-gray-600 text-base lg:text-lg text-justify">
             Donde empieza a fluir el río Chamelecón en el valle de Sula, al pie
@@ -81,7 +81,13 @@ const Conoce = () => {
             </p>
             <div className="flex justify-center w-full  mt-8 ">
               <button className=" bg-pink-700 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full z-10">
-                 <a href="https://elovum.com/TARIFAS-DE-HOTELES.pdf" target="_blank" rel="noopener noreferrer">Ver Hoteles</a>
+                <a
+                  href="https://elovum.com/TARIFAS-DE-HOTELES.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver Hoteles
+                </a>
               </button>
             </div>
           </div>
@@ -92,7 +98,7 @@ const Conoce = () => {
           <Swiper
             style={{
               "--swiper-navigation-color": "#6CBE4C",
-              "--swiper-navigation-size": "20px",
+              // "--swiper-navigation-size": "20px",
               "--swiper-pagination-color": "#6CBE4C",
               "--swiper-pagination-active-color": "#6CBE4C",
               "--swiper-pagination-background": "#fff",

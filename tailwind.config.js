@@ -55,6 +55,7 @@ const themeColors = {
   },
   yellow: {
     300: "#F3EB5F", // fondo de card
+    350: "#F3EC60",
     400: "#F3DA4C",
     700: "#FFC60B", // fondo de card
     800: "#FFC700",
@@ -130,11 +131,12 @@ module.exports = {
         base: ["1rem", { lineHeight: "1.5rem" }],
         lg: ["1.125rem", { lineHeight: "1.75rem" }],
         xl: ["1.25rem", { lineHeight: "1.75rem" }],
-        "2xl": ["1.5rem", { lineHeight: "2rem" }],
+        "2xl": ["1.5rem", { lineHeight: "2.5rem" }],
         "2.5xl": ["1.68rem", { lineHeight: "2.5rem" }],
         "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+        "3.5xl": ["2.125rem", { lineHeight: "2.89rem" }],
         "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
-        "4.5xl": ["2.56rem", { lineHeight: "3rem" }],
+        "4.5xl": ["2.7675rem", { lineHeight: "3.77rem" }],
         "5xl": ["3rem", { lineHeight: "1" }],
         "6xl": ["3.75rem", { lineHeight: "1" }],
         "7xl": ["4.5rem", { lineHeight: "1" }],
@@ -189,6 +191,7 @@ module.exports = {
       },
       height: (theme) => ({
         ...theme("extendedSpacing"),
+        17:"4.21rem",
         73: "18.8rem",
         74: "19rem",
         75: "20.9rem"
@@ -232,6 +235,9 @@ module.exports = {
         "11/12": "91.666667%",
         25: "6.25rem",
         26: "6.5rem",
+        47:"11.5rem",
+        51:"12.68rem",
+        55:"13.75rem",
         70: "17rem",
         73: "18.625rem",
         100: "20rem",

@@ -19,9 +19,11 @@ const BannerLanding = () => {
               en Honduras?
             </p>
             <div className="flex justify-center w-full   ">
-              <button className=" bg-pink-700 relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
+              <a 
+              href="#consultanos"
+              className=" bg-pink-700 block text-center relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
                 Consultanos
-              </button>
+              </a>
             </div>
           </div>
 
@@ -43,7 +45,7 @@ const BannerLanding = () => {
           />
           <p className="text-3xl text-center relative z-20  mb-9">
             ¿Quieres participar de <span className="font-bold">OVUM 2022 </span>
-             en Honduras?
+            en Honduras?
           </p>
           <div className="max-w-90 w-full  mb-11">
             <img
@@ -53,9 +55,11 @@ const BannerLanding = () => {
             />
           </div>
           <div className="flex justify-center w-full md:hidden  ">
-            <button className=" bg-pink-700 relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
+            <a
+            href="#consultanos"
+            className=" bg-pink-700 block text-center relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
               Consultanos
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const Acerca = () => {
       id="acerca"
     >
       <div className=" lg:w-256 w-full mt-5 max-w-7xl mx-auto bg-white">
-        <h6 className="text-3xl text-primary-850 lg:text-4.5xl text-center font-medium mb-8">
+        <h6 className="text-3.5xl text-primary-850 text-center font-medium mb-8">
           ACERCA DE OVUM
         </h6>
         <div className="w-full flex flex-col items-center lg:flex-row lg:justify-between">
@@ -30,7 +30,7 @@ const Acerca = () => {
               comunidad avícola latinoamericana y mundial para proyectar juntos
               el futuro de nuestra industria y de la nutrición a nivel global,
               para generar bienestar común a través de el abastecimiento de
-              proteína avícola de la más alta calidad a todos los países. En
+              proteína avícola de la más alta calidad a todos los países. <br /> <br /> En
               esta página encontrarán información completa sobre San Pedro Sula,
               la sede del OVUM 2022, la ciudad conocida como la Capital
               Industrial de Honduras, gracias al importante giro empresarial que

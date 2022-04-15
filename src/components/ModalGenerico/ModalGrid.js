@@ -24,9 +24,9 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
       <ModalCustomer isOpen={isOpen} closeModal={closeModal} size={size}>
         <div className="sm:px-2 pt-6 max-w-140">
           <Swiper
-            /*  style={{
-               '--swiper-navigation-color': '#C4C4C4'
-             }} */
+              style={{
+               '--swiper-navigation-color': '#C7C7C7'
+             }} 
             onSwiper={setSwiper}
             // loop={true}
             grabCursor={true}
@@ -37,6 +37,7 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
             /*    slidesPerView={1}
                spaceBetween={30} */
             navigation={true}
+            loop={true}
             modules={[Navigation]}
             className='mySwiper'
           >
@@ -45,17 +46,17 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
                 <div className="w-full mx-auto max-w-lg overflow-hidden sm:px-8" >
                   <div className="relative">
                     <img className="w-full h-90 object-cover" src={item?.imagenPrincipal.url} alt={item?.imagenPrincipal.descripcion} />
-                    <div className="absolute bottom-0 w-full px-4 py-1 bg-gray-600 bg-opacity-80 text-white ">
+                    {/* <div className="absolute bottom-0 w-full px-4 py-1 bg-gray-600 bg-opacity-80 text-white ">
                       <h3 className='text-xl '>Visítanos en</h3>
                       <h3 className='text-lg font-extralight'>IPPE 2022 - Booth B6981 </h3>
-                    </div>
+                    </div> */}
                   </div>
                   <div className='relative px-6 pt-4 pb-10 rounded-b-2xl'>
-                    <div className="">
+                    {/* <div className="">
                       <h6 className="text-sm font-medium text-blue-500">Día {index + 1}</h6>
-                    </div>
+                    </div> */}
                     <div className="font-bold text-xl mb-2">{item?.tituloEspa}</div>
-                    <p className="font-light text-sm lg:text-base mt-4 w-4/5 text-justify">
+                    <p className="font-light text-sm lg:text-base mt-4  text-justify">
                       {item.descripcionEspa}
                     </p>
                     <img src="/LineaCardIzq.svg" className='absolute -bottom-2 right-0' alt="" />

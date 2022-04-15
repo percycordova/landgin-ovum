@@ -25,7 +25,7 @@ const LoUltimo = () => {
   return (
     <section className=" p-8 flex flex-col justify-center items-center  overflow-x-hidden ">
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto bg-white">
-        <h6 className="text-3xl lg:text-4.5xl text-center font-semibold mb-8 text-blue-500">
+        <h6 className="text-3xl lg:text-3.5xl text-center font-semibold mb-8 text-blue-500">
           LO ÚLTIMO
         </h6>
         {/* grid en lg */}
@@ -65,7 +65,7 @@ const LoUltimo = () => {
                     />
                   </div>
                   <div className="absolute bottom-0 w-full px-10 py-3 bg-green-500 bg-opacity-90 text-white ">
-                    <h3 className="text-2xl font-bold w-100">
+                    <h3 className="text-2xl  w-100">
                       {db.slice(0)[0]?.tituloEspa}
                       {/* ¡Equipo <span className="font-bold">OVUM 2022</span> */}
                     </h3>
@@ -97,7 +97,7 @@ const LoUltimo = () => {
                       </div>
                       <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
                         {/* <h3 className="">Primer Congreso </h3> */}
-                        <h3 className=" font-bold">{item?.tituloEspa}</h3>
+                        <h3 className="">{item?.tituloEspa}</h3>
                       </div>
                     </div>
                   ))}
@@ -163,11 +163,12 @@ const LoUltimo = () => {
         {/* fin grid en lg */}
 
         {/* slider en mobile */}
-        <div className="lg:hidden">
+        <div className="lg:hidden ">
           <Swiper
             spaceBetween={30}
             effect={"fade"}
             navigation={true}
+            loop={true}
             pagination={{
               clickable: true,
             }}
@@ -180,15 +181,18 @@ const LoUltimo = () => {
             modules={[EffectFade, Navigation, Pagination]}
             className="mySwiper"
           >
-            {!loadingGetData && db.slice(5).map(item =>
+            {!loadingGetData && db.slice(0,4).map(item =>
               <SwiperSlide>
+                <div className="pb-10">
                 <div className="relative">
                   <img src={item?.imagenPrincipal?.url} className="w-full h-48 object-cover" />
                   <div className="absolute bottom-0 w-full px-4 py-2 bg-gray-600 bg-opacity-80 text-white ">
                     {/* <h3 className="text-base font-semibold">¡Vuelve </h3> */}
-                    <h3 className="text-lg font-semibold">{item?.tituloEspa}</h3>
+                    <h3 className="text-lg">{item?.tituloEspa}</h3>
                   </div>
                 </div>
+                </div>
+                
               </SwiperSlide>
             )}
           </Swiper>

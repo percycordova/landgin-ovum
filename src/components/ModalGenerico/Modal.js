@@ -21,7 +21,7 @@ const ModalCustomer = ({ children, isOpen, closeModal, size }) => {
       >
         {!size && (
           <button
-            className="modalClose bg-primary text-white   w-10 h-10 rounded-full text-3xl font-bold"
+            className="modalClose bg-primary text-secondary-600   w-10 h-10 rounded-full text-2xl font-bold"
             onClick={closeModal}
           >
             X
