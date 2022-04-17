@@ -26,7 +26,7 @@ const Conferencista = (props) => {
       </Head>
 
       <main className="">
-        <Header/>
+        <Header idiomas={props}/>
         <div className="">
           <Grid {...{ openModal, closeModal, isOpen }} />
           <BannerLanding />
@@ -61,9 +61,11 @@ const Conferencista = (props) => {
 export default Conferencista
 // eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {
-  const response = await import(`../../lang/${locale}.json`)
+  const response = await import(`../../lang/${locale}.json`);
+
   return {
     props: {
+      HeaderIdiomas: response.default.HeaderIdiomas,
       Correo: response.default.Correo,
       Nombres: response.default.Nombres,
       Apellidos: response.default.Apellidos,
@@ -78,7 +80,11 @@ export async function getStaticProps({ locale }) {
       DerechosReservados: response.default.DerechosReservados,
       DesarrolladoPor: response.default.DesarrolladoPor,
       Banner: response.default.Banner,
-      ModalInscripcion: response.default.ModalInscripcion
-    }
-  }
+      ModalInscripcion: response.default.ModalInscripcion,
+      HeaderMenu: response.default.HeaderMenu,
+      AcercaOvum: response.default.AcercaOvum,
+      LoUltimo: response.default.LoUltimo,
+      BtnVerMas: response.default.BtnVerMas,
+    },
+  };
 }
