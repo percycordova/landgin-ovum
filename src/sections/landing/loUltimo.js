@@ -45,7 +45,7 @@ const LoUltimo = () => {
           ) : (
             <div className="flex cursor-pointer justify-between">
               <div className="" onClick={() => {
-                setInitialSlide(0);
+                setInitialSlide(1);
                 openModal();
               }}>
                 <div className="relative  ">
@@ -84,7 +84,7 @@ const LoUltimo = () => {
                       className="relative cursor-pointer"
                       style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
                       onClick={() => {
-                        setInitialSlide(i+1);
+                        setInitialSlide(i+2);
                         openModal();
                       }}
                     >
@@ -182,10 +182,10 @@ const LoUltimo = () => {
             className="mySwiper"
           >
             {!loadingGetData && db.slice(0,4).map(item =>
-              <SwiperSlide>
+              <SwiperSlide key={item?.blogId}>
                 <div className="pb-10">
                 <div className="relative">
-                  <img src={item?.imagenPrincipal?.url} className="w-full h-48 object-cover" />
+                  <img src={item?.imagenPrincipal?.url} className="w-full h-48 sm:h-64 object-cover" />
                   <div className="absolute bottom-0 w-full px-4 py-2 bg-gray-600 bg-opacity-80 text-white ">
                     {/* <h3 className="text-base font-semibold">¡Vuelve </h3> */}
                     <h3 className="text-lg">{item?.tituloEspa}</h3>

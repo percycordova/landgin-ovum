@@ -38,7 +38,7 @@ function Row({ onChange, onRemove, nombre, email, telefono, area }) {
 
 export default function App() {
   const [rows, setRows] = useState([defaultState]);
-  console.log(rows)
+  // console.log(rows)
   const handleOnChange = (index, name, value) => {
     const copyRows = [...rows];
     copyRows[index] = {

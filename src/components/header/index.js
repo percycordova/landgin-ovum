@@ -7,6 +7,7 @@ import RedesSociales from "./RedesSociales";
 import { useRouter } from "next/router";
 
 const Header = ({ idiomas }) => {
+
   const [showMenu, setShowMenu] = useState(false);
   const handleBtnClick = () => setShowMenu((prev) => !prev);
   const { pathname } = useRouter();
@@ -26,9 +27,9 @@ const Header = ({ idiomas }) => {
             mostrarLogo ? " border-b" : "pb-6"
           }   `}
         >
-          <Menu mostrarLogo={mostrarLogo} />
+          <Menu mostrarLogo={mostrarLogo} idiomas={idiomas} />
           <div className="flex gap-3">
-            <Idiomas />
+            <Idiomas idiomas={idiomas}/>
             <RedesSociales />
           </div>
         </div>
@@ -36,7 +37,7 @@ const Header = ({ idiomas }) => {
 
       {/* header mobile */}
       <div className="relative flex justify-between items-start py-3 px-4 lg:hidden">
-        <Idiomas />
+        <Idiomas idiomas={idiomas}/>
         <div>
           <HamburguesBtn show={showMenu} handleClick={handleBtnClick} />
         </div>
@@ -49,10 +50,10 @@ const Header = ({ idiomas }) => {
               <Link href="/">Ovum 2022</Link>{" "}
             </li>
             <li
-               className="p-5 cursor-pointer border-b border-black hover:border-white hover:bg-secondary-600 ease-out transition-all duration-300 hover:text-white"
+              className="p-5 cursor-pointer border-b border-black hover:border-white hover:bg-secondary-600 ease-out transition-all duration-300 hover:text-white"
               onClick={() => setShowMenu(false)}
             >
-              <Link href="/#programa">Programa</Link>
+              <Link href="/#programa">{idiomas.HeaderMenu.programa}</Link>
             </li>
             {/* <li className="p-4  cursor-pointer border-b border-black"
             onClick={() => setShowMenu(false)}
@@ -60,16 +61,16 @@ const Header = ({ idiomas }) => {
               <Link href="/#patrocinadores">Patrocinadores</Link>
             </li> */}
             <li
-             className="p-5 cursor-pointer border-b border-black hover:border-white hover:bg-secondary-600 ease-out transition-all duration-300 hover:text-white"
+              className="p-5 cursor-pointer border-b border-black hover:border-white hover:bg-secondary-600 ease-out transition-all duration-300 hover:text-white"
               onClick={() => setShowMenu(false)}
             >
-              <Link href="/registro">Registrate</Link>
+              <Link href="/registro">{idiomas.HeaderMenu.registrate}</Link>
             </li>
             <li
               className="p-5 cursor-pointer border-b border-black hover:border-white hover:bg-secondary-600 ease-out transition-all duration-300 hover:text-white"
               onClick={() => setShowMenu(false)}
             >
-              <Link href="/preguntas-frecuentes">Preguntas Frecuentes</Link>
+              <Link href="/preguntas-frecuentes">{idiomas.HeaderMenu.preguntasFrecuentes}</Link>
             </li>
           </ul>
         )}

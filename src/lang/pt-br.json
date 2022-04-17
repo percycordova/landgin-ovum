@@ -1,4 +1,20 @@
 {
+  "HeaderIdiomas": {
+    "value1": "Espanhol",
+    "value2": "inglês",
+    "value3": "português"
+  },
+  "HeaderMenu": {
+    "registrate": "Registro",
+    "programa": "Programa",
+    "preguntasFrecuentes": "Perguntas frequentes"
+  },
+  "AcercaOvum": {
+    "titulo": "SOBRE O OVUM",
+    "parrafo1": "O OVUM 2022 será uma experiência inesquecível para todos os seus participantes, o Latin American Poultry Congress aprimora e inova constantemente e nesta edição reunirá a comunidade avícola latino-americana e mundial para projetar conjuntamente o futuro de nossa indústria e nutrição em nível global , para gerar bem-estar comum através do fornecimento de proteína avícola da mais alta qualidade a todos os países.",
+    "parrafo2": "Nesta página você encontrará informações completas sobre San Pedro Sula, sede da OVUM 2022, a cidade conhecida como a Capital Industrial de Honduras, graças à importante virada de negócios que representa para o país e o continente. Da mesma forma, obterão informações de interesse sobre os formadores de opinião que participarão e os temas que serão avaliados por meio dos programas e sessões focais do Congresso. Será uma honra contar com sua participação e nos reencontrar, esperamos vocês de braços abertos em San Pedro Sula, Honduras, de 6 a 9 de setembro. Com gratidão,",
+    "parrafo3": "Presidente ANAVIH e anfitrião de OVUM 2022"
+  },
   "Button": {
     "value1": "Contate-nos em",
     "value2": "Enviar"
@@ -36,11 +52,11 @@
   "DerechosReservados": {
     "value": "Todos os direitos reservados"
   },
-  "DesarrolladoPor":{
-    "value":"Desenvolvido por JOTA Comunicação Abrangente"
+  "DesarrolladoPor": {
+    "value": "Desenvolvido por JOTA Comunicação Abrangente"
   },
-  "Banner":{
-    "value":"6 a 9 de Setembro"
+  "Banner": {
+    "value": "6 a 9 de Setembro"
   },
   "ModalInscripcion": {
     "value1": "¡Obrigado!",

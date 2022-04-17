@@ -42,7 +42,7 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
             className='mySwiper'
           >
             {data.map((item, index) => (
-              <SwiperSlide key={item.id} >
+              <SwiperSlide key={item?.blogId} >
                 <div className="w-full mx-auto max-w-lg overflow-hidden sm:px-8" >
                   <div className="relative">
                     <img className="w-full h-90 object-cover" src={item?.imagenPrincipal.url} alt={item?.imagenPrincipal.descripcion} />

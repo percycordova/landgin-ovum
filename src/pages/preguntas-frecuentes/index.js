@@ -32,7 +32,7 @@ const PreguntasFrecuentes = (props) => {
       </Head>
 
       <main className="">
-        <Header />
+        <Header idiomas={props} />
         <div className="mt-11">
           <div className="lg:w-256 max-w-7xl mx-auto px-4 lg:px-0 pb-52">
             <h3 className="text-2xl  lg:text-3.5xl  text-center font-medium mb-8">
@@ -238,10 +238,13 @@ const PreguntasFrecuentes = (props) => {
 export default PreguntasFrecuentes;
 
 // eslint-disable-next-line space-before-function-paren
+// eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {
-  const response = await import(`../../lang/${locale}.json`);
+  const response = await import(`../../lang/${locale}.json`)
+
   return {
     props: {
+      HeaderIdiomas: response.default.HeaderIdiomas,
       Correo: response.default.Correo,
       Nombres: response.default.Nombres,
       Apellidos: response.default.Apellidos,
@@ -257,6 +260,7 @@ export async function getStaticProps({ locale }) {
       DesarrolladoPor: response.default.DesarrolladoPor,
       Banner: response.default.Banner,
       ModalInscripcion: response.default.ModalInscripcion,
-    },
-  };
+      HeaderMenu:response.default.HeaderMenu
+    }
+  }
 }

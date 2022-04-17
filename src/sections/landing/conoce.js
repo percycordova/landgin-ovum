@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -9,6 +9,11 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination } from "swiper";
 const Conoce = () => {
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <section className=" bg-white flex flex-col justify-center items-center py-16">
       <div className=" w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-3 lg:p-0">
@@ -24,12 +29,12 @@ const Conoce = () => {
         <div className="w-full">
           <iframe
             width="100%"
-            height="315 "
-            src="https://www.youtube.com/embed/BenCSF6abDQ?start=12"
+            height="315"
+            src="https://www.youtube.com/embed/BenCSF6abDQ"
             title="YouTube video player"
-            frameborder="0"
+            // frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            // allowfullscreen
           ></iframe>
         </div>
 
@@ -94,61 +99,64 @@ const Conoce = () => {
         </div>
       </div>
       <div className=" w-full md:w-9/12 mt-5 max-w-7xl mx-auto p-0 lg:p-0">
-        <div className="w-full mx-auto">
-          <Swiper
-            style={{
-              "--swiper-navigation-color": "#6CBE4C",
-              // "--swiper-navigation-size": "20px",
-              "--swiper-pagination-color": "#6CBE4C",
-              "--swiper-pagination-active-color": "#6CBE4C",
-              "--swiper-pagination-background": "#fff",
-              "--swiper-pagination-active-background": "#fff",
-              "--swiper-pagination-border-color": "#fff",
-              "--swiper-pagination-size": "10px",
-              "--swiper-pagination-spacing": "10px",
-              "--swiper-pagination-bullet-size": "10px",
-            }}
-            slidesPerView={1}
-            spaceBetween={30}
-            navigation={true}
-            loop={true}
-            pagination={{
-              clickable: true,
-            }}
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-              },
-            }}
-            modules={[Navigation, Pagination]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <div className=" pb-10 pt-3">
-                <img src="/avianca-1.png" className="w-full h-auto" alt="" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className=" pb-10 pt-3">
-                <img src="/avianca-2.png" className="w-full h-auto" alt="" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className=" pb-10 pt-3">
-                <img src="/avianca-3.png" className="w-full h-auto" alt="" />
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
+        {isMounted && (
+          <div className="w-full mx-auto">
+            <Swiper
+              style={{
+                "--swiper-navigation-color": "#6CBE4C",
+                // "--swiper-navigation-size": "20px",
+                "--swiper-pagination-color": "#6CBE4C",
+                "--swiper-pagination-active-color": "#6CBE4C",
+                "--swiper-pagination-background": "#fff",
+                "--swiper-pagination-active-background": "#fff",
+                "--swiper-pagination-border-color": "#fff",
+                "--swiper-pagination-size": "10px",
+                "--swiper-pagination-spacing": "10px",
+                "--swiper-pagination-bullet-size": "10px",
+              }}
+              slidesPerView={1}
+              spaceBetween={30}
+              navigation={true}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+              }}
+              modules={[Navigation, Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div className=" pb-10 pt-3">
+                  <img src="/avianca-1.png" className="w-full h-auto" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className=" pb-10 pt-3">
+                  <img src="/avianca-2.png" className="w-full h-auto" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className=" pb-10 pt-3">
+                  <img src="/avianca-3.png" className="w-full h-auto" alt="" />
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        )}
+
         {/* <div className="mt-7 p-8">
           <h2 className="text-green-400 text-2xl mb-5 lg:mb-3 text-left">
             Avianca

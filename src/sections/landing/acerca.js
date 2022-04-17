@@ -1,6 +1,6 @@
 import React from "react";
 
-const Acerca = () => {
+const Acerca = ({idiomas}) => {
   return (
     <section
       className=" p-8 flex flex-col justify-center items-center"
@@ -8,7 +8,7 @@ const Acerca = () => {
     >
       <div className=" lg:w-256 w-full mt-5 max-w-7xl mx-auto bg-white">
         <h6 className="text-3.5xl text-primary-850 text-center font-medium mb-8">
-          ACERCA DE OVUM
+          {idiomas.AcercaOvum.titulo}
         </h6>
         <div className="w-full flex flex-col items-center lg:flex-row lg:justify-between">
           <div className="max-w-115 lg:h-75 ">
@@ -24,28 +24,13 @@ const Acerca = () => {
               Informacion de OVUM
             </h2> */}
             <p className=" text-base text-justify font-light my-2">
-              El OVUM 2022 será una experiencia inolvidable para todos sus
-              participantes, el Congreso Latinoamericano de Avicultura mejora e
-              innova constantemente y en la presente edición convocará a la
-              comunidad avícola latinoamericana y mundial para proyectar juntos
-              el futuro de nuestra industria y de la nutrición a nivel global,
-              para generar bienestar común a través de el abastecimiento de
-              proteína avícola de la más alta calidad a todos los países. <br /> <br /> En
-              esta página encontrarán información completa sobre San Pedro Sula,
-              la sede del OVUM 2022, la ciudad conocida como la Capital
-              Industrial de Honduras, gracias al importante giro empresarial que
-              representa para el país y el continente. Así mismo, obtendrán
-              información de interés sobre los líderes de opinión que
-              participarán y los tópicos que serán evaluados mediante los
-              programas y sesiones foco del Congreso. Será un honor contar con
-              su participación y vernos nuevamente, los esperamos con los brazos
-              abiertos en San Pedro Sula, Honduras del 6 al 9 de septiembre. Con
-              gratitud,
+            {idiomas.AcercaOvum.parrafo1}<br /> <br />
+            {idiomas.AcercaOvum.parrafo2}
             </p>
-            <div className="text-lg font-normal text-black mt-5 lg:mt-1">
+            <div className="text-lg font-normal text-black mt-5 lg:mt-3">
               <p>Luis Valle Coello</p>
               <p className="text-gray-700">
-                Presidente ANAVIH y anfitrión del OVUM 2022
+              {idiomas.AcercaOvum.parrafo3}
               </p>
             </div>
           </div>

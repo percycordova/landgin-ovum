@@ -52,7 +52,7 @@ const Estudiante = (props) => {
       </Head>
 
       <main className="">
-        <Header />
+        <Header idiomas={props}/>
         <div className="max-w-256 border mx-auto pt-8 pb-15 mt-10 mb-20 ">
           <h2 className="text-gray-600 text-2xl pl-8 md:text-2.5xl  md:pl-24 mb-3">
             Registro
@@ -194,10 +194,13 @@ const Estudiante = (props) => {
 export default Estudiante;
 
 // eslint-disable-next-line space-before-function-paren
+// eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {
-  const response = await import(`../../../lang/${locale}.json`);
+  const response = await import(`../../../lang/${locale}.json`)
+
   return {
     props: {
+      HeaderIdiomas: response.default.HeaderIdiomas,
       Correo: response.default.Correo,
       Nombres: response.default.Nombres,
       Apellidos: response.default.Apellidos,
@@ -213,6 +216,7 @@ export async function getStaticProps({ locale }) {
       DesarrolladoPor: response.default.DesarrolladoPor,
       Banner: response.default.Banner,
       ModalInscripcion: response.default.ModalInscripcion,
-    },
-  };
+      HeaderMenu:response.default.HeaderMenu
+    }
+  }
 }

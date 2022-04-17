@@ -1,4 +1,20 @@
 {
+  "HeaderIdiomas": {
+    "value1": "Español",
+    "value2": "Ingles",
+    "value3": "Portugues"
+  },
+  "HeaderMenu": {
+    "registrate": "Registrate",
+    "programa": "Programa",
+    "preguntasFrecuentes": "Preguntas Frecuentes"
+  },
+  "AcercaOvum": {
+    "titulo": "ACERCA DE OVUM",
+    "parrafo1": "El OVUM 2022 será una experiencia inolvidable para todos sus participantes, el Congreso Latinoamericano de Avicultura mejora e innova constantemente y en la presente edición convocará a la comunidad avícola latinoamericana y mundial para proyectar juntos el futuro de nuestra industria y de la nutrición a nivel global, para generar bienestar común a través de el abastecimiento de proteína avícola de la más alta calidad a todos los países. ",
+    "parrafo2":"En esta página encontrarán información completa sobre San Pedro Sula, la sede del OVUM 2022, la ciudad conocida como la Capital Industrial de Honduras, gracias al importante giro empresarial que representa para el país y el continente. Así mismo, obtendrán información de interés sobre los líderes de opinión que participarán y los tópicos que serán evaluados mediante los programas y sesiones foco del Congreso. Será un honor contar con su participación y vernos nuevamente, los esperamos con los brazos abiertos en San Pedro Sula, Honduras del 6 al 9 de septiembre. Con gratitud,",
+    "parrafo3":"Presidente ANAVIH y anfitrión del OVUM 2022"
+  },
   "Button": {
     "value1": "Consúltanos",
     "value2": "Enviar"
@@ -6,7 +22,6 @@
   "PermanezcaConectado": {
     "value": "Permanezca Conectado"
   },
-
   "Nombres": {
     "value": "Nombres"
   },
@@ -34,7 +49,6 @@
   "Informacion": {
     "value": "Información"
   },
-
   "DerechosReservados": {
     "value": "Todos los derechos reservados"
   },

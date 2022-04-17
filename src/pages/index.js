@@ -23,7 +23,7 @@ import Programa from '../sections/landing/programa'
 const Home = (props) => {
   const [isOpenInscripcion, openModalInscripcion, closeModalInscripcion] = useModal(false)
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
-
+  console.log(props);
   return (
     <div className='font-sans'>
       <Head>
@@ -87,7 +87,7 @@ const Home = (props) => {
         <Header idiomas={props} />
         <Banner idiomas={props} />
         <div className="">
-          <Acerca />
+          <Acerca idiomas={props}/>
           <LoUltimo />
           {/* <Conferencia /> */}
           <Estructura />
@@ -130,8 +130,10 @@ export default Home
 // eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {
   const response = await import(`../lang/${locale}.json`)
+
   return {
     props: {
+      HeaderIdiomas: response.default.HeaderIdiomas,
       Correo: response.default.Correo,
       Nombres: response.default.Nombres,
       Apellidos: response.default.Apellidos,
@@ -146,7 +148,9 @@ export async function getStaticProps({ locale }) {
       DerechosReservados: response.default.DerechosReservados,
       DesarrolladoPor: response.default.DesarrolladoPor,
       Banner: response.default.Banner,
-      ModalInscripcion: response.default.ModalInscripcion
+      ModalInscripcion: response.default.ModalInscripcion,
+      HeaderMenu:response.default.HeaderMenu,
+      AcercaOvum:response.default.AcercaOvum,
     }
   }
 }

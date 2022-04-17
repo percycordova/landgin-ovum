@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 
-const Menu = ({ mostrarLogo }) => {
+const Menu = ({ mostrarLogo,idiomas }) => {
 
 
   return (
@@ -12,17 +12,17 @@ const Menu = ({ mostrarLogo }) => {
       </li>}
 
       <li className="py-4 px-2 cursor-pointer hover:-translate-y-1 transform transition-all duration-300">
-        <Link href="/registro">Registrate</Link>
+        <Link href="/registro">{idiomas.HeaderMenu.registrate}</Link>
       </li>
       <li className="py-4 px-2 cursor-pointer hover:-translate-y-1 transform transition-all duration-300">
         {/* <a href="#programa">Programa</a>{" "} */}
-        <Link href="/#programa">Programa</Link>
+        <Link href="/#programa">{idiomas.HeaderMenu.programa}</Link>
       </li>
       {/* <li className="py-4 px-2 cursor-pointer hover:-translate-y-1 transform transition-all duration-300">
         <Link href="/#patrocinadores">Patrocinadores</Link>
       </li> */}
       <li className="py-4 px-2 cursor-pointer hover:-translate-y-1 transform transition-all duration-300">
-        <Link href="/preguntas-frecuentes">Preguntas Frecuentes</Link>{" "}
+        <Link href="/preguntas-frecuentes">{idiomas.HeaderMenu.preguntasFrecuentes}</Link>{" "}
       </li>
     </ul>
   );

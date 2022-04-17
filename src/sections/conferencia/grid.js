@@ -56,7 +56,7 @@ const Grid = ({ openModal, closeModal, isOpen }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 ">
             {data.map((item, i) => (
               <CardGridConferencia key={item.id} item={item} onClick={() => {
-                console.log({ i })
+                // console.log({ i })
                 setInitialSlide(i)
                 openModal()
               }} />

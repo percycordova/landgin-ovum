@@ -1,4 +1,20 @@
 {
+  "HeaderIdiomas": {
+    "value1": "Spanish",
+    "value2": "English",
+    "value3": "Portuguese"
+  },
+  "HeaderMenu":{
+    "registrate":"Register",
+    "programa":"Program",
+    "preguntasFrecuentes":"Frequent Questions"
+  },
+  "AcercaOvum": {
+    "titulo": "ABOUT OVUM",
+    "parrafo1": "The OVUM 2022 will be an unforgettable experience for all its participants, the Latin American Poultry Congress constantly improves and innovates and in this edition it will convene the Latin American and world poultry community to jointly project the future of our industry and nutrition at a global level, to generate common welfare through the supply of poultry protein of the highest quality to all countries.",
+    "parrafo2":"On this page you will find complete information about San Pedro Sula, the headquarters of OVUM 2022, the city known as the Industrial Capital of Honduras, thanks to the important business turn it represents for the country and the continent. Likewise, they will obtain information of interest about the opinion leaders who will participate and the topics that will be evaluated through the programs and focus sessions of the Congress. It will be an honor to have your participation and to see each other again, we are waiting for you with open arms in San Pedro Sula, Honduras from September 6 to 9. With gratitude.",
+    "parrafo3":" President ANAVIH and host of OVUM 2022"
+  },
   "Button": {
     "value1": "Contact us",
     "value2": "Send"

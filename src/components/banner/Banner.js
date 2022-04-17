@@ -5,7 +5,7 @@ const Banner = ({ idiomas }) => {
     <div className="  relative z-10 py-2 text-white ">
       {/* logos  */}
       <div className="logo bg-white md:flex-row flex flex-col md:justify-center  items-center mt-3 mb-9 relative">
-        <div className="hidden sm:w-full sm:flex gap-x-26 items-start justify-center mb-5">
+        <div className="hidden sm:w-full md:flex gap-x-26 items-start justify-center mb-5">
           <img
             src="/banner__logo-asociacion.svg"
             className="w-40 h-17 object-cover lg:w-51 z-30 lg:mt-10"
@@ -22,13 +22,13 @@ const Banner = ({ idiomas }) => {
         </div>
         <img
           src="/logo-mobile.png"
-          className="z-30 relative  sm:hidden -mt-4"
+          className="z-30 relative  md:hidden -mt-4"
         />
         <div className=" md:absolute md:-bottom-6 -mt-7  flex gap-x-2 md:gap-x-6  md:mt-0 justify-center items-start">
           <img
             src="/Logo-organizado2 1.svg "
             alt=""
-            className="sm:hidden z-30 w-80"
+            className="md:hidden z-30 w-80"
           />
         </div>
       </div>

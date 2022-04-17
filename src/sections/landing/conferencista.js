@@ -13,7 +13,7 @@ import { Navigation, Pagination } from "swiper";
 import useConferenciasServices from "../../Gestionadores/useConferenciasServices";
 const Conferencista = () => {
   const { loadingGetData, db } = useConferenciasServices();
-  console.log(db);
+  // console.log(db);
   return (
     <section className="relative bg-white flex flex-col justify-center items-center py-16">
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-8 px-2 lg:p-0">
