@@ -15,18 +15,34 @@ import { EffectFade, Navigation, Pagination } from "swiper";
 import { maxHeight } from "tailwindcss/defaultTheme";
 import { useModal } from "../../hooks/useModal";
 import ModalGrid from "../../components/ModalGenerico/ModalGrid";
+import { useRouter } from "next/router";
 // import Button from '../../../components/buttons/Button'
 
-const LoUltimo = () => {
+const LoUltimo = ({ idiomas }) => {
+  const { locale } = useRouter();
+  // console.log("router", locale);
   const { loadingGetData, db } = useBlogServices();
-  const [isOpen, openModal, closeModal] = useModal(false)
+  const [isOpen, openModal, closeModal] = useModal(false);
   const [initialSlide, setInitialSlide] = useState(0);
+  const tituloPorIdioma = (db) => {
+    switch (locale) {
+      case "es-pe":
+        return db?.tituloEspa;
+      case "en-US":
+        return db?.tituloIngl;
+      case "pt-br":
+        return db?.tituloPort;
+      default:
+        return db?.tituloEspa;
+    }
+  };
+ 
 
   return (
     <section className=" p-8 flex flex-col justify-center items-center  overflow-x-hidden ">
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto bg-white">
         <h6 className="text-3xl lg:text-3.5xl text-center font-semibold mb-8 text-blue-500">
-          LO ÚLTIMO
+          {idiomas.LoUltimo.titulo}
         </h6>
         {/* grid en lg */}
         <div className="hidden lg:block relative">
@@ -44,10 +60,13 @@ const LoUltimo = () => {
             <div>Cargando...</div>
           ) : (
             <div className="flex cursor-pointer justify-between">
-              <div className="" onClick={() => {
-                setInitialSlide(1);
-                openModal();
-              }}>
+              <div
+                className=""
+                onClick={() => {
+                  setInitialSlide(1);
+                  openModal();
+                }}
+              >
                 <div className="relative  ">
                   <img
                     src="/ippe.png"
@@ -57,16 +76,17 @@ const LoUltimo = () => {
                   <div className="bg-indigo-300 w-full h-full">
                     <img
                       src={db.slice(0)[0]?.imagenPrincipal?.url}
-                      alt={
-                        db.slice(0)[0]?.imagenPrincipal?.descripcion
-                      }
+                      alt={db.slice(0)[0]?.imagenPrincipal?.descripcion}
                       className="object-cover "
                       style={{ width: "688px", height: "528px" }}
                     />
                   </div>
                   <div className="absolute bottom-0 w-full px-10 py-3 bg-green-500 bg-opacity-90 text-white ">
                     <h3 className="text-2xl  w-100">
-                      {db.slice(0)[0]?.tituloEspa}
+                      {/* {locale === "pt-br" && db.slice(0)[0]?.tituloPort}
+                      {locale === "es-pe" && db.slice(0)[0]?.tituloEspa}
+                      {locale === "en-US" && db.slice(0)[0]?.tituloIngl} */}
+                      {tituloPorIdioma(db.slice(0)[0])}
                       {/* ¡Equipo <span className="font-bold">OVUM 2022</span> */}
                     </h3>
                     {/* <h3 className="text-3xl ">A poco de el gran evento!</h3> */}
@@ -84,7 +104,7 @@ const LoUltimo = () => {
                       className="relative cursor-pointer"
                       style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
                       onClick={() => {
-                        setInitialSlide(i+2);
+                        setInitialSlide(i + 2);
                         openModal();
                       }}
                     >
@@ -97,7 +117,7 @@ const LoUltimo = () => {
                       </div>
                       <div className="absolute bottom-0 w-full px-4 py-1 bg-green-500 bg-opacity-90 text-white ">
                         {/* <h3 className="">Primer Congreso </h3> */}
-                        <h3 className="">{item?.tituloEspa}</h3>
+                        <h3 className="">{tituloPorIdioma(item)}</h3>
                       </div>
                     </div>
                   ))}
@@ -181,27 +201,30 @@ const LoUltimo = () => {
             modules={[EffectFade, Navigation, Pagination]}
             className="mySwiper"
           >
-            {!loadingGetData && db.slice(0,4).map(item =>
-              <SwiperSlide key={item?.blogId}>
-                <div className="pb-10">
-                <div className="relative">
-                  <img src={item?.imagenPrincipal?.url} className="w-full h-48 sm:h-64 object-cover" />
-                  <div className="absolute bottom-0 w-full px-4 py-2 bg-gray-600 bg-opacity-80 text-white ">
-                    {/* <h3 className="text-base font-semibold">¡Vuelve </h3> */}
-                    <h3 className="text-lg">{item?.tituloEspa}</h3>
+            {!loadingGetData &&
+              db.slice(0, 4).map((item) => (
+                <SwiperSlide key={item?.blogId}>
+                  <div className="pb-10">
+                    <div className="relative">
+                      <img
+                        src={item?.imagenPrincipal?.url}
+                        className="w-full h-48 sm:h-64 object-cover"
+                      />
+                      <div className="absolute bottom-0 w-full px-4 py-2 bg-gray-600 bg-opacity-80 text-white ">
+                        {/* <h3 className="text-base font-semibold">¡Vuelve </h3> */}
+                        <h3 className="text-lg">{tituloPorIdioma(item)}</h3>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                </div>
-                
-              </SwiperSlide>
-            )}
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
         {/* fin slider en mobile */}
         <div className="flex justify-center my-12 ">
           <Link href="/lo-ultimo">
             <button className="bg-pink-700 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full">
-              Ver más
+              {idiomas.BtnVerMas.value}
             </button>
           </Link>
         </div>
@@ -209,7 +232,7 @@ const LoUltimo = () => {
       <ModalGrid
         isOpen={isOpen}
         closeModal={closeModal}
-        data={db.slice(0,4)}
+        data={db.slice(0, 4)}
         initialSlide={initialSlide}
         setInitialSlide={setInitialSlide}
       />

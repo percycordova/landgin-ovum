@@ -3,7 +3,7 @@ import CardGrid from "../../components/cardGrid";
 import ModalGrid from "../../components/ModalGenerico/ModalGrid";
 import useBlogServices from "../../Gestionadores/useBlogServices";
 
-const Grid = ({ openModal, closeModal, isOpen }) => {
+const Grid = ({ openModal, closeModal, isOpen, idiomas }) => {
   const { loadingGetData, db } = useBlogServices();
   // console.log('db',db);
   const [initialSlide, setInitialSlide] = useState(0);
@@ -12,7 +12,7 @@ const Grid = ({ openModal, closeModal, isOpen }) => {
       <section className="relative bg-white flex flex-col justify-center items-center py-14">
         <div className="w-full mt-5 max-w-7xl mx-auto p-8 lg:p-0">
           <h6 className="text-3.5xl  text-center font-medium mb-8">
-            LO ÚLTIMO
+            {idiomas.LoUltimo.titulo}
           </h6>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {loadingGetData ? (
@@ -25,7 +25,7 @@ const Grid = ({ openModal, closeModal, isOpen }) => {
                   index={i}
                   onClick={() => {
                     // console.log({ i })
-                    setInitialSlide(i);
+                    setInitialSlide(i+1);
                     openModal();
                   }}
                 />

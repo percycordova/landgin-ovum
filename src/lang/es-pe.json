@@ -15,6 +15,12 @@
     "parrafo2":"En esta página encontrarán información completa sobre San Pedro Sula, la sede del OVUM 2022, la ciudad conocida como la Capital Industrial de Honduras, gracias al importante giro empresarial que representa para el país y el continente. Así mismo, obtendrán información de interés sobre los líderes de opinión que participarán y los tópicos que serán evaluados mediante los programas y sesiones foco del Congreso. Será un honor contar con su participación y vernos nuevamente, los esperamos con los brazos abiertos en San Pedro Sula, Honduras del 6 al 9 de septiembre. Con gratitud,",
     "parrafo3":"Presidente ANAVIH y anfitrión del OVUM 2022"
   },
+  "LoUltimo":{
+    "titulo":"LO ÚLTIMO"
+  },
+  "BtnVerMas":{
+    "value":"Ver más"
+  },
   "Button": {
     "value1": "Consúltanos",
     "value2": "Enviar"

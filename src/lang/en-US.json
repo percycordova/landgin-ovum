@@ -15,6 +15,12 @@
     "parrafo2":"On this page you will find complete information about San Pedro Sula, the headquarters of OVUM 2022, the city known as the Industrial Capital of Honduras, thanks to the important business turn it represents for the country and the continent. Likewise, they will obtain information of interest about the opinion leaders who will participate and the topics that will be evaluated through the programs and focus sessions of the Congress. It will be an honor to have your participation and to see each other again, we are waiting for you with open arms in San Pedro Sula, Honduras from September 6 to 9. With gratitude.",
     "parrafo3":" President ANAVIH and host of OVUM 2022"
   },
+  "LoUltimo":{
+    "titulo":"THE LAST"
+  },
+  "BtnVerMas":{
+    "value":"See more"
+  },
   "Button": {
     "value1": "Contact us",
     "value2": "Send"

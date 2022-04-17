@@ -1,31 +1,32 @@
-import Head from 'next/head'
-import Banner from '../components/banner/Banner'
-import ButtonWhassapt from '../components/buttons/ButtonWhassapt'
-import FomularioRegistro from '../components/Fomularios/FomularioRegistro'
-import Footer from '../components/footer/Footer'
-import Header from '../components/header'
-import ModalInscripcion from '../components/ModalGenerico/ModalInscripcion'
+import Head from "next/head";
+import Banner from "../components/banner/Banner";
+import ButtonWhassapt from "../components/buttons/ButtonWhassapt";
+import FomularioRegistro from "../components/Fomularios/FomularioRegistro";
+import Footer from "../components/footer/Footer";
+import Header from "../components/header";
+import ModalInscripcion from "../components/ModalGenerico/ModalInscripcion";
 // import ModalErrorCorreoRegistrado from '../components/ModalGenerico/ModalErrorCorreoRegistrado'
-import { useModal } from '../hooks/useModal'
-import Acerca from '../sections/landing/acerca'
-import Auspiciadores from '../sections/landing/auspiciadores'
-import BannerLanding from '../sections/landing/bannerLanding'
-import Conferencia from '../sections/landing/conferencia'
-import Conferencista from '../sections/landing/conferencista'
-import Conoce from '../sections/landing/conoce'
-import Estructura from '../sections/landing/estructura'
-import Feria from '../sections/landing/feria'
-import LoUltimo from '../sections/landing/loUltimo'
-import Organizadores from '../sections/landing/organizadores'
-import Patrocinadores from '../sections/landing/patrocinadores'
-import Programa from '../sections/landing/programa'
+import { useModal } from "../hooks/useModal";
+import Acerca from "../sections/landing/acerca";
+import Auspiciadores from "../sections/landing/auspiciadores";
+import BannerLanding from "../sections/landing/bannerLanding";
+import Conferencia from "../sections/landing/conferencia";
+import Conferencista from "../sections/landing/conferencista";
+import Conoce from "../sections/landing/conoce";
+import Estructura from "../sections/landing/estructura";
+import Feria from "../sections/landing/feria";
+import LoUltimo from "../sections/landing/loUltimo";
+import Organizadores from "../sections/landing/organizadores";
+import Patrocinadores from "../sections/landing/patrocinadores";
+import Programa from "../sections/landing/programa";
 
 const Home = (props) => {
-  const [isOpenInscripcion, openModalInscripcion, closeModalInscripcion] = useModal(false)
+  const [isOpenInscripcion, openModalInscripcion, closeModalInscripcion] =
+    useModal(false);
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
   console.log(props);
   return (
-    <div className='font-sans'>
+    <div className="font-sans">
       <Head>
         <title>OVUM 2022</title>
         <link rel="icon" href="/Captura_1.ico" />
@@ -35,10 +36,7 @@ const Home = (props) => {
         />
         <meta property="og:title" content="OVUM 2022" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://ovum-next-gamma.vercel.app/"
-        />
+        <meta property="og:url" content="https://ovum-next-gamma.vercel.app/" />
         <meta
           name="keywords"
           content="OVUM, OVUM 22, CONGRESO AVICULTURA, CONGRESO, AVICULTURA"
@@ -68,10 +66,7 @@ const Home = (props) => {
         <meta property="og:title" content="OVUM 2022" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="OVUM 2022" />
-        <meta
-          property="og:url"
-          content="https://ovum-next-gamma.vercel.app/"
-        />
+        <meta property="og:url" content="https://ovum-next-gamma.vercel.app/" />
         <meta property="og:image" content="/logo-ovum.png" />
         <meta property="og:image:secure_url" content="/logo-ovum.png" />
         <meta property="og:image:type" content="image/jpg" />
@@ -87,8 +82,8 @@ const Home = (props) => {
         <Header idiomas={props} />
         <Banner idiomas={props} />
         <div className="">
-          <Acerca idiomas={props}/>
-          <LoUltimo />
+          <Acerca idiomas={props} />
+          <LoUltimo idiomas={props} />
           {/* <Conferencia /> */}
           <Estructura />
           <Programa />
@@ -96,14 +91,17 @@ const Home = (props) => {
           <BannerLanding />
           <Conoce />
           {/* <Feria /> */}
-          <div className='' id='patrocinadores'>
+          <div className="" id="patrocinadores">
             {/* <Patrocinadores /> */}
             {/* <Auspiciadores /> */}
             <Organizadores />
           </div>
 
           <section className=" p-8 flex flex-col justify-center items-center">
-            <FomularioRegistro openModal={openModalInscripcion} idiomas={props} />
+            <FomularioRegistro
+              openModal={openModalInscripcion}
+              idiomas={props}
+            />
             <div className="md:w-9/12  w-full border-b border-gray-500 mt-10"></div>
             <div className="text-center mt-8">
               <p className="text-3xl mb-3">{props.Informacion.value}</p>
@@ -111,7 +109,8 @@ const Home = (props) => {
                 WhatsApp: <span className="font-bold ">+504 3297-4088</span>
               </p>
               <p className="text-gray-600 text-base">
-                E-mail: <span className="font-bold ">operaciones@anavih.com</span>
+                E-mail:{" "}
+                <span className="font-bold ">operaciones@anavih.com</span>
               </p>
               <p></p>
             </div>
@@ -120,16 +119,20 @@ const Home = (props) => {
       </main>
       <Footer idiomas={props} />
       <ButtonWhassapt />
-      <ModalInscripcion isOpen={isOpenInscripcion} closeModal={closeModalInscripcion} idiomas={props} />
+      <ModalInscripcion
+        isOpen={isOpenInscripcion}
+        closeModal={closeModalInscripcion}
+        idiomas={props}
+      />
       {/* <ModalErrorCorreoRegistrado isOpen={isOpenModalCorreo} closeModal={closeModalCorreo}/> */}
     </div>
-  )
-}
-export default Home
+  );
+};
+export default Home;
 
 // eslint-disable-next-line space-before-function-paren
 export async function getStaticProps({ locale }) {
-  const response = await import(`../lang/${locale}.json`)
+  const response = await import(`../lang/${locale}.json`);
 
   return {
     props: {
@@ -149,8 +152,10 @@ export async function getStaticProps({ locale }) {
       DesarrolladoPor: response.default.DesarrolladoPor,
       Banner: response.default.Banner,
       ModalInscripcion: response.default.ModalInscripcion,
-      HeaderMenu:response.default.HeaderMenu,
-      AcercaOvum:response.default.AcercaOvum,
-    }
-  }
+      HeaderMenu: response.default.HeaderMenu,
+      AcercaOvum: response.default.AcercaOvum,
+      LoUltimo: response.default.LoUltimo,
+      BtnVerMas: response.default.BtnVerMas,
+    },
+  };
 }

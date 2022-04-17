@@ -1,6 +1,32 @@
+import { useRouter } from 'next/router';
 import React from 'react'
 
 const CardGrid = ({ item, onClick, index }) => {
+  const {locale}= useRouter()
+  const tituloPorIdioma = (db) => {
+    switch (locale) {
+      case "es-pe":
+        return db?.tituloEspa;
+      case "en-US":
+        return db?.tituloIngl;
+      case "pt-br":
+        return db?.tituloPort;
+      default:
+        return db?.tituloEspa;
+    }
+  };
+  const descripcionPorIdioma = (db) => {
+    switch (locale) {
+      case "es-pe":
+        return db?.descripcionEspa;
+      case "en-US":
+        return db?.descripcionIngl;
+      case "pt-br":
+        return db?.descripcionPort;
+      default:
+        return db?.descripcionEspa;
+    }
+  }
   // const positionSlider = (item) => {
   //   setInitialSlide(item - 1)
   //   openModal()
@@ -13,11 +39,11 @@ const CardGrid = ({ item, onClick, index }) => {
         {/* <div className="">
           <h6 className="text-sm font-medium text-blue-500">Día {index + 1}</h6>
         </div> */}
-        <div className="font-bold text-xl mb-2">{item?.tituloEspa}</div>
+        <div className="font-bold text-xl mb-2">{tituloPorIdioma(item)}</div>
         <p className="font-light text-sm lg:text-base mt-4 text-justify">
-          {item?.descripcionEspa}
+          {descripcionPorIdioma(item)}
         </p>
-        <img src="/LineaCardIzq.svg" className='absolute -bottom-2 right-0' alt="" />
+        {/* <img src="/LineaCardIzq.svg" className='absolute -bottom-2 right-0' alt="" /> */}
       </div>
     </div>
   )

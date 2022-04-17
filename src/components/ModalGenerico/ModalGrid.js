@@ -8,11 +8,38 @@ import 'swiper/css/navigation'
 
 // import required modules
 import { Navigation } from 'swiper'
+import { useRouter } from 'next/router'
 
 const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
+  const { locale } = useRouter();
   const swiper = useRef(null)
   const setSwiper = (newSwiper) => {
     swiper.current = newSwiper
+  }
+
+  const tituloPorIdioma = (db) => {
+    switch (locale) {
+      case "es-pe":
+        return db?.tituloEspa;
+      case "en-US":
+        return db?.tituloIngl;
+      case "pt-br":
+        return db?.tituloPort;
+      default:
+        return db?.tituloEspa;
+    }
+  };
+  const descripcionPorIdioma = (db) => {
+    switch (locale) {
+      case "es-pe":
+        return db?.descripcionEspa;
+      case "en-US":
+        return db?.descripcionIngl;
+      case "pt-br":
+        return db?.descripcionPort;
+      default:
+        return db?.descripcionEspa;
+    }
   }
   useEffect(() => {
     if (swiper.current) {
@@ -55,9 +82,9 @@ const ModalGrid = ({ isOpen, closeModal, data, initialSlide, size }) => {
                     {/* <div className="">
                       <h6 className="text-sm font-medium text-blue-500">Día {index + 1}</h6>
                     </div> */}
-                    <div className="font-bold text-xl mb-2">{item?.tituloEspa}</div>
+                    <div className="font-bold text-xl mb-2">{tituloPorIdioma(item)}</div>
                     <p className="font-light text-sm lg:text-base mt-4  text-justify">
-                      {item.descripcionEspa}
+                      {descripcionPorIdioma(item)}
                     </p>
                     <img src="/LineaCardIzq.svg" className='absolute -bottom-2 right-0' alt="" />
                   </div>
