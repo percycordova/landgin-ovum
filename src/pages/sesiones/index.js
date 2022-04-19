@@ -44,7 +44,7 @@ const PreguntasFrecuentes = (props) => {
 
           <BannerLanding  idiomas={props}/>
           {/* <Patrocinadores /> */}
-          <Organizadores />
+          <Organizadores idiomas={props}/>
           <section className=" p-8 flex flex-col justify-center items-center">
             <FomularioRegistro
               openModal={openModalInscripcion}
