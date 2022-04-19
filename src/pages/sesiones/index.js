@@ -42,7 +42,7 @@ const PreguntasFrecuentes = (props) => {
             <p>EN FASE DE DESARROLLO...</p>
           </div>
 
-          <BannerLanding />
+          <BannerLanding  idiomas={props}/>
           {/* <Patrocinadores /> */}
           <Organizadores />
           <section className=" p-8 flex flex-col justify-center items-center">
@@ -104,6 +104,11 @@ export async function getStaticProps({ locale }) {
       AcercaOvum: response.default.AcercaOvum,
       LoUltimo: response.default.LoUltimo,
       BtnVerMas: response.default.BtnVerMas,
+      Estructura: response.default.Estructura,
+      Programa: response.default.Programa,
+      QuieresParticipar: response.default.QuieresParticipar,
+      ConoceHonduras: response.default.ConoceHonduras,
+      Organizadores: response.default.Organizadores,,
     },
   };
 }
