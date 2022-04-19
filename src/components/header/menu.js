@@ -8,7 +8,7 @@ const Menu = ({ mostrarLogo,idiomas }) => {
     <ul className="flex  text-base font-normal items-center text-gray-600">
 
       {mostrarLogo && <li className="py-4 px-2 cursor-pointer ">
-        <Link href="/"><img src="/logo-navbar.png" alt="" className="h-18 w-32 object-cover" /></Link>
+        <Link href="/"><img src="/logo-header.svg" alt="" className="h-18 w-32 object-cover" /></Link>
       </li>}
 
       <li className="py-4 px-2 cursor-pointer hover:-translate-y-1 transform transition-all duration-300">

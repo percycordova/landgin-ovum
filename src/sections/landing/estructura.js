@@ -24,6 +24,7 @@ const Estructura = ({ idiomas }) => {
       title: sesiones.titulo,
       text: sesiones.descripcion,
       typeImg: "pollo",
+      url:"/estructura-sesiones"
     },
     {
       id: 2,
@@ -31,6 +32,7 @@ const Estructura = ({ idiomas }) => {
       title: conferencias.titulo,
       text: conferencias.descripcion,
       typeImg: "ala",
+      url:"/estructura-conferencias"
     },
     {
       id: 3,
@@ -38,6 +40,7 @@ const Estructura = ({ idiomas }) => {
       title: expoferia.titulo,
       text: expoferia.descripcion,
       typeImg: "gallina",
+      url:"/estructura-expoferia"
     },
     {
       id: 4,
@@ -45,6 +48,7 @@ const Estructura = ({ idiomas }) => {
       title: investigacion.titulo,
       text: investigacion.descripcion,
       typeImg: "gallina",
+      url:"/estructura-investigacion"
     },
     {
       id: 5,
@@ -52,6 +56,7 @@ const Estructura = ({ idiomas }) => {
       title: salas.titulo,
       text: salas.descripcion,
       typeImg: "pollo-black",
+      url:"/estructura-salas"
     },
     {
       id: 6,
@@ -59,6 +64,7 @@ const Estructura = ({ idiomas }) => {
       title: turismo.titulo,
       text: turismo.descripcion,
       typeImg: "ala-black",
+      url:"/estructura-turismo"
     },
   ];
   const textColor = (id) => {
@@ -130,14 +136,14 @@ const Estructura = ({ idiomas }) => {
                   <div className=" text-xl mb-2">{item.title}</div>
                   <p className="font-light text-sm lg:text-base  h-40 text-justify">
                     <span className="mb-3 block">{item.text}</span>
-                    {/* <span className="text-white font-bold border-b border-white">
+                    <span className="text-white font-bold border-b border-white">
                     <Link
-                      href="/sesiones"
+                      href={item.url}
                       
                     >
                       Ver más
                     </Link>
-                  </span> */}
+                  </span>
                   </p>
 
                   {item.typeImg === "pollo" && (
