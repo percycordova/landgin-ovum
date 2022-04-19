@@ -14,7 +14,7 @@ import Link from "next/link";
 
 const Estructura = ({ idiomas }) => {
   const { Estructura } = idiomas;
-  const { titulo,sesiones, conferencias, expoferia, investigacion, salas, turismo } =
+  const { titulo, sesiones, conferencias, expoferia, investigacion, salas, turismo } =
     Estructura;
 
   const data = [
@@ -24,7 +24,7 @@ const Estructura = ({ idiomas }) => {
       title: sesiones.titulo,
       text: sesiones.descripcion,
       typeImg: "pollo",
-      url:"/estructura-sesiones"
+      url: "/estructura-sesiones"
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const Estructura = ({ idiomas }) => {
       title: conferencias.titulo,
       text: conferencias.descripcion,
       typeImg: "ala",
-      url:"/estructura-conferencias"
+      url: "/estructura-conferencias"
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const Estructura = ({ idiomas }) => {
       title: expoferia.titulo,
       text: expoferia.descripcion,
       typeImg: "gallina",
-      url:"/estructura-expoferia"
+      url: "/estructura-expoferia"
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ const Estructura = ({ idiomas }) => {
       title: investigacion.titulo,
       text: investigacion.descripcion,
       typeImg: "gallina",
-      url:"/estructura-investigacion"
+      url: "/estructura-investigacion"
     },
     {
       id: 5,
@@ -56,7 +56,7 @@ const Estructura = ({ idiomas }) => {
       title: salas.titulo,
       text: salas.descripcion,
       typeImg: "pollo-black",
-      url:"/estructura-salas"
+      url: "/estructura-salas"
     },
     {
       id: 6,
@@ -64,7 +64,7 @@ const Estructura = ({ idiomas }) => {
       title: turismo.titulo,
       text: turismo.descripcion,
       typeImg: "ala-black",
-      url:"/estructura-turismo"
+      url: "/estructura-turismo"
     },
   ];
   const textColor = (id) => {
@@ -137,13 +137,13 @@ const Estructura = ({ idiomas }) => {
                   <p className="font-light text-sm lg:text-base  h-40 text-justify">
                     <span className="mb-3 block">{item.text}</span>
                     <span className="text-white font-bold border-b border-white">
-                    <Link
-                      href={item.url}
-                      
-                    >
-                      Ver más
-                    </Link>
-                  </span>
+                      <Link
+                        href={item.url}
+
+                      >
+                        Ver más
+                      </Link>
+                    </span>
                   </p>
 
                   {item.typeImg === "pollo" && (
@@ -215,7 +215,7 @@ const Estructura = ({ idiomas }) => {
             >
               {data.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <div className="mx-auto max-w-sm rounded-2xl overflow-hidden ">
+                  <div className="mx-auto max-w-sm rounded-2xl overflow-hidden pb-10">
                     <img
                       className="w-full"
                       src={item.img}
@@ -227,9 +227,17 @@ const Estructura = ({ idiomas }) => {
                       )} ${textColor(item.id)} rounded-b-2xl`}
                     >
                       <div className="font-bold text-xl mb-2">{item.title}</div>
-                      <p className="font-light text-sm lg:text-base text-justify">
+                      <p className="font-light text-sm lg:text-base text-justify mb-5 h-32">
                         {item.text}
                       </p>
+                      <span className="text-white font-bold border-b border-white ">
+                        <Link
+                          href={item.url}
+
+                        >
+                          Ver más
+                        </Link>
+                      </span>
                     </div>
                   </div>
                 </SwiperSlide>
