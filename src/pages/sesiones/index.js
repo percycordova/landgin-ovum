@@ -108,7 +108,7 @@ export async function getStaticProps({ locale }) {
       Programa: response.default.Programa,
       QuieresParticipar: response.default.QuieresParticipar,
       ConoceHonduras: response.default.ConoceHonduras,
-      Organizadores: response.default.Organizadores,,
+      Organizadores: response.default.Organizadores,
     },
   };
 }
