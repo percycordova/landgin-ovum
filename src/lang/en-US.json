@@ -4,22 +4,98 @@
     "value2": "English",
     "value3": "Portuguese"
   },
-  "HeaderMenu":{
-    "registrate":"Register",
-    "programa":"Program",
-    "preguntasFrecuentes":"Frequent Questions"
+  "HeaderMenu": {
+    "registrate": "Register",
+    "programa": "Program",
+    "preguntasFrecuentes": "Frequent Questions"
   },
   "AcercaOvum": {
     "titulo": "ABOUT OVUM",
     "parrafo1": "The OVUM 2022 will be an unforgettable experience for all its participants, the Latin American Poultry Congress constantly improves and innovates and in this edition it will convene the Latin American and world poultry community to jointly project the future of our industry and nutrition at a global level, to generate common welfare through the supply of poultry protein of the highest quality to all countries.",
-    "parrafo2":"On this page you will find complete information about San Pedro Sula, the headquarters of OVUM 2022, the city known as the Industrial Capital of Honduras, thanks to the important business turn it represents for the country and the continent. Likewise, they will obtain information of interest about the opinion leaders who will participate and the topics that will be evaluated through the programs and focus sessions of the Congress. It will be an honor to have your participation and to see each other again, we are waiting for you with open arms in San Pedro Sula, Honduras from September 6 to 9. With gratitude.",
-    "parrafo3":" President ANAVIH and host of OVUM 2022"
+    "parrafo2": "On this page you will find complete information about San Pedro Sula, the headquarters of OVUM 2022, the city known as the Industrial Capital of Honduras, thanks to the important business turn it represents for the country and the continent. Likewise, they will obtain information of interest about the opinion leaders who will participate and the topics that will be evaluated through the programs and focus sessions of the Congress. It will be an honor to have your participation and to see each other again, we are waiting for you with open arms in San Pedro Sula, Honduras from September 6 to 9. With gratitude.",
+    "parrafo3": " President ANAVIH and host of OVUM 2022"
   },
-  "LoUltimo":{
-    "titulo":"THE LAST"
+  "Estructura": {
+    "titulo": "STRUCTURE",
+    "sesiones": {
+      "titulo": "SESSIONS",
+      "descripcion": "Leading international specialists will develop topics of importance for the future of the poultry sector."
+    },
+    "conferencias": {
+      "titulo": "CONFERENCES",
+      "descripcion": "Destacados especialistas internacionales desarrollarán tópicos de trascendencia para futuro del sector avícola."
+    },
+    "expoferia": {
+      "titulo": "EXPO FAIR",
+      "descripcion": "The participation of all those who make up the value chain of Latin American poultry farming, startups, research work and the latest in technology for our poultry farming."
+    },
+    "investigacion": {
+      "titulo": "RESEARCH",
+      "descripcion": "The main actors in science will mark a trend of great impact to the challenges of poultry farming."
+    },
+    "salas": {
+      "titulo": "ROOMS",
+      "descripcion": "Specially conditioned to give comfort to all participants, considering the biosecurity measures that govern internationally."
+    },
+    "turismo": {
+      "titulo": "SIGHTSEEING",
+      "descripcion": "The Honduran Caribbean and the majestic ancestral culture of the City of Thrushes awaits all the actors of our poultry industry, to provide the appropriate framework in San Pedro Sula. The OVUM 2022!"
+    }
   },
-  "BtnVerMas":{
-    "value":"See more"
+  "Programa": {
+    "titulo": "GENERAL PROGRAM",
+    "martes": {
+      "dia": "TUESDAY",
+      "mes": "September",
+      "evento1": "Registration of participants",
+      "evento2": "Inauguration ceremony",
+      "evento3": "Welcome cocktail"
+    },
+    "miercoles": {
+      "dia": "WEDNESDAY",
+      "mes": "September",
+      "evento1": "Scientific technical program",
+      "evento2": "Attendance at the exhibition",
+      "evento3": "Cultural evening"
+    },
+    "jueves": {
+      "dia": "THURSDAY",
+      "mes": "September",
+      "evento1": "Scientific technical program",
+      "evento2": "Attendance at the exhibition",
+      "evento3": "Awards and recognitions (Special guests)"
+    },
+    "viernes": {
+      "dia": "FRIDAY",
+      "mes": "September",
+      "evento1": "Scientific technical program",
+      "evento2": "Attendance at the exhibition",
+      "evento3": "Closing ceremony"
+    }
+  },
+  "LoUltimo": {
+    "titulo": "THE LAST"
+  },
+  "QuieresParticipar": {
+    "value1":"¿Do you want to participate in  ",
+    "value2":"OVUM 2022",
+    "value3":" in Honduras?"
+  },
+  "ConoceHonduras": {
+    "tituloBanner1": "GET TO KNOW",
+    "tituloBanner2": "HONDURAS",
+    "tituloVideoBold":"San Pedro Sula as venue, ",
+    "tituloVideo":"hotels, how to get there, gastronomy, tourism.",
+    "descripcionVideo":"Where the Chamelecón River rises in the Sula Valley, at the foot of the Merendón mountain range, is the city of San Pedro Sula, founded on June 27, 1536 by the then Spanish captain Don Pedro de Alvarado, in a place whose exact location has not been possible to locate, as its inhabitants moved the town several times.",
+    "tituloHotel":"Book your Hotel",
+    "descripcionHotel":"San Pedro Sula is a city with a wide cultural heritage. It is a city of happy and jovial people, a city full of contrasts, flavors, colors and a lot of love for culture. That goes from that rootedness in our roots to the updated contrasts of pop culture.",
+    "buttonHotel":"See Hotels"
+  },
+  "Organizadores":{
+    "titulo": "ORGANIZERS"
+  },
+  "BtnVerMas": {
+    "value": "See more"
   },
   "Button": {
     "value1": "Contact us",

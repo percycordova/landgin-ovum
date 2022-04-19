@@ -201,9 +201,9 @@ const PreguntasFrecuentes = (props) => {
             </p>
           </div>
 
-          <BannerLanding />
+          <BannerLanding  idiomas={props}/>
           {/* <Patrocinadores /> */}
-          <Organizadores />
+          <Organizadores  idiomas={props}/>
           <section className=" p-8 flex flex-col justify-center items-center">
             <FomularioRegistro
               openModal={openModalInscripcion}
@@ -260,7 +260,15 @@ export async function getStaticProps({ locale }) {
       DesarrolladoPor: response.default.DesarrolladoPor,
       Banner: response.default.Banner,
       ModalInscripcion: response.default.ModalInscripcion,
-      HeaderMenu:response.default.HeaderMenu
+      HeaderMenu: response.default.HeaderMenu,
+      AcercaOvum: response.default.AcercaOvum,
+      LoUltimo: response.default.LoUltimo,
+      BtnVerMas: response.default.BtnVerMas,
+      Estructura: response.default.Estructura,
+      Programa: response.default.Programa,
+      QuieresParticipar: response.default.QuieresParticipar,
+      ConoceHonduras: response.default.ConoceHonduras,
+      Organizadores: response.default.Organizadores,
     }
   }
 }

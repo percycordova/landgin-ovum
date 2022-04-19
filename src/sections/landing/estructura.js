@@ -6,56 +6,58 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 // import required modules
 import { Navigation, Pagination } from "swiper";
 import Link from "next/link";
+
 /* import Button from '../../components/buttons/Button' */
 
+const Estructura = ({ idiomas }) => {
+  const { Estructura } = idiomas;
+  const { titulo,sesiones, conferencias, expoferia, investigacion, salas, turismo } =
+    Estructura;
 
-
-const Estructura = () => {
   const data = [
     {
       id: 1,
       img: "/estructura-6.png",
-      title: "SESIONES",
-      text: "transmitidas presencial e interactivamente, permitirán encontrar soluciones conjuntas a los principales retos de nuestra industria.",
+      title: sesiones.titulo,
+      text: sesiones.descripcion,
       typeImg: "pollo",
     },
     {
       id: 2,
       img: "/estructura-1.png",
-      title: "CONFERENCIAS",
-      text: "Destacados especialistas internacionales desarrollarán tópicos de transcendencia para futuro del sector avícola.",
+      title: conferencias.titulo,
+      text: conferencias.descripcion,
       typeImg: "ala",
     },
     {
       id: 3,
       img: "/estructura-2.png",
-      title: "EXPOFERIA",
-      text: "La participación de todos los que conforman la cadena de valor de la avicultura latinoamericana, startups, trabajos de investigación y lo más novedoso en tecnología para nuestra avicultura.",
+      title: expoferia.titulo,
+      text: expoferia.descripcion,
       typeImg: "gallina",
     },
     {
       id: 4,
       img: "/estructura-3.png",
-      title: "INVESTIGACIÓN",
-      text: "Los principales actores de la ciencia, marcarán una tendencia de gran impato a los desafios de la avicultura.",
+      title: investigacion.titulo,
+      text: investigacion.descripcion,
       typeImg: "gallina",
     },
     {
       id: 5,
       img: "/estructura-4.png",
-      title: "SALAS",
-      text: "Acomodadas especialmente para dar confort a todos los participantes considerando las medidas de bioseguridad que rigen a nivel internacional.",
+      title: salas.titulo,
+      text: salas.descripcion,
       typeImg: "pollo-black",
     },
     {
       id: 6,
       img: "/estructura-5.png",
-      title: "TURISMO",
-      text: "El caribe hondureño y la majestuosa cultura ancestral de la Ciudad de los Zorzales espera a todos los actores de nuestra industria avícola, para dar el marco apropiado en San Pedro Sula. ¡El OVUM 2022!",
+      title: turismo.titulo,
+      text: turismo.descripcion,
       typeImg: "ala-black",
     },
   ];
@@ -74,7 +76,7 @@ const Estructura = () => {
       return "text-black";
     }
   };
-  
+
   const bgColor = (id) => {
     if (id === 1) {
       return "bg-green-500";
@@ -105,8 +107,8 @@ const Estructura = () => {
         className="absolute -right-15 bottom-30 "
       />
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-8 lg:p-0">
-        <h6 className="text-3xl lg:text-3.5xl text-center font-medium mb-8 text-blue-500">
-          ESTRUCTURA
+        <h6 className="text-3xl lg:text-3.5xl text-center font-bold mb-8 text-blue-500">
+          {titulo}
         </h6>
         <div className="hidden lg:grid grid-cols-2 xl:grid-cols-3 gap-4">
           {isMounted &&

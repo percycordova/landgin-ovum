@@ -7,7 +7,7 @@ const Acerca = ({idiomas}) => {
       id="acerca"
     >
       <div className=" lg:w-256 w-full mt-5 max-w-7xl mx-auto bg-white">
-        <h6 className="text-3.5xl text-primary-850 text-center font-medium mb-8">
+        <h6 className="text-3.5xl text-primary-850 text-center font-bold mb-8">
           {idiomas.AcercaOvum.titulo}
         </h6>
         <div className="w-full flex flex-col items-center lg:flex-row lg:justify-between">

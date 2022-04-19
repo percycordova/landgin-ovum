@@ -41,7 +41,7 @@ const LoUltimo = ({ idiomas }) => {
   return (
     <section className=" p-8 flex flex-col justify-center items-center  overflow-x-hidden ">
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto bg-white">
-        <h6 className="text-3xl lg:text-3.5xl text-center font-semibold mb-8 text-blue-500">
+        <h6 className="text-3xl lg:text-3.5xl text-center font-bold mb-8 text-blue-500">
           {idiomas.LoUltimo.titulo}
         </h6>
         {/* grid en lg */}

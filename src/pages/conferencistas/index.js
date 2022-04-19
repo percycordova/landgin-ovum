@@ -29,9 +29,9 @@ const Conferencista = (props) => {
         <Header idiomas={props}/>
         <div className="">
           <Grid {...{ openModal, closeModal, isOpen }} />
-          <BannerLanding />
-          <Patrocinadores />
-          <Organizadores />
+          <BannerLanding idiomas={props}/>
+          <Patrocinadores idiomas={props} />
+          <Organizadores idiomas={props} />
           <section className=" p-8 flex flex-col justify-center items-center">
             <FomularioRegistro openModal={openModalInscripcion} idiomas={props} />
             <div className="md:w-9/12  w-full border-b border-gray-500 mt-10"></div>
@@ -85,6 +85,11 @@ export async function getStaticProps({ locale }) {
       AcercaOvum: response.default.AcercaOvum,
       LoUltimo: response.default.LoUltimo,
       BtnVerMas: response.default.BtnVerMas,
+      Estructura: response.default.Estructura,
+      Programa: response.default.Programa,
+      QuieresParticipar: response.default.QuieresParticipar,
+      ConoceHonduras: response.default.ConoceHonduras,
+      Organizadores: response.default.Organizadores,
     },
   };
 }

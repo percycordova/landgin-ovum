@@ -9,7 +9,8 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation, Autoplay } from "swiper";
 
-const Organizadores = () => {
+const Organizadores = ({ idiomas }) => {
+  const { titulo } = idiomas.Organizadores;
   /* const [width, setWidth] = useState(true)
 
   const handleWidth =()=>{
@@ -20,10 +21,10 @@ const Organizadores = () => {
     }
   } */
   return (
-    <section  className="relative bg-white flex flex-col justify-center items-center py-8">
+    <section className="relative bg-white flex flex-col justify-center items-center py-8">
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-0 lg:p-0">
-        <h6 className="text-3xl lg:text-3.5xl text-center font-normal mb-8 text-blue-500">
-          ORGANIZADORES
+        <h6 className="text-3xl lg:text-3.5xl text-center font-bold mb-8 text-blue-500">
+         {titulo}
         </h6>
         <div className="flex justify-center flex-wrap">
           <img src="/asociacion.png " className=" lg:w-64 h-32 object-cover" />

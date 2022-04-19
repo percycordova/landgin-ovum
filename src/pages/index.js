@@ -24,7 +24,7 @@ const Home = (props) => {
   const [isOpenInscripcion, openModalInscripcion, closeModalInscripcion] =
     useModal(false);
   // const [isOpenModalCorreo, openModalCorreo, closeModalCorreo] = useModal(false)
-  console.log(props);
+  // console.log(props);
   return (
     <div className="font-sans">
       <Head>
@@ -85,16 +85,16 @@ const Home = (props) => {
           <Acerca idiomas={props} />
           <LoUltimo idiomas={props} />
           {/* <Conferencia /> */}
-          <Estructura />
-          <Programa />
+          <Estructura  idiomas={props}  />
+          <Programa idiomas={props}/>
           {/* <Conferencista /> */}
-          <BannerLanding />
-          <Conoce />
+          <BannerLanding idiomas={props}/>
+          <Conoce idiomas={props}/>
           {/* <Feria /> */}
           <div className="" id="patrocinadores">
             {/* <Patrocinadores /> */}
             {/* <Auspiciadores /> */}
-            <Organizadores />
+            <Organizadores idiomas={props}/>
           </div>
 
           <section className=" p-8 flex flex-col justify-center items-center">
@@ -156,6 +156,11 @@ export async function getStaticProps({ locale }) {
       AcercaOvum: response.default.AcercaOvum,
       LoUltimo: response.default.LoUltimo,
       BtnVerMas: response.default.BtnVerMas,
+      Estructura: response.default.Estructura,
+      Programa: response.default.Programa,
+      QuieresParticipar: response.default.QuieresParticipar,
+      ConoceHonduras: response.default.ConoceHonduras,
+      Organizadores: response.default.Organizadores,
     },
   };
 }

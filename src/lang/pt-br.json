@@ -15,14 +15,90 @@
     "parrafo2": "Nesta página você encontrará informações completas sobre San Pedro Sula, sede da OVUM 2022, a cidade conhecida como a Capital Industrial de Honduras, graças à importante virada de negócios que representa para o país e o continente. Da mesma forma, obterão informações de interesse sobre os formadores de opinião que participarão e os temas que serão avaliados por meio dos programas e sessões focais do Congresso. Será uma honra contar com sua participação e nos reencontrar, esperamos vocês de braços abertos em San Pedro Sula, Honduras, de 6 a 9 de setembro. Com gratidão,",
     "parrafo3": "Presidente ANAVIH e anfitrião de OVUM 2022"
   },
-  "LoUltimo":{
-    "titulo":"O ÚLTIMO"
+  "Estructura": {
+    "titulo": "ESTRUTURA",
+    "sesiones": {
+      "titulo": "SESSÕES",
+      "descripcion": "Com transmissão presencial e interativa, eles poderão encontrar soluções conjuntas para os principais desafios do nosso setor."
+    },
+    "conferencias": {
+      "titulo": "CONFERÊNCIAS",
+      "descripcion": "Os principais especialistas internacionais desenvolverão temas de importância para o futuro do setor avícola."
+    },
+    "expoferia": {
+      "titulo": "EXPO FEIRA",
+      "descripcion": "A participação de todos os que compõem a cadeia de valor da avicultura latino-americana, startups, trabalhos de pesquisa e o que há de mais moderno em tecnologia para nossa avicultura."
+    },
+    "investigacion": {
+      "titulo": "PESQUISAR",
+      "descripcion": "Os principais atores da ciência marcarão uma tendência de grande impacto para os desafios da avicultura."
+    },
+    "salas": {
+      "titulo": "QUARTOS",
+      "descripcion": "Especialmente condicionado para dar conforto a todos os participantes, considerando as medidas de biossegurança que regem internacionalmente."
+    },
+    "turismo": {
+      "titulo": "TURISMO",
+      "descripcion": "O Caribe hondurenho e a majestosa cultura ancestral da Cidade dos Tordos espera todos os atores de nossa indústria avícola, para fornecer o enquadramento adequado em San Pedro Sula. O OVUM 2022!"
+    }
   },
-  "BtnVerMas":{
-    "value":"Ver mais"
+  "Programa": {
+    "titulo": "PROGRAMA GERAL",
+    "martes": {
+      "dia": "TERÇA",
+      "mes": "Setembro",
+      "evento1": "Registro de participantes",
+      "evento2": "Cerimônia de inauguração",
+      "evento3": "Coquetel de boas-vindas"
+    },
+    "miercoles": {
+      "dia": "QUARTA-FEIRA",
+      "mes": "Setembro",
+      "evento1": "Técnico científico programa",
+      "evento2": "Presença na exposição",
+      "evento3": "Noite cultural"
+    },
+    "jueves": {
+      "dia": "QUINTA-FEIRA",
+      "mes": "Setembro",
+      "evento1": "Técnico científico programa",
+      "evento2": "Presença na exposição",
+      "evento3": "Prêmios e reconhecimentos (Convidados especiais)"
+    },
+    "viernes": {
+      "dia": "SEXTA-FEIRA",
+      "mes": "Setembro",
+      "evento1": "Técnico científico programa",
+      "evento2": "Presença na exposição",
+      "evento3": "Cerimônia de encerramento"
+    }
+  },
+  "LoUltimo": {
+    "titulo": "O ÚLTIMO"
+  },
+  "QuieresParticipar": {
+    "value1": "Você quer participar da ",
+    "value2": "OVUM 2022",
+    "value3": " em Honduras?"
+  },
+  "ConoceHonduras": {
+    "tituloBanner1": "CONHECER",
+    "tituloBanner2": "HONDURAS",
+    "tituloVideoBold":"San Pedro Sula como local, ",
+    "tituloVideo":"hotéis, como chegar, gastronomia, turismo.",
+    "descripcionVideo":"Onde nasce o rio Chamelecón, no vale de Sula, no sopé da serra de Merendón, fica a cidade de San Pedro Sula, fundada em 27 de junho de 1536 pelo então capitão espanhol Don Pedro de Alvarado, em um lugar cuja exata localização não foi possível localizar, pois seus habitantes mudaram de cidade várias vezes.",
+    "tituloHotel":"Reserve seu hotel",
+    "descripcionHotel":"San Pedro Sula é uma cidade com um amplo patrimônio cultural. É uma cidade de gente alegre e jovial, uma cidade cheia de contrastes, sabores, cores e muito amor pela cultura. Isso vai desde esse enraizamento em nossas raízes até os contrastes atualizados da cultura pop.",
+    "buttonHotel":"Ver hotéis"
+  },
+  "Organizadores":{
+    "titulo": "ORGANIZADORES"
+  },
+  "BtnVerMas": {
+    "value": "Ver mais"
   },
   "Button": {
-    "value1": "Contate-nos em",
+    "value1": "Pergunte-nos",
     "value2": "Enviar"
   },
   "PermanezcaConectado": {

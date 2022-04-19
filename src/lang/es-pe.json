@@ -12,14 +12,90 @@
   "AcercaOvum": {
     "titulo": "ACERCA DE OVUM",
     "parrafo1": "El OVUM 2022 será una experiencia inolvidable para todos sus participantes, el Congreso Latinoamericano de Avicultura mejora e innova constantemente y en la presente edición convocará a la comunidad avícola latinoamericana y mundial para proyectar juntos el futuro de nuestra industria y de la nutrición a nivel global, para generar bienestar común a través de el abastecimiento de proteína avícola de la más alta calidad a todos los países. ",
-    "parrafo2":"En esta página encontrarán información completa sobre San Pedro Sula, la sede del OVUM 2022, la ciudad conocida como la Capital Industrial de Honduras, gracias al importante giro empresarial que representa para el país y el continente. Así mismo, obtendrán información de interés sobre los líderes de opinión que participarán y los tópicos que serán evaluados mediante los programas y sesiones foco del Congreso. Será un honor contar con su participación y vernos nuevamente, los esperamos con los brazos abiertos en San Pedro Sula, Honduras del 6 al 9 de septiembre. Con gratitud,",
-    "parrafo3":"Presidente ANAVIH y anfitrión del OVUM 2022"
+    "parrafo2": "En esta página encontrarán información completa sobre San Pedro Sula, la sede del OVUM 2022, la ciudad conocida como la Capital Industrial de Honduras, gracias al importante giro empresarial que representa para el país y el continente. Así mismo, obtendrán información de interés sobre los líderes de opinión que participarán y los tópicos que serán evaluados mediante los programas y sesiones foco del Congreso. Será un honor contar con su participación y vernos nuevamente, los esperamos con los brazos abiertos en San Pedro Sula, Honduras del 6 al 9 de septiembre. Con gratitud,",
+    "parrafo3": "Presidente ANAVIH y anfitrión del OVUM 2022"
   },
-  "LoUltimo":{
-    "titulo":"LO ÚLTIMO"
+  "Estructura": {
+    "titulo": "ESTRUCTURA",
+    "sesiones": {
+      "titulo": "SESIONES",
+      "descripcion": "Transmitidas presencial e interactivamente, permitirán encontrar soluciones conjuntas a los principales retos de nuestra industria."
+    },
+    "conferencias": {
+      "titulo": "CONFERENCIAS",
+      "descripcion": "Destacados especialistas internacionales desarrollarán tópicos de trascendencia para futuro del sector avícola."
+    },
+    "expoferia": {
+      "titulo": "EXPOFERIA",
+      "descripcion": "La participación de todos los que conforman la cadena de valor de la avicultura latinoamericana, startups, trabajos de investigación y lo más novedoso en tecnología para nuestra avicultura."
+    },
+    "investigacion": {
+      "titulo": "INVESTIGACIÓN",
+      "descripcion": "Los principales actores de la ciencia, marcarán una tendencia de gran impacto a los desafíos de la avicultura."
+    },
+    "salas": {
+      "titulo": "SALAS",
+      "descripcion": "Acondicionadas especialmente para dar confort a todos los participantes, considerando las medidas de bioseguridad que rigen a nivel internacional."
+    },
+    "turismo": {
+      "titulo": "TURISMO",
+      "descripcion": "El caribe hondureño y la majestuosa cultura ancestral de la Ciudad de los Zorzales espera a todos los actores de nuestra industria avícola, para dar el marco apropiado en San Pedro Sula. ¡El OVUM 2022!"
+    }
   },
-  "BtnVerMas":{
-    "value":"Ver más"
+  "Programa": {
+    "titulo": "PROGRAMA GENERAL",
+    "martes": {
+      "dia": "MARTES",
+      "mes": "De Septiembre",
+      "evento1": "Registro de Participantes",
+      "evento2": "Ceremonia de Inauguración",
+      "evento3": "Coctel de Bienvenida"
+    },
+    "miercoles": {
+      "dia": "MIÉRCOLES",
+      "mes": "De Septiembre",
+      "evento1": "Programa Técnico Científico",
+      "evento2": "Asistencia a la Exposición",
+      "evento3": "Noche Cultural"
+    },
+    "jueves": {
+      "dia": "JUEVES",
+      "mes": "De Septiembre",
+      "evento1": "Programa Técnico Científico",
+      "evento2": "Asistencia a la Exposición",
+      "evento3": "Premiación y Reconocimientos (Invitados especiales)"
+    },
+    "viernes": {
+      "dia": "VIERNES",
+      "mes": "De Septiembre",
+      "evento1": "Programa Técnico Científico",
+      "evento2": "Asistencia a la Exposición",
+      "evento3": "Ceremonia de Clausura"
+    }
+  },
+  "QuieresParticipar": {
+    "value1": "¿Quieres participar de ",
+    "value2": "OVUM 2022",
+    "value3": " en Honduras?"
+  },
+  "ConoceHonduras": {
+    "tituloBanner1": "CONOCE",
+    "tituloBanner2": "HONDURAS",
+    "tituloVideoBold":"San Pedro Sula como sede, ",
+    "tituloVideo":"hoteles, como llegar, gastronomía, turismo.",
+    "descripcionVideo":"Donde empieza a fluir el río Chamelecón en el valle de Sula, al pie de la cordillera de Merendón, se encuentra ubicada la ciudad de San Pedro Sula, fundada el 27 de Junio de 1536 por el entonces capitán español Don Pedro de Alvarado, en un sitio cuya localización exacta no a sido posible ubicar, debido que sus habitantes, trasladaron varias veces la villa.",
+    "tituloHotel":"Reserva tu Hotel",
+    "descripcionHotel":"San Pedro Sula es una ciudad con un amplio patrimonio cultural. Es una ciudad de gente alegre y jovial, una ciudad cargada de contrastes, sabores, colores y mucho amor por la cultura. Que va de ese arraigo por nuestras raíces hasta los actualizados contrastes de la cultura pop.",
+    "buttonHotel":"Ver Hoteles"
+  },
+  "Organizadores":{
+    "titulo": "ORGANIZADORES"
+  },
+  "LoUltimo": {
+    "titulo": "LO ÚLTIMO"
+  },
+  "BtnVerMas": {
+    "value": "Ver más"
   },
   "Button": {
     "value1": "Consúltanos",

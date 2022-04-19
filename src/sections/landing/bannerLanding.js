@@ -1,6 +1,9 @@
 import React from "react";
 
-const BannerLanding = () => {
+const BannerLanding = ({ idiomas }) => {
+  const { QuieresParticipar, Button } = idiomas
+  const { value1, value2, value3 } = QuieresParticipar
+  
   return (
     <section className="relative z-10  w-full flex items-center justify-center h-128 lg:h-90 m-auto  bg-center bg-cover custom_img ">
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto text-white  z-20">
@@ -14,15 +17,15 @@ const BannerLanding = () => {
           />
           <div className=" max-w-120 ">
             <p className="text-3xl text-center relative z-20  mb-9">
-              ¿Quieres participar de{" "}
-              <span className="font-bold">OVUM 2022 </span>
-              en Honduras?
+              {value1}
+              <span className="font-bold">{value2}</span>
+              {value3}
             </p>
             <div className="flex justify-center w-full   ">
-              <a 
-              href="#consultanos"
-              className=" bg-pink-700 block text-center relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
-                Consultanos
+              <a
+                href="#consultanos"
+                className=" bg-pink-700 block text-center relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
+                {Button.value1}
               </a>
             </div>
           </div>
@@ -44,8 +47,8 @@ const BannerLanding = () => {
             className="absolute z-20 bottom-0 "
           />
           <p className="text-3xl text-center relative z-20  mb-9">
-            ¿Quieres participar de <span className="font-bold">OVUM 2022 </span>
-            en Honduras?
+            {value1} <span className="font-bold">{value2} </span>
+            {value3}
           </p>
           <div className="max-w-90 w-full  mb-11">
             <img
@@ -56,9 +59,9 @@ const BannerLanding = () => {
           </div>
           <div className="flex justify-center w-full md:hidden  ">
             <a
-            href="#consultanos"
-            className=" bg-pink-700 block text-center relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
-              Consultanos
+              href="#consultanos"
+              className=" bg-pink-700 block text-center relative z-20 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full ">
+              {Button.value1}
             </a>
           </div>
         </div>

@@ -8,7 +8,17 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Navigation, Pagination } from "swiper";
-const Conoce = () => {
+const Conoce = ({ idiomas }) => {
+  const {
+    tituloBanner1,
+    tituloBanner2,
+    tituloVideoBold,
+    tituloVideo,
+    descripcionVideo,
+    tituloHotel,
+    descripcionHotel,
+    buttonHotel,
+  } = idiomas.ConoceHonduras;
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
     setIsMounted(true);
@@ -20,8 +30,8 @@ const Conoce = () => {
         <div className="relative">
           <img src="/conoce-honduras.png" className="w-full h-auto" />
           <h2 className="absolute bottom-8 left-5 md:left-10 md:bottom-16 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl::text-7xl lg:top-15 lg:left-15  text-white">
-            CONOCÉ <br />
-            <span className="font-bold"> HONDURAS</span>
+            {tituloBanner1} <br />
+            <span className="font-bold"> {tituloBanner2}</span>
           </h2>
         </div>
       </div>
@@ -40,16 +50,11 @@ const Conoce = () => {
 
         <div className="w-full flex flex-col justify-center">
           <h2 className="text-green-400 text-2xl mb-5 lg:mb-3 text-center lg:text-left">
-            <span className="font-bold">San Pedro Sula como sede</span>,
-            hoteles, como llegar, gastronomía, turismo.
+            <span className="font-bold">{tituloVideoBold}</span>
+            {tituloVideo}
           </h2>
           <p className=" text-gray-600 text-base lg:text-lg text-justify">
-            Donde empieza a fluir el río Chamelecón en el valle de Sula, al pie
-            de la cordillera de Merendón, se encuentra ubicada la ciudad de San
-            Pedro Sula, fundada el 27 de Junio de 1536 por el entonces capitán
-            español Don Pedro de Alvarado, en un sitio cuya localización exacta
-            no a sido posible ubicar, debido que sus habitantes, trasladaron
-            varias veces la villa.
+            {descripcionVideo}
           </p>
           {/* <div className="flex justify-center w-full  mt-8 ">
             <button className=" bg-pink-700 text-white text-xl font-normal py-2 max-w-52 w-full rounded-full z-10">
@@ -75,14 +80,10 @@ const Conoce = () => {
 
           <div className="w-full flex flex-col justify-center">
             <h2 className="text-blue-500 text-2xl mb-5 lg:mb-3 text-center lg:text-left">
-              Reserva tu Hotel
+              {tituloHotel}
             </h2>
             <p className=" text-gray-600 text-base lg:text-lg text-justify">
-              San Pedro Sula es una ciudad con un amplio patrimonio cultural. Es
-              una ciudad de gente alegre y jovial, una ciudad cargada de
-              contrastes, sabores, colores y mucho amor por la cultura. Que va
-              de ese arraigo por nuestras raíces hasta los actualizados
-              contrastes de la cultura pop.
+              {descripcionHotel}
             </p>
             <div className="flex justify-center w-full  mt-8 ">
               <button className=" bg-pink-700 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full z-10">
@@ -91,7 +92,7 @@ const Conoce = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Ver Hoteles
+                  {buttonHotel}
                 </a>
               </button>
             </div>
