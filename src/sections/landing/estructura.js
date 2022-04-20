@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { gsap, Power2 } from "gsap";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination } from "swiper";
 import Link from "next/link";
+import useOnScreen from "../../hooks/useOnScreen";
 
 /* import Button from '../../components/buttons/Button' */
 
@@ -16,6 +17,37 @@ const Estructura = ({ idiomas }) => {
   const { Estructura } = idiomas;
   const { titulo, sesiones, conferencias, expoferia, investigacion, salas, turismo } =
     Estructura;
+    const RefObservador = useRef(null);
+    const RefTitulo = useRef(null);
+    const { isNearScreen } = useOnScreen({
+      externalRef: RefObservador,
+      distance: "-100px",
+      once: false,
+    });
+    const timeLine = gsap.timeline({
+      defaults: {
+        duration: 1,
+        ease: Power2.easeOut,
+        opacity: 0,
+      },
+    });
+    useEffect(() => {
+      const items=document.querySelectorAll('.item')
+      if (isNearScreen && isMounted) {
+        timeLine
+        .from(RefTitulo.current, {
+          y: -50,
+          x: 0,
+          stagger: 0.2,
+        })
+          .from(items, {
+            y: 0,
+            x: 0,
+            stagger: 0.2,
+          },"-=0.8")
+      }
+    }, [isNearScreen]);
+
 
   const data = [
     {
@@ -105,6 +137,7 @@ const Estructura = ({ idiomas }) => {
   return (
     <section
       className="relative overflow-x-hidden bg-white flex flex-col justify-center items-center py-14 border"
+      ref={RefObservador}
       id="estructura"
     >
       <img
@@ -113,7 +146,9 @@ const Estructura = ({ idiomas }) => {
         className="absolute -right-15 bottom-30 "
       />
       <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto p-8 lg:p-0">
-        <h6 className="text-3xl lg:text-3.5xl text-center font-bold mb-8 text-blue-500">
+        <h6 
+        ref={RefTitulo}
+        className="text-3xl lg:text-3.5xl text-center font-bold mb-8 text-blue-500">
           {titulo}
         </h6>
         <div className="hidden lg:grid grid-cols-2 xl:grid-cols-3 gap-4">
@@ -121,7 +156,8 @@ const Estructura = ({ idiomas }) => {
             data.map((item) => (
               <div
                 key={item.id}
-                className=" mx-auto max-w-sm rounded-2xl overflow-hidden "
+                className=" mx-auto max-w-sm rounded-2xl overflow-hidden item"
+
               >
                 <img
                   className="w-full object-cover"

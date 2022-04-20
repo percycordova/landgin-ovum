@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import useBlogServices from "../../Gestionadores/useBlogServices";
 // Import Swiper React components
@@ -16,11 +16,45 @@ import { maxHeight } from "tailwindcss/defaultTheme";
 import { useModal } from "../../hooks/useModal";
 import ModalGrid from "../../components/ModalGenerico/ModalGrid";
 import { useRouter } from "next/router";
+import useOnScreen from "../../hooks/useOnScreen";
+import { gsap, Power2 } from "gsap";
 // import Button from '../../../components/buttons/Button'
 
 const LoUltimo = ({ idiomas }) => {
   const { locale } = useRouter();
   // console.log("router", locale);
+  const RefObservador = useRef(null);
+  const refTitulo = useRef(null);
+  const refButton = useRef(null);
+  const { isNearScreen } = useOnScreen({
+    externalRef: RefObservador,
+    distance: "0px",
+    once: false,
+  });
+  const timeLineAcerca = gsap.timeline({
+    defaults: {
+      duration: 1,
+      ease: Power2.easeOut,
+      opacity: 0,
+    },
+  });
+  useEffect(() => {
+    const items=document.querySelectorAll('.itemLoUltimo')
+    if (isNearScreen) {
+      timeLineAcerca
+        .from(refTitulo.current, {
+          y: -50,
+          x: 0,
+          stagger: 0.3,
+        })
+        .from(items, {
+          y: 0,
+          x: 0,
+          stagger: 0.3,
+        }, "-=0.8")
+        
+    }
+  }, [isNearScreen]);
   const { loadingGetData, db } = useBlogServices();
   const [isOpen, openModal, closeModal] = useModal(false);
   const [initialSlide, setInitialSlide] = useState(0);
@@ -36,12 +70,16 @@ const LoUltimo = ({ idiomas }) => {
         return db?.tituloEspa;
     }
   };
- 
+
 
   return (
-    <section className=" p-8 flex flex-col justify-center items-center  overflow-x-hidden ">
-      <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto bg-white">
-        <h6 className="text-3xl lg:text-3.5xl text-center font-bold mb-8 text-blue-500">
+    <section
+      ref={RefObservador}
+      className=" p-8 flex flex-col justify-center items-center  overflow-x-hidden ">
+      <div className="w-full md:max-w-256 mt-5 max-w-7xl mx-auto bg-white overflow-hidden">
+        <h6 
+        ref={refTitulo}
+        className="text-3xl lg:text-3.5xl text-center font-bold mb-8 text-blue-500">
           {idiomas.LoUltimo.titulo}
         </h6>
         {/* grid en lg */}
@@ -61,7 +99,7 @@ const LoUltimo = ({ idiomas }) => {
           ) : (
             <div className="flex cursor-pointer justify-between">
               <div
-                className=""
+                className="itemLoUltimo"
                 onClick={() => {
                   setInitialSlide(1);
                   openModal();
@@ -93,7 +131,8 @@ const LoUltimo = ({ idiomas }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-4 xl:col-span-4 ">
+              <div className="col-span-4 xl:col-span-4 "
+              >
                 <div
                   className="flex flex-col justify-between "
                   style={{ height: "528px" }}
@@ -101,7 +140,7 @@ const LoUltimo = ({ idiomas }) => {
                   {db.slice(1, 4).map((item, i) => (
                     <div
                       key={item.blogId}
-                      className="relative cursor-pointer"
+                      className="relative cursor-pointer itemLoUltimo"
                       style={{ maxWidth: "18.625rem", maxHeight: "164px" }}
                       onClick={() => {
                         setInitialSlide(i + 2);
@@ -223,7 +262,9 @@ const LoUltimo = ({ idiomas }) => {
         {/* fin slider en mobile */}
         <div className="flex justify-center my-12 ">
           <Link href="/lo-ultimo">
-            <button className="bg-pink-700 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full">
+            <button 
+            ref={refButton}
+            className="bg-pink-700 text-white text-xl font-normal py-3 max-w-52 w-full rounded-full">
               {idiomas.BtnVerMas.value}
             </button>
           </Link>
