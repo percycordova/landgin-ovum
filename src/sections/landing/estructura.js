@@ -172,14 +172,14 @@ const Estructura = ({ idiomas }) => {
                   <div className=" text-xl mb-2">{item.title}</div>
                   <p className="font-light text-sm lg:text-base  h-40 text-justify">
                     <span className="mb-3 block">{item.text}</span>
-                    <span className="text-white font-bold border-b border-white">
+                    {/* <span className="text-white font-bold border-b border-white">
                       <Link
                         href={item.url}
 
                       >
                         Ver más
                       </Link>
-                    </span>
+                    </span> */}
                   </p>
 
                   {item.typeImg === "pollo" && (
@@ -266,14 +266,14 @@ const Estructura = ({ idiomas }) => {
                       <p className="font-light text-sm lg:text-base text-justify mb-5 h-32">
                         {item.text}
                       </p>
-                      <span className="text-white font-bold border-b border-white ">
+                      {/* <span className="text-white font-bold border-b border-white ">
                         <Link
                           href={item.url}
 
                         >
                           Ver más
                         </Link>
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </SwiperSlide>

@@ -77,21 +77,21 @@
     "titulo": "THE LAST"
   },
   "QuieresParticipar": {
-    "value1":"¿Do you want to participate in  ",
-    "value2":"OVUM 2022",
-    "value3":" in Honduras?"
+    "value1": "¿Do you want to participate in  ",
+    "value2": "OVUM 2022",
+    "value3": " in Honduras?"
   },
   "ConoceHonduras": {
     "tituloBanner1": "GET TO KNOW",
     "tituloBanner2": "HONDURAS",
-    "tituloVideoBold":"San Pedro Sula as venue, ",
-    "tituloVideo":"hotels, how to get there, gastronomy, tourism.",
-    "descripcionVideo":"Where the Chamelecón River rises in the Sula Valley, at the foot of the Merendón mountain range, is the city of San Pedro Sula, founded on June 27, 1536 by the then Spanish captain Don Pedro de Alvarado, in a place whose exact location has not been possible to locate, as its inhabitants moved the town several times.",
-    "tituloHotel":"Book your Hotel",
-    "descripcionHotel":"San Pedro Sula is a city with a wide cultural heritage. It is a city of happy and jovial people, a city full of contrasts, flavors, colors and a lot of love for culture. That goes from that rootedness in our roots to the updated contrasts of pop culture.",
-    "buttonHotel":"See Hotels"
+    "tituloVideoBold": "San Pedro Sula as venue, ",
+    "tituloVideo": "hotels, how to get there, gastronomy, tourism.",
+    "descripcionVideo": "Where the Chamelecón River rises in the Sula Valley, at the foot of the Merendón mountain range, is the city of San Pedro Sula, founded on June 27, 1536 by the then Spanish captain Don Pedro de Alvarado, in a place whose exact location has not been possible to locate, as its inhabitants moved the town several times.",
+    "tituloHotel": "Book your Hotel",
+    "descripcionHotel": "San Pedro Sula is a city with a wide cultural heritage. It is a city of happy and jovial people, a city full of contrasts, flavors, colors and a lot of love for culture. That goes from that rootedness in our roots to the updated contrasts of pop culture.",
+    "buttonHotel": "See Hotels"
   },
-  "Organizadores":{
+  "Organizadores": {
     "titulo": "ORGANIZERS"
   },
   "BtnVerMas": {
@@ -141,7 +141,8 @@
     "value": "Developed by JOTA Comprehensive Communication"
   },
   "Banner": {
-    "value": "September 6 to 9"
+    "value": "September 6 to 9",
+    "button": "Download Information"
   },
   "ModalInscripcion": {
     "value1": "¡Thanks!",

@@ -81,14 +81,14 @@
   "ConoceHonduras": {
     "tituloBanner1": "CONOCE",
     "tituloBanner2": "HONDURAS",
-    "tituloVideoBold":"San Pedro Sula como sede, ",
-    "tituloVideo":"hoteles, como llegar, gastronomía, turismo.",
-    "descripcionVideo":"Donde empieza a fluir el río Chamelecón en el valle de Sula, al pie de la cordillera de Merendón, se encuentra ubicada la ciudad de San Pedro Sula, fundada el 27 de Junio de 1536 por el entonces capitán español Don Pedro de Alvarado, en un sitio cuya localización exacta no a sido posible ubicar, debido que sus habitantes, trasladaron varias veces la villa.",
-    "tituloHotel":"Reserva tu Hotel",
-    "descripcionHotel":"San Pedro Sula es una ciudad con un amplio patrimonio cultural. Es una ciudad de gente alegre y jovial, una ciudad cargada de contrastes, sabores, colores y mucho amor por la cultura. Que va de ese arraigo por nuestras raíces hasta los actualizados contrastes de la cultura pop.",
-    "buttonHotel":"Ver Hoteles"
+    "tituloVideoBold": "San Pedro Sula como sede, ",
+    "tituloVideo": "hoteles, como llegar, gastronomía, turismo.",
+    "descripcionVideo": "Donde empieza a fluir el río Chamelecón en el valle de Sula, al pie de la cordillera de Merendón, se encuentra ubicada la ciudad de San Pedro Sula, fundada el 27 de Junio de 1536 por el entonces capitán español Don Pedro de Alvarado, en un sitio cuya localización exacta no a sido posible ubicar, debido que sus habitantes, trasladaron varias veces la villa.",
+    "tituloHotel": "Reserva tu Hotel",
+    "descripcionHotel": "San Pedro Sula es una ciudad con un amplio patrimonio cultural. Es una ciudad de gente alegre y jovial, una ciudad cargada de contrastes, sabores, colores y mucho amor por la cultura. Que va de ese arraigo por nuestras raíces hasta los actualizados contrastes de la cultura pop.",
+    "buttonHotel": "Ver Hoteles"
   },
-  "Organizadores":{
+  "Organizadores": {
     "titulo": "ORGANIZADORES"
   },
   "LoUltimo": {
@@ -138,7 +138,8 @@
     "value": "Desarrollado por JOTA Comunicación Integral"
   },
   "Banner": {
-    "value": "6 al 9 de Septiembre"
+    "value": "6 al 9 de Septiembre",
+    "button": "Descargar Información"
   },
   "ModalInscripcion": {
     "value1": "¡Gracias!",

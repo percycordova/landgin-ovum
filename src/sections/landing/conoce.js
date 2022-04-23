@@ -141,6 +141,36 @@ const Conoce = ({ idiomas }) => {
             >
               <SwiperSlide>
                 <div className=" pb-10 pt-3">
+                  <img src="/conoce_1.jpg" className="w-full h-auto" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className=" pb-10 pt-3">
+                  <img src="/conoce_2.jpg" className="w-full h-auto" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className=" pb-10 pt-3">
+                  <img src="/conoce_3.jpg" className="w-full h-auto" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className=" pb-10 pt-3">
+                  <img src="/conoce_4.jpg" className="w-full h-auto" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className=" pb-10 pt-3">
+                  <img src="/conoce_5.jpg" className="w-full h-auto" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className=" pb-10 pt-3">
+                  <img src="/conoce_6.jpg" className="w-full h-auto" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className=" pb-10 pt-3">
                   <img src="/avianca-1.png" className="w-full h-auto" alt="" />
                 </div>
               </SwiperSlide>
@@ -154,6 +184,7 @@ const Conoce = ({ idiomas }) => {
                   <img src="/avianca-3.png" className="w-full h-auto" alt="" />
                 </div>
               </SwiperSlide>
+              
             </Swiper>
           </div>
         )}

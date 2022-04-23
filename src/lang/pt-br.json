@@ -84,14 +84,14 @@
   "ConoceHonduras": {
     "tituloBanner1": "CONHECER",
     "tituloBanner2": "HONDURAS",
-    "tituloVideoBold":"San Pedro Sula como local, ",
-    "tituloVideo":"hotéis, como chegar, gastronomia, turismo.",
-    "descripcionVideo":"Onde nasce o rio Chamelecón, no vale de Sula, no sopé da serra de Merendón, fica a cidade de San Pedro Sula, fundada em 27 de junho de 1536 pelo então capitão espanhol Don Pedro de Alvarado, em um lugar cuja exata localização não foi possível localizar, pois seus habitantes mudaram de cidade várias vezes.",
-    "tituloHotel":"Reserve seu hotel",
-    "descripcionHotel":"San Pedro Sula é uma cidade com um amplo patrimônio cultural. É uma cidade de gente alegre e jovial, uma cidade cheia de contrastes, sabores, cores e muito amor pela cultura. Isso vai desde esse enraizamento em nossas raízes até os contrastes atualizados da cultura pop.",
-    "buttonHotel":"Ver hotéis"
+    "tituloVideoBold": "San Pedro Sula como local, ",
+    "tituloVideo": "hotéis, como chegar, gastronomia, turismo.",
+    "descripcionVideo": "Onde nasce o rio Chamelecón, no vale de Sula, no sopé da serra de Merendón, fica a cidade de San Pedro Sula, fundada em 27 de junho de 1536 pelo então capitão espanhol Don Pedro de Alvarado, em um lugar cuja exata localização não foi possível localizar, pois seus habitantes mudaram de cidade várias vezes.",
+    "tituloHotel": "Reserve seu hotel",
+    "descripcionHotel": "San Pedro Sula é uma cidade com um amplo patrimônio cultural. É uma cidade de gente alegre e jovial, uma cidade cheia de contrastes, sabores, cores e muito amor pela cultura. Isso vai desde esse enraizamento em nossas raízes até os contrastes atualizados da cultura pop.",
+    "buttonHotel": "Ver hotéis"
   },
-  "Organizadores":{
+  "Organizadores": {
     "titulo": "ORGANIZADORES"
   },
   "BtnVerMas": {
@@ -138,7 +138,8 @@
     "value": "Desenvolvido por JOTA Comunicação Abrangente"
   },
   "Banner": {
-    "value": "6 a 9 de Setembro"
+    "value": "6 a 9 de Setembro",
+    "button": "Baixar Informação"
   },
   "ModalInscripcion": {
     "value1": "¡Obrigado!",

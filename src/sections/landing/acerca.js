@@ -45,7 +45,7 @@ const Acerca = ({ idiomas }) => {
       id="acerca"
       ref={RefObservador}
     >
-      <div className=" lg:w-256 w-full mt-5 max-w-7xl mx-auto bg-white  ">
+      <div className=" lg:w-256 w-full mt-5 max-w-7xl mx-auto bg-white  overflow-hidden">
         <h6
           ref={refTitulo}
           className="text-3.5xl text-primary-850 text-center font-bold mb-8"
