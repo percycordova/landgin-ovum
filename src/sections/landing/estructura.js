@@ -279,6 +279,16 @@ const Estructura = ({idiomas}) => {
 											<p className='font-light text-sm lg:text-base text-justify mb-5 h-32'>
 												{item.text}
 											</p>
+											{index === 2 && (
+												<a
+													className='text-black  border-b border-black'
+													href='/pdfs/MANUAL-DEL-EXPOSITOR-OVUM-2022-21-MAR.pdf'
+													target='_blank'
+													rel='noopener noreferrer'
+												>
+													Descargar manual del expositor.
+												</a>
+											)}
 											{/* <span className="text-white font-bold border-b border-white ">
                         <Link
                           href={item.url}
