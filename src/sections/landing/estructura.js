@@ -262,7 +262,7 @@ const Estructura = ({idiomas}) => {
 							modules={[Navigation, Pagination]}
 							className='mySwiper'
 						>
-							{data.map((item) => (
+							{data.map((item, index) => (
 								<SwiperSlide key={item.id}>
 									<div className='mx-auto max-w-sm rounded-2xl overflow-hidden pb-10'>
 										<img
